@@ -399,7 +399,9 @@ html:has(.locus-page) { scroll-snap-type: none; }
 .lc-screen p { font-size: var(--lc-body); line-height: 1.5; }
 .lc-screen p + p { margin-top: 0; }
 .lc-screen__curve { position: absolute; pointer-events: none; height: auto; }
-.lc-screen:nth-child(1) .lc-screen__curve { width: clamp(50px, 4.8vw, 83px); left: 22%; top: 100%; }
+.lc-screen:nth-child(1) .lc-screen__curve { width: calc(77.9vw - 287px); max-width: none; left: 22%; top: 100%; }   /* long arrow: sweeps across and points down at the Learn phone */
+@media (max-width: 1000px) { .lc-screen:nth-child(1) .lc-screen__curve { width: calc(48.75vw + 4.5px); } }
+@media (min-width: 1441px) { .lc-screen:nth-child(1) .lc-screen__curve { width: min(calc(98vw - 576px), 994px); } }
 .lc-screen:nth-child(2) .lc-screen__curve { width: clamp(90px, 9.8vw, 169px); right: 8%; top: 100%; }
 .lc-screen:nth-child(3) .lc-screen__curve { width: clamp(70px, 7.3vw, 127px); left: 14%; top: 100%; }
 
