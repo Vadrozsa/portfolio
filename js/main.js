@@ -214,4 +214,20 @@
   if (prev) prev.addEventListener('click', function () {
     row.scrollBy({ left: -step(), behavior: 'smooth' });
   });
+
+  // touch screens: tap a photo to show its caption (only one open at a time), tap again or elsewhere to hide
+  if (window.matchMedia('(hover: none)').matches) {
+    var closeAll = function (except) {
+      row.querySelectorAll('.frame.is-open').forEach(function (f) { if (f !== except) f.classList.remove('is-open'); });
+    };
+    row.addEventListener('click', function (e) {
+      var f = e.target.closest('.frame');
+      if (!f) return;
+      closeAll(f);
+      f.classList.toggle('is-open');
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.frame')) closeAll();
+    });
+  }
 })();

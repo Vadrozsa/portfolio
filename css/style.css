@@ -808,9 +808,11 @@ html[data-theme="dark"] .card__badge { background: rgba(29, 27, 28, .9); border-
   .scroller.is-dragging .frame { transform: none; box-shadow: none; }
   .scroller.is-dragging .frame figcaption { opacity: 0; }
 }
-/* phones / tablets can't hover, so the caption is always shown */
+/* phones / tablets can't hover: tap a photo to show its caption, tap again (or elsewhere) to hide */
 @media (hover: none) {
-  .frame figcaption { opacity: 1; transform: none; font-size: 11px; padding: 32px 12px 12px; }
+  .frame { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .frame figcaption { font-size: 11px; padding: 32px 12px 12px; }
+  .frame.is-open figcaption { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .frame, .frame figcaption { transition: opacity .2s; }
