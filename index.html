@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Róza Parlagi — Product &amp; UX / UI Designer</title>
+  <meta name="description" content="Portfolio of Róza Parlagi, a product and UX / UI designer based in Budapest. Case studies, CV and contact.">
+  <meta name="theme-color" content="#7a3b3b">
+
+  <!-- Social preview (replace the URL once you have your domain; add assets/img/og-image.jpg, 1200x630) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Róza Parlagi — Product & UX / UI Designer">
+  <meta property="og:description" content="Fresh eyes, honest curiosity, and careful craft. Portfolio of a Budapest-based product designer.">
+  <meta property="og:url" content="https://parlagiroza.com/">
+  <!-- <meta property="og:image" content="https://YOUR-DOMAIN.com/assets/img/og-image.jpg"> -->
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    /* dark mode: use the visitor's saved choice, otherwise their system setting (runs before paint, so no flash) */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+</head>
+
+<body id="top">
+  <div class="page">
+
+    <!-- Decorative blurred ring, top right -->
+    <img class="blob blob--hero" src="assets/img/blob.webp" alt="" width="1400" height="1400" aria-hidden="true">
+
+    <!-- ============ NAV ============ -->
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Róza Parlagi — home">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
+          <li class="nav__desktop-only"><a href="#gallery">Get to Know Me</a></li>
+          <li><a href="Roza_Parlagi_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+              <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+              <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="hero__eyebrow">Product &amp; UX / UI Designer</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__first">Roza</span>
+          <span class="hero__last">Parlagi</span>
+        </h1>
+        <p class="hero__intro">
+          Hi, I'm Róza. I'm at the start of my design career, and I bring fresh eyes, honest curiosity, and careful craft to every project I touch.
+        </p>
+        <a class="btn" href="#projects">
+          See my work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+        </a>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="projects" id="projects" aria-labelledby="projects-label">
+        <div class="projects__head">
+          <h2 class="label" id="projects-label">Projects / Case studies</h2>
+          <div class="scroller-nav" aria-hidden="true">
+            <button type="button" data-scroll="prev" aria-label="Previous project" tabindex="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            </button>
+            <button type="button" data-scroll="next" aria-label="Next project" tabindex="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="scroller" data-scroller>
+          <!-- CARD 1 — Locus -->
+          <a class="card" href="locus.html">
+            <div class="card__media">
+              <img src="assets/img/locus.jpg" alt="Locus app on a phone held in two hands, with the tagline 'Help is around the corner'" width="1275" height="1182">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Locus</h3>
+              <p class="card__desc">A community-driven platform designed to ease menstrual poverty in Budapest while empowering women to become more conscious, informed, and connected.</p>
+              <span class="tag">Social design</span>
+            </div>
+          </a>
+
+          <!-- CARD 2 — Mercedes AURA -->
+          <a class="card" href="mercedes-aura.html">
+            <div class="card__media">
+              <img src="assets/img/project-2.jpg" alt="Green Y-shaped scanner interface showing 'Successful scanning'" width="1275" height="1182" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Mercedes AURA</h3>
+              <p class="card__desc">An in-car experience for Mercedes-Benz that turns family road trips into a shared journey of discovery.</p>
+              <span class="tag">In-car UX</span>
+            </div>
+          </a>
+
+          <!-- CARD 3 — Remi (coming soon: not clickable yet. To publish it, change the <div ... card--soon> into <a class="card" href="remi.html"> and remove the "Coming soon" badge) -->
+          <div class="card card--soon" aria-disabled="true">
+            <div class="card__media">
+              <img src="assets/img/project-3.jpg" alt="Remi, a friendly robot face, above a laptop showing the Remi therapy dashboard" width="1047" height="1182" loading="lazy">
+              <span class="card__badge">Coming soon</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Remi</h3>
+              <p class="card__desc">A playful companion robot that uses photo reminiscence therapy to help nursing home residents with dementia hold on to their memories.</p>
+              <span class="tag">Human–robot interaction</span>
+            </div>
+          </div>
+
+          <!-- CARD 4 — Granta (coming soon) -->
+          <div class="card card--soon" aria-disabled="true">
+            <div class="card__media">
+              <img src="assets/img/cards/granta.jpg" alt="Hands holding a phone with the Granta app showing matching grants" width="1275" height="1182" loading="lazy">
+              <span class="card__badge">Coming soon</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Granta</h3>
+              <p class="card__desc">A multilingual assistant that matches Hungarian small business owners with the grants they qualify for, in plain language.</p>
+              <span class="tag">Service design</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="about" id="about" aria-labelledby="about-title" data-reveal>
+        <div class="about__row">
+        <div class="about__main">
+        <p class="label">About</p>
+        <h2 class="about__title" id="about-title">Curious by default,<br>careful by craft</h2>
+        <div class="about__text">
+          <!-- ✏️ EDIT: this is draft copy — rewrite it in your own words -->
+          <p>Based in Budapest, working in English and Hungarian.</p>
+          <p>I have a BA in Glass design, where I learned that good work takes patience, plenty of iteration, and respect for the material. Now I'm studying Interaction Design (MA) and bringing that same care to digital products.</p>
+        </div>
+        </div>
+        <figure class="about__photo">
+          <img src="assets/img/roza%20about.jpeg" alt="Me looking up at a large circular light installation" width="1600" height="1067" loading="lazy">
+        </figure>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="contact" id="contact" aria-labelledby="contact-label">
+        <img class="blob blob--contact" src="assets/img/blob.webp" alt="" width="1400" height="1400" aria-hidden="true" loading="lazy">
+        <div class="contact__inner" data-reveal>
+          <h2 class="label" id="contact-label">Contact</h2>
+          <p class="contact__text">I'm open to product design roles, internships, and small freelance projects. My inbox is always open.</p>
+          <!-- The button opens the visitor's own mail app with a subject already filled in.
+               The small links below open a new draft in Gmail or Outlook in the browser. -->
+          <a class="btn" href="mailto:rozsavirag.2003@gmail.com?subject=Hello%20R%C3%B3za">rozsavirag.2003@gmail.com</a>
+          <p class="contact__webmail">or write from
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rozsavirag.2003@gmail.com&amp;su=Hello%20R%C3%B3za" target="_blank" rel="noopener">Gmail</a> ·
+            <a href="https://outlook.live.com/mail/0/deeplink/compose?to=rozsavirag.2003@gmail.com&amp;subject=Hello%20R%C3%B3za" target="_blank" rel="noopener">Outlook</a>
+          </p>
+          <!-- ✏️ EDIT: paste your real LinkedIn address -->
+          <a class="contact__linkedin" href="https://www.linkedin.com/in/parlagi-róza" target="_blank" rel="noopener">Linkedin</a>
+        </div>
+      </section>
+
+      <!-- ============ GET TO KNOW ME ============ -->
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title" data-reveal>
+        <div class="gallery__head">
+          <h2 class="gallery__title" id="gallery-title">Get to know me</h2>
+          <div class="scroller-nav gallery__nav">
+            <button type="button" data-gallery="prev" aria-label="Previous photo" class="is-hidden">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            </button>
+            <button type="button" data-gallery="next" aria-label="Next photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="scroller" data-scroller data-loop>
+          <!-- Photos live in assets/img/gallery/. The alt text is only read by screen readers (not shown on the page).
+               ✏️ EDIT: the <figcaption> text is what appears on the photo when you hover over it. -->
+          <figure class="frame"><img src="assets/img/gallery/photo-01.jpg" alt="Me standing on stage at the MOME Diploma event, holding a folder" width="610" height="860" loading="lazy"><figcaption>On stage at the MOME Diploma event.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-02.jpg" alt="A glowing green textured disc in a dark room" width="610" height="860" loading="lazy"><figcaption>A glowing textured disc from one of my light experiments.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-03.jpg" alt="Me sitting next to a glowing textured light installation while a classmate adjusts it" width="610" height="860" loading="lazy"><figcaption>Setting up a textured light installation with a classmate.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-04.jpg" alt="Me working at a glass-blowing torch, wearing protective glasses" width="610" height="860" loading="lazy"><figcaption>At the glass-blowing torch, where it all started.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-05.jpg" alt="Sketching on a cardboard mock-up with texture patterns and an on/off switch" width="610" height="860" loading="lazy"><figcaption>Sketching textures and switches on a cardboard mock-up.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-06.jpg" alt="Me and two others building with coloured blocks from a yellow box at an EPAM event" width="610" height="860" loading="lazy"><figcaption>Building with blocks at an EPAM event.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-07.jpg" alt="Me with two teammates in front of the Mercedes-Benz Research &amp; Development building" width="610" height="860" loading="lazy"><figcaption>With my team at Mercedes-Benz Research &amp; Development.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-08.jpg" alt="Me painting a material sample on a light table, wearing gloves" width="610" height="860" loading="lazy"><figcaption>Painting material samples on a light table.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-09.jpg" alt="Me and a classmate cutting a pink three-winged shape out of foam" width="610" height="860" loading="lazy"><figcaption>Cutting a foam prototype with a classmate.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-10.jpg" alt="Me shaping hot glass with tongs in a glass workshop" width="610" height="860" loading="lazy"><figcaption>Shaping hot glass in the workshop.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-11.jpg" alt="Me and a teammate on stage presenting Mercedes AURA: The Journey of Discovery" width="610" height="860" loading="lazy"><figcaption>Presenting Mercedes AURA: The Journey of Discovery.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-12.jpg" alt="Me cutting small black pieces of material at a desk" width="610" height="860" loading="lazy"><figcaption>Cutting material pieces for a prototype.</figcaption></figure>
+          <figure class="frame"><img src="assets/img/gallery/photo-13.jpg" alt="Me working with a torch flame in a glass studio, wearing tinted glasses" width="610" height="860" loading="lazy"><figcaption>Working with the flame in the glass studio.</figcaption></figure>
+        </div>
+      </section>
+    </main>
+        <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+        <p>&copy; 2026 Róza Parlagi</p>
+      </div>
+      <ul class="footer__links">
+        
+        <li><a href="#" aria-label="Back to top">Back to top &uarr;</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

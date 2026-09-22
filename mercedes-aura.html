@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mercedes AURA — Róza Parlagi</title>
+  <meta name="description" content="Mercedes AURA: an in-car experience for Mercedes-Benz that turns family road trips into a shared journey of discovery. A team case study from MOME University.">
+  <meta name="theme-color" content="#0c0d0c">
+
+  <!-- Social preview (replace the URL once you have your domain) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Mercedes AURA — a case study by Róza Parlagi">
+  <meta property="og:description" content="An in-car experience for Mercedes-Benz that turns family road trips into a shared journey of discovery.">
+  <meta property="og:url" content="https://parlagiroza.com/mercedes-aura.html">
+  <!-- <meta property="og:image" content="https://YOUR-DOMAIN.com/assets/img/project-2.jpg"> -->
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mercedes.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    /* dark mode: use the visitor's saved choice, otherwise their system setting (runs before paint, so no flash) */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+</head>
+
+<body id="top" class="mb-page">
+  <div class="page">
+
+    <!-- ============ NAV (same as the home page) ============ -->
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Róza Parlagi — home">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#contact">Get in Touch</a></li>
+          <li class="nav__desktop-only"><a href="index.html#gallery">Get to Know Me</a></li>
+          <li><a href="Roza_Parlagi_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+              <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+              <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="mb">
+
+      <!-- ============ 1. HERO ============ -->
+      <section class="mb-hero" aria-labelledby="mb-title">
+        <img class="mb-hero__logo" src="assets/img/mercedes/mb-logo.svg" alt="Mercedes-Benz" width="275" height="85">
+        <div class="mb-hero__head">
+          <h1 class="mb-title" id="mb-title">Mercedes AURA</h1>
+          <p class="mb-hero__sub">The Journey of discovery</p>
+        </div>
+        <dl class="mb-meta">
+          <div><dt>My role</dt><dd>Concept forming, space design, animations, interaction design</dd></div>
+          <div><dt>Emphasis on</dt><dd>Learning how to deliver for a high-end client such as Mercedes-Benz</dd></div>
+          <div><dt>Team</dt><dd>3 interaction designers, 1&nbsp;automotive designer</dd></div>
+          <div><dt>Timeline</dt><dd>One semester, 2026</dd></div>
+        </dl>
+      </section>
+
+      <!-- ============ 2. OVERVIEW ============ -->
+      <section class="mb-overview" aria-labelledby="mb-overview">
+        <div class="mb-narrow" data-reveal>
+          <h2 class="mb-label mb-label--bold" id="mb-overview">Overview</h2>
+          <div class="mb-text">
+            <p>Designing an in-car experience for Mercedes-Benz based on the brief: <em>Journey is the destination</em>.</p>
+            <p>Mercedes AURA is a speculative concept built with Mercedes-Benz during a semester-long studio at MOME University. Working alongside three other designers (two in interaction design, one in automotive design) I helped shape the experience layer of a vehicle built around a simple idea: let children touch, collect, and discover the world outside the window again, instead of disappearing into a screen.</p>
+            <p>The project spans exterior design language, an in-car interaction system, and a companion digital touchpoint, all tied together by one concept: tactility as the antidote to a screen-locked childhood.</p>
+          </div>
+        </div>
+        <img class="mb-overview__stones" src="assets/img/mercedes/stones.png" alt="" aria-hidden="true" width="900" height="900" loading="lazy">
+      </section>
+
+      <!-- ============ 3. DELIVERABLES / APPROACH ============ -->
+      <section class="mb-wrap mb-facts" aria-label="Deliverables and approach">
+        <div data-reveal>
+          <h3>Deliverables</h3>
+          <p>Concept direction, in-car UX system, device design, exterior collaboration, final presentation</p>
+        </div>
+        <div data-reveal style="--d:.1s">
+          <h3>Approach</h3>
+          <p>Research-driven, family-centred, multisensory design</p>
+        </div>
+      </section>
+
+      <!-- ============ 4. PROBLEM ============ -->
+      <section class="mb-problem" aria-labelledby="mb-problem">
+        <div class="mb-problem__text" data-reveal>
+          <h2 class="mb-label" id="mb-problem">The problem</h2>
+          <p class="mb-lead">Family road trips have quietly become solo screen time.</p>
+          <p class="mb-text">Kids are hard to entertain during long car rides. The easiest and most common method is giving them headphones, tablets or phones. This way the landscape outside is reduced to a blur. We wanted to know what a car could do to bring that attention back outward.</p>
+        </div>
+        <img class="mb-problem__img" src="assets/img/mercedes/children.jpg" alt="Two children in the back seat of a car, looking down at their phones" width="1400" height="774" loading="lazy" data-reveal>
+      </section>
+
+      <!-- ============ 5. BAND ============ -->
+      <section class="mb-band" aria-label="How was it, when we were children?">
+        <img src="assets/img/mercedes/children-band.jpg" alt="" aria-hidden="true" width="1737" height="343" loading="lazy">
+        <p data-reveal>How was it, when we were children?</p>
+      </section>
+
+      <!-- ============ 6. INSIGHT ============ -->
+      <section class="mb-narrow mb-block" aria-labelledby="mb-insight" data-reveal>
+        <h2 class="mb-label" id="mb-insight">Insight</h2>
+        <div class="mb-text mb-text--airy">
+          <p>We asked ourselves, what was it like when we were children? We recalled a shared, almost lost memory of collecting little trinkets from nature, pinecones and pebbles. We were naturally drawn to these objects.</p>
+          <p>Based on this memory we started doing desktop research, and found out that exploring, touch and collecting is essential for a child’s healthy neural development.</p>
+        </div>
+      </section>
+
+      <!-- ============ 7. QUOTE ============ -->
+      <section class="mb-quote" aria-label="Research quote">
+        <div class="mb-quote__imgs" aria-hidden="true">
+          <img src="assets/img/mercedes/quote-1.jpg" alt="" width="488" height="626" loading="lazy">
+          <img src="assets/img/mercedes/quote-2.jpg" alt="" width="712" height="626" loading="lazy">
+          <img src="assets/img/mercedes/quote-3.jpg" alt="" width="531" height="626" loading="lazy">
+        </div>
+        <blockquote data-reveal>
+          <p>“Every time a child explores a new texture, their brain physically creates the neural pathways used for lifelong problem-solving.”</p>
+          <cite>— Kolb, 2012</cite>
+        </blockquote>
+      </section>
+
+      <!-- ============ 8. CONCEPT ============ -->
+      <section class="mb-concept" aria-labelledby="mb-concept">
+        <img class="mb-concept__hand" src="assets/img/mercedes/hand-pinecone.png" alt="" aria-hidden="true" width="900" height="853" loading="lazy">
+        <div class="mb-narrow" data-reveal>
+          <h2 class="mb-label" id="mb-concept">Concept</h2>
+          <p class="mb-lead">Tactility adventure</p>
+          <p class="mb-text mb-text--airy">A multisensory experience for the whole family, built around a child's natural instinct to touch and collect. The car becomes a companion to exploration on the way to a destination.</p>
+        </div>
+      </section>
+
+      <!-- ============ 9. USER JOURNEY ============ -->
+      <section class="mb-journey" aria-labelledby="mb-journey">
+        <div class="mb-narrow" data-reveal>
+          <h2 class="mb-label" id="mb-journey">User journey</h2>
+          <p class="mb-text mb-text--airy">Imagine the family venturing into the forest, gathering trinkets and bringing them back to the car. By scanning the object, the interior completely transforms, revealing its natural tactile patterns across the car's panels. The car becomes a magnifying glass, providing the ultimate tools for the expedition.</p>
+        </div>
+        <div class="mb-wrap">
+          <div class="mb-journey__path">
+            <img class="mb-journey__line" src="assets/img/mercedes/journey-path.svg" alt="" aria-hidden="true">
+            <img class="mb-journey__img mb-journey__img--1" src="assets/img/mercedes/journey-1.jpg" alt="Hands holding acorns, chestnuts, pinecones and leaves collected in the forest" width="544" height="871" loading="lazy" data-reveal>
+            <img class="mb-journey__img mb-journey__img--2" src="assets/img/mercedes/journey-2.jpg" alt="A family walking back to the car on a forest road" width="544" height="871" loading="lazy" data-reveal>
+            <img class="mb-journey__img mb-journey__img--3" src="assets/img/mercedes/journey-3.jpg" alt="The family inside the car around the scanner, looking at a pinecone" width="544" height="871" loading="lazy" data-reveal>
+            <img class="mb-journey__img mb-journey__img--4" src="assets/img/mercedes/journey-4.jpg" alt="Children's hands touching a textured car panel" width="544" height="871" loading="lazy" data-reveal>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 10. DESIGNING FOR PHIGITAL ============ -->
+      <section class="mb-phigital" aria-labelledby="mb-phigital">
+        <div class="mb-wrap mb-phigital__grid">
+          <div class="mb-phigital__left" data-reveal>
+            <h2 class="mb-label" id="mb-phigital">Designing for phigital</h2>
+            <p class="mb-text mb-text--airy">We started thinking about the shape of our centerpiece and the car inside layout as well before designing the screens.</p>
+            <img class="mb-photo" src="assets/img/mercedes/workshop-1.jpg" alt="Two team members sitting on chairs arranged like car seats around a paper mock-up of the centerpiece" width="1200" height="802" loading="lazy">
+          </div>
+          <img class="mb-photo mb-phigital__right" src="assets/img/mercedes/workshop-2.jpg" alt="The team building a cardboard model of the device in the workshop" width="900" height="1152" loading="lazy" data-reveal>
+        </div>
+      </section>
+
+      <!-- ============ 11. BUILDING THE SYSTEM ============ -->
+      <section class="mb-wrap mb-system" aria-labelledby="mb-system">
+        <div class="mb-system__text" data-reveal>
+          <h2 class="mb-label" id="mb-system">Building the system</h2>
+          <div class="mb-text mb-text--airy">
+            <p>For the in-car experience, we decided to include:</p>
+            <ul class="mb-list">
+              <li>a <strong>scanner</strong> that can read the small objects</li>
+              <li>a <strong>digital library</strong> that can store these scanned items</li>
+              <li><strong>texture panels</strong> where the family can see and touch how the physical objects turn into digital ones</li>
+              <li><strong>ambient sounds</strong> that the car gathers during nature rides and plays back</li>
+            </ul>
+            <p>This way the car can act as a true magnifying glass.</p>
+          </div>
+        </div>
+        <figure class="mb-media mb-system__video" data-reveal>
+          <video class="mb-loop" poster="assets/img/mercedes/system-poster.jpg" width="1110" height="624" muted loop playsinline preload="none" aria-label="Driving through a forest inside the Mercedes AURA interior">
+              <source src="assets/video/mercedes/system.webm" type="video/webm">
+              <source src="assets/video/mercedes/system.mp4" type="video/mp4">
+            </video>
+          <figcaption>AI-generated visualisation (Veo)</figcaption>
+        </figure>
+      </section>
+
+      <!-- ============ 12. THE FINAL PRODUCT ============ -->
+      <section class="mb-final" aria-labelledby="mb-final">
+        <div class="mb-wrap">
+          <h2 class="mb-label" id="mb-final">The final product</h2>
+        </div>
+        <div class="mb-intro" data-reveal>
+          <img src="assets/img/mercedes/aura-symbol.svg" alt="" aria-hidden="true" width="101" height="101">
+          <p class="mb-intro__kicker">Introducing</p>
+          <p class="mb-title">Mercedes AURA</p>
+        </div>
+
+        <div class="mb-form">
+          <img class="mb-form__shape" src="assets/img/mercedes/form-shape.png" alt="" aria-hidden="true" width="861" height="756" loading="lazy">
+          <div class="mb-form__text" data-reveal>
+            <h3 class="mb-label">The form</h3>
+            <p class="mb-text mb-text--airy">The three-winged device is inspired by the Mercedes-Benz logo, and by one of the main goals we wanted to reach: bring families together during rides.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 13. SCANNING A NEW OBJECT ============ -->
+      <section class="mb-wrap mb-feature" aria-labelledby="mb-scan">
+        <h2 class="mb-label" id="mb-scan">Scanning a new object</h2>
+        <div class="mb-feature__row">
+          <figure class="mb-media mb-feature__media mb-feature__media--scan" data-reveal>
+            <video class="mb-loop" poster="assets/img/mercedes/scan-poster.jpg" muted loop playsinline preload="none" aria-label="The scanner screen: a new object is scanned and its texture appears">
+              <source src="assets/video/mercedes/scanning.webm" type="video/webm">
+              <source src="assets/video/mercedes/scanning.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <p class="mb-text mb-text--airy" data-reveal>A portal scans in the object and brings it to the “other dimension”, the digital world. Then users can see the object texture in the scanned form, apply it to the car surfaces, and interact with it.</p>
+        </div>
+      </section>
+
+      <!-- ============ 14. RELIVING A MEMORY ============ -->
+      <section class="mb-wrap mb-feature" aria-labelledby="mb-memory">
+        <h2 class="mb-label" id="mb-memory">Reliving a memory</h2>
+        <div class="mb-feature__row mb-feature__row--flip">
+          <p class="mb-text mb-text--airy" data-reveal>The scanned memories won’t go to waste: they will live in the digital gallery, where users can revisit them anytime they like.</p>
+          <figure class="mb-media mb-feature__media mb-feature__media--gallery" data-reveal>
+            <video class="mb-loop" poster="assets/img/mercedes/gallery-poster.jpg" muted loop playsinline preload="none" aria-label="The digital gallery screen: Explore the nature, past journeys and new discovery">
+              <source src="assets/video/mercedes/gallery.webm" type="video/webm">
+              <source src="assets/video/mercedes/gallery.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ 15. PROTOTYPE ============ -->
+      <section class="mb-wrap mb-feature" aria-labelledby="mb-prototype">
+        <h2 class="mb-label" id="mb-prototype">Prototype</h2>
+        <div class="mb-feature__row mb-feature__row--wide">
+          <figure class="mb-media mb-feature__media" data-reveal>
+            <video poster="assets/img/mercedes/prototype-poster.jpg" width="1024" height="576" controls playsinline preload="none" aria-label="Prototype test: participants place a pinecone on the scanner and watch it become digital">
+              <source src="assets/video/mercedes/prototype.webm" type="video/webm">
+              <source src="assets/video/mercedes/prototype.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <p class="mb-text mb-text--airy" data-reveal>We were able to build a fully working prototype for the new item scanning flow, where the participants could witness live how their physical object becomes digital.</p>
+        </div>
+      </section>
+
+      <!-- ============ 16. REFLECTION + COLLABORATORS ============ -->
+      <section class="mb-reflection" aria-labelledby="mb-reflection">
+        <img class="mb-reflection__bg" src="assets/img/mercedes/reflection-bg.jpg" alt="" aria-hidden="true" width="1714" height="964" loading="lazy">
+        <div class="mb-reflection__inner">
+          <div data-reveal>
+            <h2 class="mb-label" id="mb-reflection">Reflection</h2>
+            <!-- ✏️ Draft text: edit it so it sounds like you -->
+            <div class="mb-text mb-reflection__text">
+              <p>This was my first project with a real client, and it taught me that designing for a brand like Mercedes-Benz means every idea has to fit a much bigger story. We had to balance a speculative concept with the brand’s language, and learn to explain our decisions clearly, not just show our visuals.</p>
+              <p>Working in a team of four, together with an automotive designer, showed me how closely the physical form and the digital experience depend on each other. The shape of the device came from the Mercedes star, and the screens had to follow that shape, not the other way around.</p>
+              <p>The most rewarding moment was the prototype test: watching people place a real object on the scanner and see it turn digital showed us that the idea works beyond the slides. If we continued, I would test the experience with families on a longer drive, and explore how the collected memories could be shared after the trip.</p>
+            </div>
+          </div>
+          <div class="mb-collab" data-reveal>
+            <h2 class="mb-label">Collaborators</h2>
+            <ul>
+              <li>Tamás Lajos Jakab</li>
+              <li>Vladimir Borovic</li>
+              <li>Uros Gavrilovic</li>
+              <li class="mb-collab__teacher">Teacher: Péter Molnár</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- NEXT / BACK: floats on the dark background -->
+        <nav class="mb-next mb-wrap" aria-label="More projects">
+          <a class="mb-next__back" href="index.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Back to home
+          </a>
+          <a class="mb-next__next" href="locus.html">
+            <span class="mb-next__small">Next project</span>
+            <span class="mb-next__title">Locus
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER (same as the home page) ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+        <p>&copy; 2026 Róza Parlagi</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="#top" aria-label="Back to top">Back to top &uarr;</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    /* Looping videos: only play while on screen (saves data), and stay still if the visitor prefers less motion */
+    (function () {
+      var vids = document.querySelectorAll('video.mb-loop');
+      var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (still || !('IntersectionObserver' in window)) {
+        vids.forEach(function (v) { v.controls = true; });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) { v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+          else { v.pause(); }
+        });
+      }, { threshold: 0.25 });
+      vids.forEach(function (v) { io.observe(v); });
+    })();
+  </script>
+</body>
+</html>

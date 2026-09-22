@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+
+# Large originals and working files (not part of the website)
+Photos-original/
+assets/videos-original/
+Exploration/

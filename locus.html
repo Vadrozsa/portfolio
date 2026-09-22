@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Locus — Róza Parlagi</title>
+  <meta name="description" content="Locus: a community-driven platform designed to ease menstrual poverty in Budapest. A UX / UI and service design case study by Róza Parlagi.">
+  <meta name="theme-color" content="#8323ca">
+
+  <!-- Social preview (replace the URL once you have your domain) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Locus — a case study by Róza Parlagi">
+  <meta property="og:description" content="A community-driven platform designed to ease menstrual poverty in Budapest while empowering women to become more conscious, informed, and connected.">
+  <meta property="og:url" content="https://parlagiroza.com/locus.html">
+  <!-- <meta property="og:image" content="https://YOUR-DOMAIN.com/assets/img/locus.jpg"> -->
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/locus.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    /* dark mode: use the visitor's saved choice, otherwise their system setting (runs before paint, so no flash) */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+</head>
+
+<body id="top" class="locus-page">
+  <div class="page">
+
+    <!-- ============ NAV (same as the home page) ============ -->
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Róza Parlagi — home">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#contact">Get in Touch</a></li>
+          <li class="nav__desktop-only"><a href="index.html#gallery">Get to Know Me</a></li>
+          <li><a href="Roza_Parlagi_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+              <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+              <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="lc">
+
+      <!-- ============ 1. HERO ============ -->
+      <section class="lc-hero" aria-labelledby="lc-title">
+        <p class="lc-hero__eyebrow">Case study</p>
+        <div class="lc-hero__head">
+          <img class="lc-hero__pin" src="assets/img/locus/hero-pin.svg" alt="" aria-hidden="true" width="526" height="668">
+          <h1 class="lc-hero__title" id="lc-title">Locus</h1>
+          <p class="lc-hero__lead">A community-driven platform designed to ease menstrual poverty in Budapest while empowering women to become more conscious, informed, and connected.</p>
+        </div>
+        <dl class="lc-meta">
+          <div><dt>Context</dt><dd>MOME University</dd></div>
+          <div><dt>My role</dt><dd>Solo · research, service &amp; UX/UI design</dd></div>
+          <div><dt>Timeline</dt><dd>One semester</dd></div>
+        </dl>
+      </section>
+
+      <!-- ============ 2. PROBLEM ============ -->
+      <section class="lc-problem lc-wrap lc-wrap--narrow" aria-labelledby="lc-problem">
+        <h2 class="lc-h2" id="lc-problem" data-reveal>Problem: Help exists in Budapest, but it's hard to find</h2>
+        <div class="lc-text" data-reveal>
+          <p>In my first semester at MOME University Interaction design we got the brief: “how might we make vulnerable groups in cities safer and more supported during crisis”. The first thing that popped into my mind was period poverty, because I just attended an event by A hang, an activist group in Hungary, and I was shocked by the things I heard there. I knew that period poverty is a thing and it is present in Hungary, but I would have never thought how shocking the numbers and statistics are. So I started doing my first semester work on this topic.</p>
+          <p>What started as a broad social problem narrowed, through research, into a much sharper one: support already exists across Budapest, but it's scattered, quiet, and nearly impossible to find in the moment it's needed.</p>
+          <p>Locus is the product of this research. A citywide network of support points, education, and community, built around one habit: turning occasional generosity into a consistent, findable system of care.</p>
+        </div>
+      </section>
+
+      <!-- ============ 3. RESEARCH ============ -->
+      <section class="lc-research" aria-labelledby="lc-research">
+        <div class="lc-research__bg" aria-hidden="true"><img src="assets/img/locus/research-map.jpg" alt="" width="2188" height="1258" loading="lazy"></div>
+
+        <div class="lc-wrap lc-research__intro">
+          <div data-reveal>
+            <h2 class="lc-label" id="lc-research">Research</h2>
+            <p class="lc-text">I wanted to understand the whole picture, so I started my research first worldwide, then Europe, and in the end I narrowed it down to Hungary. The bigger perspective helped me a lot to understand what the good practices are in other countries (like Scotland) and what Hungary is currently lacking to solve this problem.</p>
+          </div>
+          <div class="lc-stat" data-reveal>
+            <p class="lc-stat__big">Roughly 210,000 to 315,000 women and adolescents</p>
+            <p class="lc-stat__small">Affected by period poverty. That is 10-15% of Hungary’s menstruators</p>
+          </div>
+        </div>
+
+        <div class="lc-wrap lc-landscape">
+          <div class="lc-landscape__text" data-reveal>
+            <h3 class="lc-label">Landscape</h3>
+            <p class="lc-h3">Hungary isn't starting from zero.</p>
+            <div class="lc-text">
+              <p>Before designing anything, I mapped what already exists: annual awareness campaigns like #nemluxustáska and the MENSZ campaign, institutional programs such as the Red Cross's "Lányból Nővé" (Girl to Woman), and local district actions like Józsefváros's municipal initiatives. The support is real, the question was why so few people seemed to know it existed.</p>
+              <p>After the desktop research I decided to conduct some interviews so I can map out this problem and get a first-hand understanding of it. I defined 5 stakeholder groups, and the plan was to talk with at least one person from each stakeholder group.</p>
+              <p>I made 11 interviews across lived-experience participants, professionals, policymakers, researchers, and grassroots activists.</p>
+            </div>
+          </div>
+
+          <figure class="lc-chart" data-reveal>
+            <img class="lc-chart__donut" src="assets/img/locus/donut.svg" alt="Donut chart of the 11 interviewees by stakeholder group" width="396" height="396" loading="lazy">
+            <figcaption>
+              <ul class="lc-legend">
+                <li><span class="lc-dot lc-dot--1"></span>Lived-experience participants - 4 (36%)</li>
+                <li><span class="lc-dot lc-dot--2"></span>Professionals - 3 (27%)</li>
+                <li><span class="lc-dot lc-dot--3"></span>Policy makers and institutional actors - 1 (9%)</li>
+                <li><span class="lc-dot lc-dot--4"></span>Researchers - 1 (9%)</li>
+                <li><span class="lc-dot lc-dot--5"></span>Activists and grassroots initiatives - 2 (18%)</li>
+              </ul>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="lc-insight">
+          <figure class="lc-insight__notes" data-reveal>
+            <img src="assets/img/locus/interview-notes.jpg" width="931" height="589" alt="Quotes from the interviews, e.g. “people are actually very generous and like to donate, they just don't have the right platform and system for it”" loading="lazy">
+          </figure>
+          <div class="lc-insight__text" data-reveal>
+            <p class="lc-text">After completing and analyzing the interviews I came to the conclusion:</p>
+            <p class="lc-h3 lc-h3--big">Help exists in Hungary but it’s invisible.</p>
+            <p class="lc-text">Meaning, people in need often don’t know where to seek help, or that there is help somewhere for them at all. Also, current support is often seasonal (e.g., #nemluxustáska campaigns around holidays) or limited to specific schools (Red Cross), leaving women without coverage during other months.</p>
+          </div>
+        </div>
+
+        <div class="lc-wrap lc-hmw">
+          <p class="lc-hmw__intro lc-text" data-reveal>Now that I knew what the actual root problem was, I started asking questions:</p>
+          <ul class="lc-hmw__list">
+            <li class="lc-bubble lc-bubble--1" data-reveal>HMW turn scattered period poverty support into a coordinated citywide network?</li>
+            <li class="lc-bubble lc-bubble--2" data-reveal style="--d:.1s">HMW make menstrual help easily accessible and findable in Budapest?</li>
+            <li class="lc-bubble lc-bubble--3" data-reveal style="--d:.2s">HMW turn occasional donations into a consistent monthly habit of care?</li>
+          </ul>
+          <!-- floating question marks -->
+          <div class="lc-qs lc-qs--a" aria-hidden="true"><img src="assets/img/locus/qmarks.svg" alt="" width="377" height="237" loading="lazy"></div>
+          <div class="lc-qs lc-qs--b" aria-hidden="true"><img src="assets/img/locus/qmarks.svg" alt="" width="377" height="237" loading="lazy"></div>
+          <p class="lc-goal lc-text" data-reveal>I also stated my goal: <u>Turn scattered period poverty support into a coordinated citywide network.</u></p>
+        </div>
+      </section>
+
+      <!-- ============ 4. SOLUTION / PROCESS ============ -->
+      <section class="lc-solution" aria-labelledby="lc-solution">
+        <div class="lc-wrap">
+          <h2 class="lc-label" id="lc-solution">Solution</h2>
+          <p class="lc-text">That’s how I decided to make:</p>
+        </div>
+
+        <div class="lc-statement" data-reveal>
+          <img class="lc-statement__pin" src="assets/img/locus/solution-pin.svg" alt="" aria-hidden="true" width="178" height="226" loading="lazy">
+          <p>A community-driven platform designed to ease menstrual poverty in Budapest while empowering women to become more conscious, informed, and connected.</p>
+        </div>
+
+        <div class="lc-wrap lc-two">
+          <div data-reveal>
+            <p class="lc-text">Because I wanted to design a permanent solution, I started doing research on how to make a living community.</p>
+            <ul class="lc-stickies">
+              <li><span>Foundation:</span> Trust and Safety</li>
+              <li><span>Shared Purpose:</span> Education and Empowerment</li>
+              <li><span>Activation:</span> Participation and Visibility</li>
+            </ul>
+          </div>
+          <div data-reveal style="--d:.1s">
+            <p class="lc-text">Based on my findings I started planning the features to enable this community to work well.</p>
+            <ul class="lc-features">
+              <li><img src="assets/img/locus/icon-find.svg" alt="" width="38" height="46">Find</li>
+              <li><img src="assets/img/locus/icon-learn.svg" alt="" width="57" height="57">Learn</li>
+              <li><img src="assets/img/locus/icon-community.svg" alt="" width="47" height="43">Community</li>
+              <li><img src="assets/img/locus/icon-contribute.svg" alt="" width="49" height="49">Contribute</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lc-wrap lc-process">
+          <div class="lc-process__left">
+            <p class="lc-text" data-reveal>Made the information architecture and activity diagrams and started doing the wireframes.</p>
+            <img class="lc-process__arrows" src="assets/img/locus/arrows-wireframes.svg" alt="" aria-hidden="true" width="507" height="207" loading="lazy">
+            <figure class="lc-wire lc-wire--lo" data-reveal>
+              <img src="assets/img/locus/wireframe-lo-crop.png" width="735" height="710" alt="Low-fidelity wireframes of the Support Points map and the Need help? screen" loading="lazy">
+            </figure>
+            <figure class="lc-wire lc-wire--hi" data-reveal>
+              <img src="assets/img/locus/wireframe-hi-crop.png" width="722" height="710" alt="Mid-fidelity versions of the same two screens in the Locus purple" loading="lazy">
+            </figure>
+          </div>
+          <div class="lc-process__right">
+            <figure class="lc-diagram" data-reveal>
+              <a href="assets/img/locus/activity-diagram.png" target="_blank" rel="noopener" title="Open full size"><img src="assets/img/locus/activity-diagram.png" width="1430" height="926" alt="Activity diagram: the flow between a person in need, the app and a support point" loading="lazy"></a>
+            </figure>
+            <figure class="lc-diagram" data-reveal>
+              <a href="assets/img/locus/ia-diagram.png" target="_blank" rel="noopener" title="Open full size"><img src="assets/img/locus/ia-diagram.png" width="1512" height="866" alt="Information architecture: Find, Connect, Learn, Contribute and Profile under the home screen" loading="lazy"></a>
+            </figure>
+          </div>
+        </div>
+
+        <div class="lc-wrap">
+          <h2 class="lc-label lc-final-label">The final product</h2>
+        </div>
+      </section>
+
+      <!-- ============ 5. FINAL DESIGN ============ -->
+      <section class="lc-final" aria-label="The final product">
+        <img class="lc-final__logo" src="assets/img/locus/locus-logo.svg" alt="Locus — Help is around the corner" width="367" height="192" data-reveal>
+
+        <div class="lc-wrap lc-onboarding" data-reveal>
+          <p class="lc-text">Onboarding</p>
+          <div class="lc-onboarding__scroll" data-scroller>
+            <img src="assets/img/locus/onboarding.png" width="2782" height="898" alt="Six onboarding screens: Welcome to Locus, Help is around the corner, Learn about yourself, Find your safe space, Be the support system, Turn kindness into impact" loading="lazy">
+          </div>
+          <img class="lc-onboarding__arrows" src="assets/img/locus/onboarding-arrows.svg" width="1026" height="84" alt="" aria-hidden="true" loading="lazy">
+        </div>
+
+        <div class="lc-wrap lc-screens">
+          <article class="lc-screen" data-reveal>
+            <img class="lc-screen__phone" src="assets/img/locus/phone-find.png" alt="Support Points screen: a map of nearby support points in Budapest" width="487" height="981" loading="lazy">
+            <div class="lc-screen__text">
+              <img class="lc-screen__icon" src="assets/img/locus/icon-find.svg" alt="" width="38" height="46" style="filter: brightness(0) invert(1)">
+              <h3>Find your safe space</h3>
+              <p>At its core, the app bridges the gap between those in need and a network of certified Support Points, where people in need can access the necessary products and help.</p>
+              <p>We are building more than a digital tool; we are constructing a permanent infrastructure of care.</p>
+            </div>
+            <img class="lc-screen__curve" src="assets/img/locus/curve-1.svg" width="83" height="259" alt="" aria-hidden="true">
+          </article>
+
+          <article class="lc-screen lc-screen--flip" data-reveal>
+            <img class="lc-screen__phone" src="assets/img/locus/phone-learn.png" alt="Learn Hub screen: daily myth buster and articles" width="487" height="981" loading="lazy">
+            <div class="lc-screen__text">
+              <img class="lc-screen__icon" src="assets/img/locus/f-learn.svg" alt="" width="51" height="39">
+              <h3>Learn about yourself</h3>
+              <p>A lot of menstruators still don’t know a lot of things about their cycle. In the Learn Hub, they can access basic information and articles from healthcare professionals.</p>
+            </div>
+            <img class="lc-screen__curve" src="assets/img/locus/curve-2.svg" width="169" height="183" alt="" aria-hidden="true">
+          </article>
+
+          <article class="lc-screen" data-reveal>
+            <img class="lc-screen__phone" src="assets/img/locus/phone-community.png" alt="Community screen: upcoming events and trending conversations" width="487" height="981" loading="lazy">
+            <div class="lc-screen__text">
+              <img class="lc-screen__icon" src="assets/img/locus/f-community.svg" alt="" width="49" height="49">
+              <h3>Connect with others</h3>
+              <p>There is no better way to keep an initiative alive than forming a strong community around it. Here people can see events related to cycle health, discuss topics, and ask for recommendations or help.</p>
+            </div>
+            <img class="lc-screen__curve" src="assets/img/locus/curve-3.svg" width="127" height="242" alt="" aria-hidden="true">
+          </article>
+
+          <article class="lc-screen lc-screen--flip" data-reveal>
+            <img class="lc-screen__phone" src="assets/img/locus/phone-contribute.png" alt="Contribute screen: donate products, donate money or volunteer" width="487" height="981" loading="lazy">
+            <div class="lc-screen__text">
+              <img class="lc-screen__icon" src="assets/img/locus/f-contribute.svg" alt="" width="46" height="51">
+              <h3>Contribute to the community</h3>
+              <p>People will be the most engaged if they feel that they could actively help and contribute, so there is an option to support the community with donations and volunteering.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ 6. IMPACT ============ -->
+      <section class="lc-impact" aria-labelledby="lc-impact">
+        <div class="lc-wrap lc-impact__inner">
+          <img class="lc-impact__phone" src="assets/img/locus/phone-home.png" alt="Home screen: Hello, Manna! with the December mission, 40% raised" width="824" height="1223" loading="lazy" data-reveal>
+          <div class="lc-impact__text" data-reveal>
+            <h2 class="lc-label" id="lc-impact">Impact</h2>
+            <div class="lc-text lc-impact__copy">
+              <p>Locus is still a concept. It was a one-semester university project and hasn't launched, so I can't show usage numbers. What I can show is how the project changed my thinking.</p>
+              <p>The biggest shift came from the interviews. I started out wanting to design more help, but the people I talked to showed me that the help already exists. What's missing is the link between that help and the people who need it. That turned Locus from a donation app into a network that makes existing support visible and easy to find.</p>
+              <p>Talking to 11 people from 5 different groups taught me more than any desk research. Designing for a sensitive topic also taught me to think about trust and privacy before features.</p>
+              <p>If I continue the project, my next steps are to test the prototype with people with lived experience, ask a few organisations whether they would join as Support Points, and work out how the network could keep running long term.</p>
+            </div>
+          </div>
+        </div>
+        <img class="lc-impact__sticker" src="assets/img/locus/sticker.png" alt="Round Locus sticker: Help is around the corner" width="896" height="672" loading="lazy" data-reveal>
+        <!-- NEXT / BACK: floats on the purple, no background of its own -->
+        <nav class="lc-next lc-wrap" aria-label="More projects">
+          <a class="lc-next__back" href="index.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Back to home
+          </a>
+          <a class="lc-next__next" href="mercedes-aura.html">
+            <span class="lc-next__small">Next project</span>
+            <span class="lc-next__title">Mercedes AURA
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        </nav>
+      </section>
+
+    </main>
+
+    <!-- ============ FOOTER (same as the home page) ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+        <p>&copy; 2026 Róza Parlagi</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="#top" aria-label="Back to top">Back to top &uarr;</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

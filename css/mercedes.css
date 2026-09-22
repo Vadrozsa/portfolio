@@ -1,0 +1,308 @@
+/* ==========================================================================
+   Mercedes AURA case study (mercedes-aura.html only). Loaded after style.css.
+   Figma frame is 1728px wide, dark theme; sizes scale fluidly down to phones.
+   ========================================================================== */
+
+/* "Mercedes AURA" title font from the Figma (PP Cirka Regular). With a web licence,
+   put the file at assets/fonts/pp-cirka-regular.woff2 — until then a serif stands in. */
+@font-face {
+  font-family: "PP Cirka"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../assets/fonts/pp-cirka-regular.woff2") format("woff2");
+}
+
+.mb-page {
+  --mb-bg: #0c0d0c;
+  --mb-ink: #fff;
+  --mb-soft: rgba(255, 255, 255, .72);
+  --mb-green: rgba(95, 147, 82, .5);
+  --font-cirka: "PP Cirka", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+
+  --mb-body: clamp(15px, 1.16vw, 20px);     /* 20px */
+  --mb-label: clamp(22px, 2.08vw, 36px);    /* 36px */
+  --mb-lead: clamp(19px, 1.85vw, 32px);     /* 32px */
+  --mb-title: clamp(44px, 3.82vw, 66px);    /* 66px */
+  --mb-gap: clamp(72px, 8.1vw, 140px);      /* space between sections */
+
+  background: var(--mb-bg);
+}
+html:has(.mb-page) { scroll-snap-type: none; }   /* this page scrolls normally */
+
+.mb { position: relative; z-index: 1; overflow-x: clip; color: var(--mb-ink); background: var(--mb-bg); }
+.mb figure { margin: 0; }
+.mb img, .mb video { display: block; max-width: 100%; }
+
+.mb-wrap   { position: relative; width: min(1428px, 100% - 2 * var(--px)); margin-inline: auto; }
+.mb-narrow { position: relative; width: min(928px, 100% - 2 * var(--px)); margin-inline: auto; }
+.mb-block  { margin-top: var(--mb-gap); }
+
+.mb-label {
+  margin: 0 0 .6em;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--mb-label);
+  line-height: 1.3;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  color: var(--mb-ink);
+}
+.mb-label--bold { font-weight: 700; }
+.mb-lead { margin-bottom: .8em; font-size: var(--mb-lead); line-height: 1.4; }
+.mb-text { font-size: var(--mb-body); line-height: 1.5; letter-spacing: -.01em; }
+.mb-text p + p { margin-top: 1.2em; }
+.mb-text--airy { line-height: 2.1; }
+.mb-title { font-family: var(--font-cirka); font-weight: 400; font-size: var(--mb-title); line-height: 1.1; }
+
+/* ---------- 1. Hero ---------- */
+.mb-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100svh - var(--nav-h));
+  padding: clamp(40px, 5.8vw, 100px) var(--px) clamp(40px, 4vw, 70px);
+  text-align: center;
+  background: #161616 url("../assets/img/mercedes/hero-bg.jpg") center / cover no-repeat;
+}
+.mb-hero__logo { width: clamp(180px, 15.9vw, 275px); height: auto; }
+.mb-hero__head { margin: auto 0; padding-block: clamp(48px, 6vw, 100px); }
+.mb-hero__sub { margin-top: 20px; font-size: clamp(20px, 2.08vw, 36px); }
+.mb-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 3.7vw, 64px);
+  width: min(1405px, 100%);
+  padding-top: clamp(32px, 4.3vw, 74px);
+  border-top: 1px solid rgba(255, 255, 255, .35);
+  font-size: var(--mb-body);
+}
+.mb-meta dt { font-weight: 700; letter-spacing: -.02em; }
+.mb-meta dd { margin-top: clamp(12px, 1.74vw, 30px); line-height: 1.4; }
+
+/* ---------- 2. Overview ---------- */
+.mb-overview { position: relative; padding-top: var(--mb-gap); }
+.mb-overview__stones {
+  position: absolute;
+  right: -2%;
+  top: calc(var(--mb-gap) + 40%);
+  width: clamp(220px, 26vw, 450px);
+  height: auto;
+  pointer-events: none;
+}
+
+/* ---------- 3. Deliverables / approach ---------- */
+.mb-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 500px));
+  gap: clamp(32px, 11.6vw, 200px);
+  margin-top: var(--mb-gap);
+}
+.mb-facts h3 { margin-bottom: .8em; font-weight: 700; font-size: clamp(22px, 1.85vw, 32px); letter-spacing: -.02em; }
+.mb-facts p { font-size: clamp(17px, 1.39vw, 24px); line-height: 1.4; }
+
+/* ---------- 4. Problem ---------- */
+.mb-problem {
+  display: grid;
+  grid-template-columns: minmax(0, 883fr) minmax(0, 785fr);
+  gap: clamp(24px, 3.5vw, 60px);
+  align-items: center;
+  margin-top: var(--mb-gap);
+  padding-left: var(--px);
+}
+.mb-problem__text { max-width: 583px; }
+.mb-problem__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 785 / 434;
+  object-fit: cover;
+  border-radius: clamp(24px, 2.9vw, 50px) 0 0 clamp(24px, 2.9vw, 50px);
+}
+
+/* ---------- 5. Band ---------- */
+.mb-band { position: relative; margin-top: var(--mb-gap); display: grid; place-items: center; }
+.mb-band img { width: 100%; height: clamp(180px, 19.8vw, 343px); object-fit: cover; grid-area: 1 / 1; }
+.mb-band p {
+  grid-area: 1 / 1;
+  z-index: 1;
+  padding: 0 var(--px);
+  font-weight: 700;
+  font-size: var(--mb-label);
+  text-align: center;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, .6);
+}
+
+/* ---------- 7. Quote ---------- */
+.mb-quote { position: relative; margin-top: var(--mb-gap); display: grid; }
+.mb-quote__imgs { grid-area: 1 / 1; display: grid; grid-template-columns: 488fr 712fr 531fr; height: clamp(320px, 36.2vw, 626px); }
+.mb-quote__imgs img { width: 100%; height: 100%; object-fit: cover; }
+.mb-quote::after { content: ""; grid-area: 1 / 1; background: rgba(0, 0, 0, .25); }
+.mb-quote blockquote { text-shadow: 0 2px 16px rgba(0, 0, 0, .5); }
+.mb-quote blockquote {
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+  width: min(664px, 100% - 2 * var(--px));
+  margin: 0;
+  text-align: center;
+  font-size: clamp(18px, 1.85vw, 32px);
+  line-height: 1.55;
+}
+.mb-quote cite { display: block; margin-top: .4em; font-style: normal; }
+
+/* ---------- 8. Concept ---------- */
+.mb-concept {
+  position: relative;
+  padding: clamp(90px, 8vw, 138px) 0 clamp(160px, 20vw, 340px);
+  background:
+    linear-gradient(to bottom, rgba(12, 13, 12, 0) 70%, var(--mb-bg)),
+    url("../assets/img/mercedes/concept-bg.jpg") center top / cover no-repeat;
+}
+.mb-concept__hand {
+  position: absolute;
+  left: -10%;
+  top: clamp(40px, 5.8vw, 100px);
+  width: clamp(200px, 37.5vw, 648px);
+  height: auto;
+  pointer-events: none;
+}
+
+/* ---------- 9. User journey ---------- */
+.mb-journey { position: relative; margin-top: clamp(24px, 3vw, 48px); }
+.mb-journey__path { position: relative; aspect-ratio: 1428 / 938; margin-top: clamp(40px, 4vw, 70px); }
+.mb-journey__line { position: absolute; left: 8.1%; top: 0; width: 78.4%; height: auto; opacity: .8; }
+.mb-journey__img {
+  position: absolute;
+  width: 19.05%;
+  height: auto;
+  aspect-ratio: 272 / 435;
+  object-fit: cover;
+  border-radius: clamp(16px, 1.74vw, 30px);
+}
+.mb-journey__img--1 { left: 0;       top: 13%; }
+.mb-journey__img--2 { left: 27.2%;   top: 31.3%; }
+.mb-journey__img--3 { left: 54.5%;   top: 13%; }
+.mb-journey__img--4 { left: 80.95%;  top: 31.3%; }
+
+/* ---------- 10. Designing for phigital ---------- */
+.mb-phigital {
+  margin-top: calc(var(--mb-gap) * .5);
+  padding: var(--mb-gap) 0;
+  background:
+    linear-gradient(to bottom, var(--mb-bg), rgba(12, 13, 12, 0) 18%, rgba(12, 13, 12, 0) 80%, var(--mb-bg)),
+    url("../assets/img/mercedes/phigital-bg.jpg") center top / cover no-repeat;
+}
+.mb-phigital__grid { display: grid; grid-template-columns: minmax(0, 859fr) minmax(0, 504fr); gap: clamp(24px, 3.8vw, 65px); align-items: start; }
+.mb-phigital__left .mb-text { max-width: 44em; }
+.mb-photo { width: 100%; height: auto; border-radius: 20px; opacity: .92; }
+.mb-phigital__left .mb-photo { width: min(657px, 100%); margin-top: clamp(20px, 2vw, 32px); }
+
+/* ---------- 11. Building the system ---------- */
+.mb-system { margin-top: var(--mb-gap); }
+.mb-system__text { max-width: 980px; }
+.mb-list { margin: .3em 0 .3em; padding-left: clamp(24px, 6.9vw, 120px); list-style: disc; }
+.mb-list strong { font-weight: 700; }
+.mb-media video { width: 100%; height: auto; background: #000; }
+.mb-system__video { width: min(1110px, 100%); margin: clamp(32px, 3vw, 56px) auto 0; }
+.mb-media figcaption { margin-top: 10px; font-size: 13px; color: var(--mb-soft); text-align: right; }
+
+/* ---------- 12. Final product ---------- */
+.mb-final { margin-top: var(--mb-gap); }
+.mb-intro { display: flex; flex-direction: column; align-items: center; margin-top: clamp(48px, 5vw, 90px); text-align: center; }
+.mb-intro img { width: clamp(72px, 5.8vw, 101px); height: auto; margin-bottom: 23px; }
+.mb-intro__kicker { font-size: clamp(16px, 1.39vw, 24px); text-transform: uppercase; line-height: 2; }
+
+.mb-form { position: relative; display: grid; place-items: center; width: min(863px, 100% - 2 * var(--px)); margin: var(--mb-gap) auto 0; }
+.mb-form__shape { grid-area: 1 / 1; width: 100%; height: auto; }
+.mb-form__text { grid-area: 1 / 1; align-self: start; margin-top: 29%; max-width: 626px; padding: 0 16px; text-align: center; }
+.mb-form__text .mb-label { margin-bottom: .8em; }
+
+/* ---------- 13–15. Feature rows (scanning, memory, prototype) ---------- */
+.mb-feature { margin-top: var(--mb-gap); }
+.mb-feature__row { display: grid; grid-template-columns: minmax(0, 672fr) minmax(0, 706fr); gap: clamp(24px, 2.9vw, 50px); align-items: start; }
+.mb-feature__row--flip { grid-template-columns: minmax(0, 792fr) minmax(0, 502fr); gap: clamp(24px, 7.5vw, 130px); }
+.mb-feature__row--wide { grid-template-columns: minmax(0, 1024fr) minmax(0, 354fr); }
+.mb-feature__media--scan video { aspect-ratio: 672 / 594; object-fit: cover; }
+.mb-feature__media--gallery video {
+  aspect-ratio: 502 / 663;
+  object-fit: cover;
+  border: 4px solid var(--mb-green);
+  border-radius: 25px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  opacity: .9;
+}
+
+/* ---------- 16. Reflection + collaborators + next ---------- */
+.mb-reflection { position: relative; margin-top: var(--mb-gap); padding-top: clamp(80px, 8.2vw, 142px); overflow: hidden; }
+.mb-reflection__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  pointer-events: none;
+}
+.mb-reflection::before {        /* dark at the top, the photo shows through lower down */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--mb-bg) 2%, rgba(12, 13, 12, .78) 45%, rgba(0, 0, 0, .55));
+  z-index: 1;
+}
+.mb-reflection > :not(.mb-reflection__bg) { position: relative; z-index: 2; }
+.mb-reflection__inner { width: min(864px, 100% - 2 * var(--px)); margin-inline: auto; text-align: center; }
+.mb-reflection__text { max-width: 44em; margin-inline: auto; text-align: center; line-height: 1.8; }
+.mb-collab { margin-top: clamp(56px, 6vw, 100px); }
+.mb-collab ul { margin: 0; padding: 0; list-style: none; font-size: var(--mb-body); line-height: 2.5; text-transform: uppercase; }
+.mb-collab__teacher { text-transform: none; color: var(--mb-soft); }
+
+.mb-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: clamp(72px, 8vw, 140px) clamp(32px, 3vw, 48px);
+}
+.mb-next a { color: #f8f5f5; text-decoration: none; transition: color .2s; }
+.mb-next a:hover { color: #b9d8a9; }
+.mb-next svg { width: 20px; height: 20px; flex: none; transition: transform .2s; }
+.mb-next__back { display: inline-flex; align-items: center; gap: 10px; font-size: var(--mb-body); }
+.mb-next__back:hover svg { transform: translateX(-4px); }
+.mb-next__next { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; text-align: right; }
+.mb-next__small { font-size: 14px; color: var(--mb-soft); text-transform: uppercase; letter-spacing: .04em; }
+.mb-next__title { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: clamp(24px, 2.1vw, 36px); line-height: 1.1; }
+.mb-next__next:hover svg { transform: translateX(4px); }
+
+/* ---------- Tablets ---------- */
+@media (max-width: 1000px) {
+  .mb-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
+  .mb-problem { grid-template-columns: 1fr; padding-left: 0; }
+  .mb-problem__text { width: min(928px, 100% - 2 * var(--px)); max-width: none; margin-inline: auto; }
+  .mb-problem__img { width: calc(100% - var(--px)); margin-left: auto; }
+  .mb-phigital__grid { grid-template-columns: 1fr; }
+  .mb-phigital__right { width: min(504px, 100%); }
+  .mb-feature__row, .mb-feature__row--flip, .mb-feature__row--wide { grid-template-columns: 1fr; }
+  .mb-feature__row--flip .mb-feature__media { order: 2; width: min(420px, 100%); }
+  .mb-overview__stones { position: static; width: min(300px, 60%); margin: 24px 0 0 auto; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 720px) {
+  .mb-page { --mb-gap: 72px; }
+  .mb-hero { min-height: auto; }
+  .mb-meta { grid-template-columns: 1fr; text-align: center; }
+  .mb-facts { grid-template-columns: 1fr; }
+  .mb-text--airy { line-height: 1.8; }
+  .mb-quote__imgs { grid-template-columns: 1fr 1fr; height: 360px; }
+  .mb-quote__imgs img:first-child { display: none; }
+  .mb-concept { padding-bottom: 120px; }
+  .mb-concept__hand { position: static; width: 70%; margin: 0 0 16px -10%; }
+  .mb-journey__path { aspect-ratio: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .mb-journey__line { display: none; }
+  .mb-journey__img { position: static; width: 100%; }
+  .mb-journey__img--2, .mb-journey__img--4 { margin-top: 32px; }
+  .mb-form__text { margin-top: 20%; }
+  .mb-form__text .mb-text { line-height: 1.6; font-size: 14px; }
+  .mb-next { flex-direction: column-reverse; align-items: stretch; }
+  .mb-next__next { align-items: flex-start; text-align: left; }
+}

@@ -1,0 +1,926 @@
+/* ==========================================================================
+   Róza Parlagi — portfolio
+   Designed at 1440px wide; everything scales fluidly down to phones.
+   Sections:  1 Tokens · 2 Base · 3 Nav · 4 Hero · 5 Projects · 6 About
+              7 Contact · 8 Gallery · 9 Case-study pages · 10 Motion
+   ========================================================================== */
+
+/* ---------- Fonts (self-hosted, latin + latin-ext so ő / ű work) ---------- */
+@font-face {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/anton-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/anton-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/space-mono-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/space-mono-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/space-mono-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/space-mono-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- 1. Tokens ---------- */
+:root {
+  --burgundy: #7a3b3b;
+  --burgundy-dark: #642f2f;
+  --ink: #262626;
+  --black: #000;
+  --muted: #575757;
+  --pill: #ecbebe;
+  --frame: #f8f5f5;
+  --white: #fff;
+
+  --font-display: "Anton", "Impact", sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* horizontal page margin: 150px at 1440, shrinks to 20px on phones */
+  --px: clamp(20px, 10.4vw, 150px);
+
+  /* type scale (values are the 1440px design sizes) */
+  --fs-body: clamp(16px, 1.67vw, 24px);      /* 24px */
+  --fs-small: 16px;
+  --fs-label: clamp(16px, 1.67vw, 24px);     /* 24px section labels */
+  --fs-hero: clamp(84px, 8.75vw, 126px);     /* ROZA PARLAGI */
+  --fs-h2: clamp(36px, 3.33vw, 48px);        /* Curious by default */
+  --fs-btn: clamp(15px, 1.39vw, 20px);       /* 20px */
+
+  --nav-h: clamp(44px, 3.33vw, 48px);
+  --radius-card: 20px;
+  --radius-btn: clamp(14px, 1.5vw, 22px);
+
+  --blob: clamp(520px, 72.9vw, 1050px);      /* size of the blurred rings */
+}
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--nav-h);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, figure, dl, dd { margin: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--burgundy);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page { position: relative; overflow-x: clip; }   /* rings bleed off-canvas; clip (not hidden) keeps the nav sticky */
+
+/* the blurred burgundy rings */
+.blob {
+  position: absolute;
+  width: var(--blob);
+  height: var(--blob);
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.blob--hero {
+  top: 0;
+  right: calc(var(--blob) * -0.4667);
+}
+.blob--contact {
+  top: calc(var(--blob) * -0.2333);
+  left: calc(var(--blob) * -0.5114);
+}
+
+.label {
+  font-size: var(--fs-label);
+  line-height: 1.5;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* burgundy button (hero + contact) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  height: clamp(60px, 6.25vw, 90px);
+  padding: 0 clamp(30px, 4.17vw, 60px);
+  background: var(--burgundy);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--fs-btn);
+  text-decoration: none;
+  border-radius: var(--radius-btn);
+  transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover { background: var(--burgundy-dark); transform: translateY(-2px); box-shadow: 0 10px 24px -10px rgba(122, 59, 59, .55); }
+.btn:active { transform: translateY(0); }
+.btn svg { width: 1.1em; height: 1.1em; flex: none; transition: transform .2s ease; }
+.btn:hover svg { transform: translateY(2px); }
+
+/* ---------- 3. Nav ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-h);
+  padding: 0 clamp(16px, 2.8vw, 40px) 0 clamp(16px, 1.94vw, 28px);
+  background: rgba(255, 255, 255, .88);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--burgundy);
+}
+.nav__logo { display: block; line-height: 0; border-radius: 8px; }
+.nav__logo img { width: clamp(26px, 2.1vw, 30px); height: auto; transition: transform .3s ease; }
+.nav__logo:hover img { transform: rotate(-8deg) scale(1.05); }
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3.9vw, 56px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__links a {
+  position: relative;
+  font-size: clamp(12px, .97vw, 14px);
+  line-height: 1.5;
+  color: var(--black);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 3px 0;
+}
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--burgundy);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.nav__links a:hover::after,
+.nav__links a[aria-current="page"]::after { transform: scaleX(1); }
+
+@media (max-width: 720px) {
+  .nav__links { gap: 14px; }
+  .nav__links a { font-size: 12px; }
+}
+@media (max-width: 380px) {
+  .nav__links { gap: 10px; }
+  .nav__links a { font-size: 11px; }
+}
+
+/* ---------- 4. Hero ---------- */
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: clamp(40px, 5.14vw, 74px) var(--px) 0;
+}
+.hero__eyebrow {
+  font-size: var(--fs-label);
+  line-height: 1.5;
+  color: var(--muted);
+}
+.hero__title {
+  margin-top: clamp(6px, 1.8vw, 26px);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-hero);
+  line-height: .95;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.hero__title span { display: block; }
+.hero__title .hero__first { color: var(--burgundy); }
+
+.hero__intro {
+  max-width: 52ch;
+  margin-top: clamp(36px, 6.4vw, 92px);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.hero .btn { margin-top: clamp(24px, 2.64vw, 38px); }
+
+/* ---------- 5. Projects ---------- */
+.projects {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(80px, 10.9vw, 157px);
+}
+.projects__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 var(--px);
+  margin-bottom: clamp(14px, 2.5vw, 36px);
+}
+.scroller-nav { position: absolute; right: var(--px); top: 50%; transform: translateY(-50%); display: flex; gap: 10px; }
+.scroller-nav button {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  padding: 0;
+  background: var(--white);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .2s, color .2s, opacity .2s, border-color .2s;
+}
+.scroller-nav button:hover:not(:disabled) { background: var(--burgundy); border-color: var(--burgundy); color: var(--white); }
+.scroller-nav button:disabled { opacity: .3; cursor: default; }
+.scroller-nav svg { width: 18px; height: 18px; }
+@media (hover: none) { .scroller-nav { display: none; } }   /* touch devices just swipe */
+
+/* horizontal rows (project cards + photos) run to the right edge of the window */
+.scroller {
+  display: flex;
+  gap: clamp(14px, 1.94vw, 28px);
+  padding: 4px var(--px) 24px;   /* room for hover lift + shadow */
+  margin-bottom: -20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--px);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroller::-webkit-scrollbar { display: none; }
+.scroller.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.scroller.is-dragging a { pointer-events: none; }
+
+.card {
+  flex: 0 0 clamp(230px, 22.2vw, 320px);
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--muted);
+  border-radius: 16px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  scroll-snap-align: start;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--burgundy);
+  box-shadow: 0 22px 40px -22px rgba(122, 59, 59, .45);
+}
+.card__media { aspect-ratio: 425 / 394; overflow: hidden; background: var(--frame); }
+.card__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  transition: transform .6s ease;
+}
+.card:hover .card__media img { transform: scale(1.04); }
+.card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px 18px 18px;
+}
+.card__title { font-size: 18px; font-weight: 400; line-height: 24px; }
+.card__desc  { margin-bottom: 18px; font-size: 13px; line-height: 20px; }
+.tag {
+  display: inline-block;
+  margin: auto 0 0 0;         /* pushes the tag to the bottom so all cards line up */
+  padding: 8px 18px;
+  background: var(--pill);
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 999px;
+}
+
+/* ---------- 6. About ---------- */
+.about {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--px);
+  margin-top: clamp(96px, 19.9vw, 287px);
+}
+.about__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: 1.5;
+  color: var(--black);
+}
+.about__text { max-width: 36.5em; margin-top: 10px; font-size: var(--fs-small); line-height: 24px; }
+.about__text p + p { margin-top: 12px; }
+
+/* ---------- 7. Contact ---------- */
+.contact {
+  position: relative;          /* no z-index: lets the ring sit behind About/Gallery text */
+  margin-top: clamp(80px, 12vw, 172px);
+  padding: 0 var(--px);
+  text-align: center;
+}
+.contact .label { display: block; }
+.contact__text {
+  max-width: 58ch;
+  margin: clamp(20px, 3vw, 43px) auto 0;
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.contact .btn { margin-top: clamp(24px, 2.9vw, 42px); max-width: 100%; font-size: clamp(13px, 1.39vw, 20px); }
+.contact__linkedin {
+  display: inline-block;
+  margin-top: clamp(20px, 2.9vw, 42px);
+  font-size: var(--fs-label);
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.contact__linkedin:hover { color: var(--burgundy); border-color: var(--burgundy); }
+.contact__inner { position: relative; z-index: 1; }
+
+/* ---------- 8. Gallery ---------- */
+.gallery {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(80px, 15vw, 218px);
+  padding-bottom: clamp(48px, 6.6vw, 95px);
+}
+.gallery__title {
+  padding: 0 var(--px);
+  margin-bottom: clamp(12px, 1.4vw, 20px);
+  font-family: var(--font-sans);
+  font-size: clamp(22px, 2.22vw, 32px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--black);
+}
+.frame {
+  flex: 0 0 clamp(200px, 21.2vw, 305px);
+  aspect-ratio: 305 / 430;
+  overflow: hidden;
+  background: var(--frame);
+  border: 1px solid var(--ink);
+  border-radius: 24px;
+  scroll-snap-align: start;
+}
+.frame img { width: 100%; height: 100%; object-fit: cover; -webkit-user-drag: none; }
+
+/* ---------- 9. Case-study pages ---------- */
+.cs { position: relative; z-index: 1; padding: clamp(32px, 4.5vw, 64px) var(--px) clamp(64px, 8vw, 120px); }
+.cs__back {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: var(--fs-small);
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .2s;
+}
+.cs__back:hover { color: var(--burgundy); }
+.cs__back svg { width: 18px; height: 18px; transition: transform .2s; }
+.cs__back:hover svg { transform: translateX(-3px); }
+.cs__eyebrow { margin-top: clamp(32px, 4vw, 56px); font-size: var(--fs-label); color: var(--muted); }
+.cs__title {
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(64px, 8.75vw, 126px);
+  line-height: .95;
+  text-transform: uppercase;
+  color: var(--burgundy);
+}
+.cs__lead { max-width: 34em; margin-top: clamp(24px, 3vw, 44px); font-size: var(--fs-body); line-height: 1.5; }
+.cs__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  margin-top: clamp(32px, 4vw, 56px);
+  padding: 24px 0;
+  border-top: 1px solid var(--muted);
+  border-bottom: 1px solid var(--muted);
+}
+.cs__meta dt { font-size: 14px; color: var(--muted); }
+.cs__meta dd { margin-top: 4px; font-size: var(--fs-small); }
+.cs__hero {
+  margin-top: clamp(32px, 4vw, 56px);
+  overflow: hidden;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius-card);
+  background: var(--frame);
+}
+.cs__hero img { width: 100%; height: auto; }
+.cs__section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: clamp(16px, 4vw, 64px);
+  margin-top: clamp(56px, 7vw, 104px);
+}
+.cs__section h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: 1.2;
+}
+.cs__section p { max-width: 40em; line-height: 1.6; }
+.cs__section p + p { margin-top: 14px; }
+.cs__placeholder { color: var(--muted); }
+.cs__next {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  margin-top: clamp(64px, 8vw, 120px);
+  padding-top: 24px;
+  border-top: 1px solid var(--muted);
+}
+.cs__next a { font-size: var(--fs-label); text-decoration: none; }
+.cs__next a:hover { color: var(--burgundy); }
+@media (max-width: 720px) {
+  .cs__section { grid-template-columns: 1fr; }
+}
+
+/* ---------- Phones: keep the rings decorative, not in the way of the text ---------- */
+@media (max-width: 720px) {
+  :root { --blob: 460px; --fs-label: 15px; --fs-body: 17px; }
+  .blob { opacity: .75; }
+  .blob--hero { top: 70px; right: -290px; }
+  .blob--contact { top: -60px; left: -300px; }
+  .scroller-nav { display: none; }
+  .card { flex-basis: min(68vw, 250px); }
+  .frame { flex-basis: min(58vw, 240px); }
+  .about__title { line-height: 1.3; }
+}
+
+/* ---------- 10. Motion ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .blob { animation: drift 22s ease-in-out infinite alternate; }
+  .blob--contact { animation-duration: 28s; animation-direction: alternate-reverse; }
+  @keyframes drift {
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to   { transform: translate3d(-18px, 22px, 0) scale(1.04); }
+  }
+
+  /* scroll-reveal (only if JS is running, so the page never hides without it) */
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .8s cubic-bezier(.2, .7, .2, 1), transform .8s cubic-bezier(.2, .7, .2, 1);
+    transition-delay: var(--d, 0s);
+  }
+  .js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+  /* hero title lands on load */
+  .hero__title span { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero__title .hero__last { animation-delay: .12s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+}
+
+/* ---------- 11. Footer (same height and padding as the nav) ---------- */
+.footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--nav-h);
+  padding: 0 clamp(16px, 2.8vw, 40px) 0 clamp(16px, 1.94vw, 28px);
+  background: rgba(255, 255, 255, .92);
+  border-top: 1px solid var(--burgundy);
+}
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(12px, .97vw, 14px);
+  line-height: 1.5;
+  color: var(--muted);
+}
+.footer__brand img { width: clamp(26px, 2.1vw, 30px); height: auto; flex: none; }
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3.9vw, 56px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer__links a {
+  font-size: clamp(12px, .97vw, 14px);
+  line-height: 1.5;
+  color: var(--black);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.footer__links a:hover { color: var(--burgundy); border-color: var(--burgundy); }
+
+/* phones: the header already has the links, so the footer keeps just © and "Back to top" */
+@media (max-width: 720px) {
+  .footer__links li:not(:last-child) { display: none; }
+  .footer__links a, .footer__brand { font-size: 12px; }
+}
+
+/* ---------- 12. Full-screen sections that snap into place ---------- */
+.hero,
+.projects,
+.about,
+.contact,
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100svh - var(--nav-h));
+}
+.hero { align-items: flex-start; }
+.about,
+.contact { padding-left: var(--px); padding-right: var(--px); }
+.gallery {
+  /* the footer is the same height as the nav, so this section + footer fill one screen */
+  min-height: calc(100vh - var(--nav-h) * 2);
+  min-height: calc(100svh - var(--nav-h) * 2);
+}
+.blob--contact { top: calc(50% - var(--blob) / 2); }
+
+/* Only snap when the window is tall enough for each section to fit;
+   on short windows (phones held sideways) the page scrolls normally. */
+@media (min-height: 700px) {
+  html { scroll-snap-type: y mandatory; }
+  .hero,
+  .projects,
+  .about,
+  .contact,
+  .gallery { scroll-snap-align: start; scroll-snap-stop: always; }
+}
+
+/* while the mouse-wheel glide is running, pause snapping so the two don't fight */
+html.is-paging { scroll-snap-type: none !important; scroll-behavior: auto !important; }
+
+/* smaller "See my work" button (the contact e-mail button keeps its size) */
+.hero .btn {
+  height: clamp(44px, 3.9vw, 56px);
+  padding: 0 clamp(22px, 2.5vw, 36px);
+  font-size: clamp(13px, 1.04vw, 15px);
+  border-radius: clamp(12px, 1vw, 14px);
+}
+/* ---------- 13. "Coming soon" project cards (not clickable yet) ---------- */
+.card--soon { cursor: default; border-color: rgba(87, 87, 87, .45); }
+.card--soon:hover { transform: none; border-color: rgba(87, 87, 87, .45); box-shadow: none; }
+.card--soon .card__media { position: relative; }
+.card--soon .card__media img { filter: grayscale(.85); opacity: .55; }
+.card--soon:hover .card__media img { transform: none; }
+.card--soon .card__title,
+.card--soon .card__desc { color: var(--muted); }
+.card--soon .tag { background: #e6e2e2; color: var(--muted); }
+.card__badge {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+/* ---------- 14. Dark mode (switch in the header; choice is remembered) ---------- */
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  color: var(--black);
+  border: 1px solid currentColor;
+  border-color: rgba(38, 38, 38, .25);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color .2s, border-color .2s, background-color .2s;
+}
+.theme-toggle:hover { color: var(--burgundy); border-color: var(--burgundy); }
+.theme-toggle svg { width: 16px; height: 16px; }
+.theme-toggle__sun { display: none; }
+html[data-theme="dark"] .theme-toggle__sun { display: block; }
+html[data-theme="dark"] .theme-toggle__moon { display: none; }
+
+/* colours from the reference: warm near-black, off-white text, dusty rose accent */
+html[data-theme="dark"] body:not(.locus-page),
+html[data-theme="dark"] .locus-page .nav,
+html[data-theme="dark"] .locus-page .footer {
+  --white: #1d1b1c;          /* page background */
+  --black: #f3eeee;          /* main text */
+  --ink: #ece6e6;
+  --muted: #a8a0a0;
+  --frame: #2a2728;          /* photo frames, card image backgrounds */
+  --pill: rgba(201, 128, 123, .18);
+  --burgundy: #c9807b;       /* accent (buttons, highlights) */
+  --burgundy-dark: #d8958f;
+  --line: rgba(255, 255, 255, .12);
+}
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme="dark"] body:not(.locus-page):not(.mb-page) { background: #1d1b1c; }
+body { transition: background-color .3s ease, color .3s ease; }
+
+html[data-theme="dark"] .nav { background: rgba(29, 27, 28, .88); border-bottom-color: var(--line); }
+html[data-theme="dark"] .footer { background: rgba(29, 27, 28, .95); border-top-color: var(--line); }
+html[data-theme="dark"] .theme-toggle { border-color: var(--line); }
+html[data-theme="dark"] .theme-toggle:hover { border-color: var(--burgundy); }
+html[data-theme="dark"] .nav__logo img,
+html[data-theme="dark"] .footer__brand img { filter: brightness(1.9) saturate(.75); }   /* lift the burgundy logo off the dark background */
+
+html[data-theme="dark"] .btn { color: #1d1b1c; }
+html[data-theme="dark"] .btn:hover { box-shadow: 0 10px 24px -10px rgba(201, 128, 123, .45); }
+html[data-theme="dark"] .blob { opacity: .35; }
+html[data-theme="dark"] .card { background: #232022; border-color: var(--line); }
+html[data-theme="dark"] .card:hover { border-color: var(--burgundy); box-shadow: 0 22px 40px -22px rgba(0, 0, 0, .8); }
+html[data-theme="dark"] .scroller-nav button { border-color: var(--line); }
+html[data-theme="dark"] .scroller-nav button:hover:not(:disabled) { color: #1d1b1c; }
+html[data-theme="dark"] .frame { border-color: var(--line); }
+html[data-theme="dark"] .card--soon,
+html[data-theme="dark"] .card--soon:hover { border-color: var(--line); box-shadow: none; }
+html[data-theme="dark"] .card--soon .card__media img { opacity: .4; }
+html[data-theme="dark"] .card--soon .tag { background: #2e2a2b; color: var(--muted); }
+html[data-theme="dark"] .card__badge { background: rgba(29, 27, 28, .9); border-color: var(--line); color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) { body { transition: none; } }
+
+/* ---------- 15. "Get to know me" arrows ---------- */
+.gallery__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 var(--px);
+  margin-bottom: clamp(12px, 1.4vw, 20px);
+}
+.gallery__head .gallery__title { padding: 0; margin: 0; }
+.gallery__nav { position: static; transform: none; }
+.gallery__nav .is-hidden { visibility: hidden; opacity: 0; }
+.gallery__nav button { transition: background-color .2s, color .2s, opacity .3s, border-color .2s; }
+
+/* ---------- 16. "Get to know me": same label style as "Projects / Case studies", smaller photos ---------- */
+.gallery__title,
+.gallery__head .gallery__title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.frame { flex-basis: clamp(170px, 17vw, 245px); border-radius: 20px; }
+@media (max-width: 720px) {
+  .frame { flex-basis: min(48vw, 200px); }
+}
+
+/* ---------- 17. Photos sit closer to the footer ---------- */
+.gallery {
+  justify-content: flex-end;                        /* extra room goes above the title, not below the photos */
+  padding-bottom: clamp(28px, 3vw, 48px);
+}
+
+/* ---------- 18. "Get to know me": photo grows on hover + caption slides up ---------- */
+.gallery .scroller {                                /* extra room above/below so the bigger photo isn't cut off */
+  padding-top: 24px;
+  padding-bottom: 32px;
+  margin-top: -20px;
+  margin-bottom: -28px;
+}
+.gallery__head { z-index: 2; }
+.frame {
+  position: relative;
+  margin: 0;                                        /* <figure> has a default margin */
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s;
+}
+.frame figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 40px 14px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.45;
+  color: #fff;
+  background: linear-gradient(to top, rgba(20, 16, 16, .82) 0%, rgba(20, 16, 16, .55) 55%, rgba(20, 16, 16, 0) 100%);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .3s, transform .35s cubic-bezier(.2, .7, .2, 1);
+  pointer-events: none;
+}
+@media (hover: hover) {
+  .frame:hover { transform: scale(1.08); z-index: 1; box-shadow: 0 8px 18px rgba(0, 0, 0, .16); }
+  .frame:hover figcaption { opacity: 1; transform: none; }
+  .scroller.is-dragging .frame { transform: none; box-shadow: none; }
+  .scroller.is-dragging .frame figcaption { opacity: 0; }
+}
+/* phones / tablets can't hover, so the caption is always shown */
+@media (hover: none) {
+  .frame figcaption { opacity: 1; transform: none; font-size: 11px; padding: 32px 12px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .frame, .frame figcaption { transition: opacity .2s; }
+  .frame:hover { transform: none; }
+}
+
+/* ---------- 19. Contact: smaller e-mail button + Gmail / Outlook links ---------- */
+.contact .btn {
+  height: clamp(50px, 4.7vw, 68px);
+  padding: 0 clamp(24px, 3.1vw, 44px);
+  font-size: clamp(13px, 1.18vw, 17px);
+}
+.contact__webmail {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.contact__webmail a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: color .2s;
+}
+.contact__webmail a:hover { color: var(--burgundy); }
+
+/* ---------- 20. "Get to Know Me" header link: hidden on phones (no room; the photos are one swipe below Contact) ---------- */
+@media (max-width: 720px) {
+  .nav__desktop-only { display: none; }
+}
+
+/* ---------- 21. Project cards: 4 fit on one screen without scrolling ---------- */
+.projects .scroller { --gap: clamp(14px, 1.94vw, 28px); gap: var(--gap); }
+.projects .card { flex: 0 0 max(180px, min(300px, calc((100% - 3 * var(--gap)) / 4))); }
+.projects .card__body { padding: 12px 16px 16px; }
+.projects .card__title { font-size: 17px; }
+.projects .card__desc { font-size: 12.5px; line-height: 19px; margin-bottom: 14px; }
+.projects .tag { padding: 6px 14px; font-size: 11.5px; border-radius: 16px; }   /* stays a pill; still looks right if a long tag wraps on small laptops */
+@media (max-width: 720px) {
+  .projects .card { flex-basis: min(68vw, 250px); }
+}
+
+/* ---------- 22. About: text on the left, photo on the right ---------- */
+.about {
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+.about__main { flex: 1 1 0; min-width: 0; }
+.about__photo {
+  flex: 0 1 44%;
+  margin: 0;
+  aspect-ratio: 2 / 1;                              /* wider crop: ends above the jacket hem */
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--frame);
+}
+.about__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }   /* 2nd value moves the crop: lower % = higher up in the photo */
+@media (max-width: 900px) {
+  .about { flex-direction: column; align-items: stretch; }
+  .about__main,
+  .about__photo { flex: none; width: 100%; }
+}
+
+/* ---------- 23. Project cards: grow on hover without the top being cut off ---------- */
+.projects .scroller {                               /* extra room above/below so the bigger card isn't clipped */
+  padding-top: 28px;
+  padding-bottom: 64px;                             /* room for the shadow too */
+  margin-top: -24px;
+  margin-bottom: -60px;
+}
+.projects__head { position: relative; z-index: 2; }
+.projects .card { position: relative; }
+@media (hover: hover) {
+  .projects .card:not(.card--soon):hover { transform: translateY(-4px) scale(1.06); z-index: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .projects .card:not(.card--soon):hover { transform: none; }
+}
+
+/* ---------- 24. "Get to know me" sits in the middle of the screen (replaces the push-to-bottom in section 17) ---------- */
+.gallery {
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* ---------- 25. About photo: same height as the text next to it, zoomed in a little ---------- */
+.about { flex-direction: column; justify-content: center; align-items: stretch; }
+.about__row {
+  display: flex;
+  align-items: stretch;                             /* photo column takes the height of the text column */
+  gap: clamp(32px, 5vw, 80px);
+}
+.about__photo { position: relative; aspect-ratio: auto; }
+.about__photo img {
+  position: absolute;
+  inset: 0;
+  object-position: 50% 30%;
+  transform: scale(1.25);                           /* zoom: 1 = none, bigger = closer */
+  transform-origin: 50% 20%;                        /* zooms towards the top-middle, so the crop stays above the jacket hem */
+}
+@media (max-width: 900px) {
+  .about__row { flex-direction: column; }
+  .about__photo { aspect-ratio: 2 / 1; }
+}
+
+/* ---------- 26. Project arrows also on phones / touch screens (they hide themselves when all cards fit) ---------- */
+@media (max-width: 720px), (hover: none) {
+  .projects .scroller-nav { display: flex; gap: 8px; }
+  .projects .scroller-nav button { width: 38px; height: 38px; }
+  .projects .scroller-nav svg { width: 16px; height: 16px; }
+  html body .projects .scroller-nav button:hover:not(:disabled) { background: var(--white); border-color: currentColor; color: var(--ink); }   /* no sticky hover colour after a tap */
+}
