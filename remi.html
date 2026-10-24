@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>remi — Case study · Róza Parlagi</title>
+  <meta name="description" content="remi: a quiet companion robot that runs Photo Reminiscence Therapy with nursing home residents living with dementia, and a dashboard for their carers. A human–robot interaction case study by Róza Parlagi.">
+  <meta name="theme-color" content="#0e0e0e">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="remi — Case study · Róza Parlagi">
+  <meta property="og:description" content="A quiet companion robot for Photo Reminiscence Therapy in nursing homes.">
+  <meta property="og:url" content="https://parlagiroza.com/remi.html">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/chonburi-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/domine-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/remi.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body id="top" class="home cs-page remi-page">
+  <div class="page">
+
+    <!-- ============ NAV (same as the home page) ============ -->
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Róza Parlagi — home">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links" id="main-menu">
+          <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#contact">Get in touch</a></li>
+          <li><a href="Roza_Parlagi_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+        <main class="cs-main">
+
+      <!-- ============ HERO ============ -->
+      <section class="re-hero" aria-labelledby="re-title">
+        <img class="re-hero__bg" src="assets/img/remi/hero-bg.jpg" alt="" width="3456" height="1958">
+        <div class="re-hero__center">
+          <p class="re-hero__eyebrow">Case study · Product / robot design &amp; HRI</p>
+          <h1 id="re-title"><img class="re-hero__logo" src="assets/img/remi/remi-logo.svg" alt="remi" width="428" height="140"></h1>
+          <p class="re-hero__motto">„Hogy a múlt fénye ne tudjon kialudni” &nbsp;·&nbsp; So the light of the past may never fade</p>
+          <p class="re-hero__sub">A quiet companion device that uses Photo Reminiscence Therapy to help nursing home residents with dementia hold onto their memories a little longer.</p>
+        </div>
+        <dl class="cs-meta">
+          <div><dt>My role</dt><dd>Research, robot personality, medical dashboard, testing</dd></div>
+          <div><dt>Emphasis on</dt><dd>Human–robot interaction and product / robot design</dd></div>
+          <div><dt>Team</dt><dd>Team Botapest · 3 people<br>Dulguun Enkhbat, Koncz Olivér, Róza Parlagi</dd></div>
+          <div><dt>Timeline</dt><dd>One-week Human–Robot Interaction intensive at MOME, February 2026, led by David Yann Robert (Boston Dynamics)</dd></div>
+        </dl>
+      </section>
+
+      <!-- ============ OVERVIEW ============ -->
+      <section class="cs-sec cs-sec--overview" aria-labelledby="re-overview">
+        <p class="cs-kicker" id="re-overview">Overview</p>
+        <h2 class="cs-h1" data-reveal>A companion for remembering</h2>
+        <div class="cs-overview" data-reveal>
+          <div class="cs-overview__text">
+            <p>Dementia is rising fast across Europe, and there are therapies that help. One of them, Photo Reminiscence Therapy, uses old photos and videos to train long-term memory. But in Hungarian nursing homes there simply aren't enough people to offer it regularly.</p>
+            <p>In February 2026, MOME hosted a one-week Human–Robot Interaction intensive led by David Yann Robert, at the time Director of Human–Robot Interaction Design at Boston Dynamics. In that week, our team of three designed <b>remi</b>: a calm, slightly clumsy companion robot that runs reminiscence sessions with residents and gives health professionals the data to follow their progress.</p>
+          </div>
+          <dl class="cs-figures">
+            <div><dt>8M</dt><dd>people in Europe live with cognitive decline (WHO)</dd></div>
+            <div><dt>30–35%</dt><dd>vacancy rates among Hungarian health professionals</dd></div>
+            <div><dt>1</dt><dd>week from brief to working demo</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ THE PROCESS ============ -->
+      <section class="cs-sec cs-sec--alt cs-sec--process" aria-labelledby="re-process">
+        <p class="cs-kicker" id="re-process">The process</p>
+        <p class="cs-lead">A one-week sprint squeezes the whole process into a few intense days. We went from research to a defined role for the robot, then explored its personality and form, and delivered a working demo that we tested.</p>
+        <div class="cs-diamond" data-reveal>
+          <svg viewBox="0 0 1408 470" role="img" aria-labelledby="re-dd-title">
+            <title id="re-dd-title">Double diamond: Discover and Define lead to the role of remi, Develop and Deliver lead to the demo</title>
+            <polygon points="0,240 340,60 340,420" fill="#c1aa7f" fill-opacity=".2"/>
+            <polygon points="340,60 680,240 340,420" fill="#c1aa7f" fill-opacity=".4"/>
+            <polygon points="728,240 1068,60 1068,420" fill="#c1aa7f" fill-opacity=".2"/>
+            <polygon points="1068,60 1408,240 1068,420" fill="#c1aa7f" fill-opacity=".4"/>
+            <circle cx="704" cy="240" r="9" fill="#c1aa7f"/>
+            <circle cx="1399" cy="240" r="9" fill="#c1aa7f"/>
+            <g class="cs-dd-num"><text x="214" y="199">01</text><text x="465.5" y="199">02</text><text x="943.5" y="199">03</text><text x="1193" y="199">04</text></g>
+            <g class="cs-dd-name"><text x="220" y="240">DISCOVER</text><text x="471" y="240">DEFINE</text><text x="950" y="240">DEVELOP</text><text x="1200" y="240">DELIVER</text></g>
+            <g class="cs-dd-sub"><text x="210" y="275">diverge</text><text x="461.5" y="275">converge</text><text x="938" y="275">diverge</text><text x="1189.5" y="275">converge</text></g>
+            <g class="cs-dd-end"><text x="646" y="467" text-anchor="start">Role of remi</text><text x="1362" y="467" text-anchor="start">Demo</text></g>
+          </svg>
+        </div>
+        <div class="cs-steps" data-reveal>
+          <div><p class="cs-steps__head">01 · Discover</p><ul><li>Desk research</li><li>Dementia statistics</li><li>Care workforce gap</li><li>Target audience</li><li>Photo Reminiscence Therapy</li></ul></div>
+          <div><p class="cs-steps__head">02 · Define</p><ul><li>Problem statement</li><li>How might we…</li><li>Role of remi</li></ul></div>
+          <div><p class="cs-steps__head">03 · Develop</p><ul><li>Robot personality</li><li>Roleplaying sessions</li><li>Sketches &amp; clay models</li><li>Build</li></ul></div>
+          <div><p class="cs-steps__head">04 · Deliver</p><ul><li>Final robot design</li><li>Medical dashboard</li><li>Demo</li><li>Testing &amp; evaluation</li></ul></div>
+        </div>
+      </section>
+
+      <!-- ============ 01 DISCOVER ============ -->
+      <section class="cs-sec" aria-labelledby="re-discover">
+        <h2 class="cs-phase" id="re-discover"><span class="cs-phase__num" aria-hidden="true">01</span><span class="cs-phase__name">Discover</span></h2>
+        <p class="cs-h2">Research &amp; planning</p>
+        <p class="cs-lead">We had one week, so research had to be fast and focused. We started from the scale of the problem, then looked at what already works and who it is failing to reach.</p>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <p class="cs-label">Research plan</p>
+        <ol class="re-timeline" data-reveal>
+          <li><span class="re-timeline__dot">01</span><p class="re-timeline__title">Desk research</p><p>Dementia statistics from the WHO and the cost of dementia care in Hungary.</p></li>
+          <li><span class="re-timeline__dot">02</span><p class="re-timeline__title">Care system context</p><p>The Hungarian healthcare workforce gap and what it means for nursing homes.</p></li>
+          <li><span class="re-timeline__dot">03</span><p class="re-timeline__title">Therapy research</p><p>Existing non-drug methods, especially Photo Reminiscence Therapy.</p></li>
+          <li><span class="re-timeline__dot re-timeline__dot--fill">04</span><p class="re-timeline__title">Target audience</p><p>Residents in the critical window and the professionals who care for them.</p></li>
+        </ol>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group cs-group--wide">
+          <p class="cs-label">The scale of the problem</p>
+          <h3 class="cs-h3">Dementia is growing faster than care can keep up</h3>
+        </div>
+        <div class="re-stats" data-reveal>
+          <div class="re-chart">
+            <p class="re-chart__title">People in Europe with cognitive decline</p>
+            <div class="re-chart__bars" role="img" aria-label="8 million people now, 24 million by 2050">
+              <div class="re-chart__bar"><b>8M</b><span style="--h:100; --c:#a8874e"></span></div>
+              <div class="re-chart__bar"><b>24M</b><span style="--h:300; --c:#c1aa7f"></span></div>
+            </div>
+            <div class="re-chart__labels" aria-hidden="true"><span>Now</span><span>2050</span></div>
+            <p class="re-chart__src">×3 by 2050 · Source: World Health Organization</p>
+          </div>
+          <div class="re-facts">
+            <div class="re-fact"><p class="re-fact__big">~€847M</p><p>per year: total national dementia costs in Hungary (321.4 billion HUF)</p></div>
+            <div class="re-fact"><p class="re-fact__big">30–35%</p><p>vacancy rates among health professionals: not enough people to deliver therapy (Hungarian Chamber of Health Professionals, Betlehem et al. 2024/25)</p></div>
+          </div>
+        </div>
+
+        <div class="re-finding" data-reveal>
+          <p class="cs-label">What we found</p>
+          <ol>
+            <li><span class="re-finding__num">01</span><span class="re-finding__title">Good methods exist</span>Non-drug therapies for dementia work.</li>
+            <li><span class="re-finding__num">02</span><span class="re-finding__title">They aren't well known</span>In Hungary, these methods are not widely used.</li>
+            <li><span class="re-finding__num">03</span><span class="re-finding__title">There aren't enough hands</span>Staff shortages make regular therapy impossible.</li>
+          </ol>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Target audience</p>
+          <h3 class="cs-h3">Two users, one care moment</h3>
+          <p class="cs-p">remi serves residents directly, but it only works if it also helps the professionals around them.</p>
+        </div>
+        <div class="re-audience" data-reveal>
+          <div>
+            <img src="assets/img/remi/primary-users.jpg" alt="An elderly nursing home resident" width="1384" height="640" loading="lazy">
+            <div class="re-audience__text">
+              <p class="cs-label">Primary users</p>
+              <ul><li>Residents of Hungarian nursing homes</li><li>Diagnosed with dementia</li><li>Ages 70–85: the critical, high-risk intervention window (National Library of Medicine)</li></ul>
+            </div>
+          </div>
+          <div>
+            <img src="assets/img/remi/secondary-users.jpg" alt="A nurse caring for an elderly resident" width="1384" height="640" loading="lazy">
+            <div class="re-audience__text">
+              <p class="cs-label">Secondary users</p>
+              <ul><li>Health professionals: nurses, caregivers and therapists</li><li>Working in elderly care homes</li><li>Need to follow residents' progress without extra workload</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="re-split" data-reveal>
+          <img class="re-split__img" src="assets/img/remi/prt.jpg" alt="Hands holding old family photographs" width="1036" height="1162" loading="lazy">
+          <div class="cs-group">
+            <p class="cs-label">The method</p>
+            <h3 class="cs-h3">What is Photo Reminiscence Therapy?</h3>
+            <p class="cs-p">PRT uses stimulating materials, such as old photos and videos, to train long-term memory. It is simple, personal and proven to have cognitive benefits, but it needs someone to sit down with each resident, again and again.</p>
+            <p class="re-src">Source: National Institute for Dementia Education, Dementia Research: Cognitive Benefits of Photo Reminiscence Therapy for Dementia Patients (2022)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 02 DEFINE ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="re-define">
+        <h2 class="cs-phase" id="re-define"><span class="cs-phase__num" aria-hidden="true">02</span><span class="cs-phase__name">Define</span></h2>
+        <p class="cs-h2">From a care gap to a clear role</p>
+        <p class="cs-lead">Research gave us three facts: the therapy works, it isn't widely used in Hungary, and there aren't enough people to deliver it. That pointed us to a specific job for a robot: not replacing carers, but taking on the repetitive part of the therapy.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-callout re-problem" data-reveal>
+          <p class="cs-label">Problem statement</p>
+          <p class="cs-callout__big">Dementia therapy works, but Hungarian nursing homes don't have the people to deliver it.</p>
+          <p>Good non-drug methods exist, yet they are little known in Hungary, and with 30–35% of healthcare positions unfilled, regular one-on-one sessions are out of reach.</p>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="re-band">
+          <div class="cs-group">
+            <p class="cs-label">Role of remi</p>
+            <h3 class="cs-h3">Four jobs for one quiet companion</h3>
+          </div>
+          <div class="cs-cards cs-cards--4" data-reveal>
+            <div class="re-role re-role--gold"><p class="re-role__num">01</p><p class="re-role__title">Photo Reminiscence Therapy</p><p>Runs sessions with old photos and videos to train long-term memory.</p></div>
+            <div class="re-role"><p class="re-role__num">02</p><p class="re-role__title">Make therapy fun</p><p>Turns therapy into an engaging, social moment rather than a task.</p></div>
+            <div class="re-role"><p class="re-role__num">03</p><p class="re-role__title">Daily reminders</p><p>Reminds residents of pills, events, the time and the date.</p></div>
+            <div class="re-role"><p class="re-role__num">04</p><p class="re-role__title">Progress data</p><p>Evaluates progress and shares it with health professionals.</p></div>
+          </div>
+          <div class="cs-goal re-goal" data-reveal>
+            <span class="cs-goal__pill">Goal</span>
+            <p>A companion residents want to talk to, and a tool carers can rely on.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 03 DEVELOP ============ -->
+      <section class="cs-sec re-over" aria-labelledby="re-develop">
+        <h2 class="cs-phase" id="re-develop"><span class="cs-phase__num" aria-hidden="true">03</span><span class="cs-phase__name">Develop</span></h2>
+        <p class="cs-h2">Designing a character</p>
+        <p class="cs-lead">For a robot that talks to people with dementia, the interface is its voice, its pauses and its face. We designed the personality first, tested it by roleplaying, and only then shaped the body.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="re-persona" data-reveal>
+          <div class="cs-group">
+            <p class="cs-label">Personality</p>
+            <h3 class="cs-h3">Polite, curious and a little clumsy</h3>
+            <dl>
+              <div><dt>Vibe</dt><dd>Polite, curious and slightly “playful-clumsy”. Not perfect, so residents feel at ease.</dd></div>
+              <div><dt>Tone</dt><dd>Warm, optimistic and modest.</dd></div>
+              <div><dt>Interaction examples</dt><dd>Engages in harmless gossip. Asks follow-up questions between sessions, so it feels like remi remembers.</dd></div>
+            </dl>
+          </div>
+          <div class="re-orb" aria-hidden="true"></div>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group cs-group--wide">
+          <p class="cs-label">Roleplaying &amp; iterations</p>
+          <h3 class="cs-h3">Acting it out before building it</h3>
+          <p class="cs-p">Before designing anything, we roleplayed therapy sessions ourselves, one of us as remi, one as a resident. It was the closest we could get to knowing whether the experience actually felt like care. Then we sketched and modelled the form.</p>
+        </div>
+        <img class="re-iterations" src="assets/img/remi/iterations.png" alt="Photos from the week: roleplaying sessions, sketches and clay models of remi" width="2102" height="1176" loading="lazy" data-reveal>
+      </section>
+
+      <!-- ============ 04 DELIVER ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="re-deliver">
+        <h2 class="cs-phase" id="re-deliver"><span class="cs-phase__num" aria-hidden="true">04</span><span class="cs-phase__name">Deliver</span></h2>
+        <p class="cs-h2">remi, the final design</p>
+        <p class="cs-lead">A soft, lamp-like companion with a simple screen face, and a dashboard that turns every session into useful information for carers.</p>
+        <div class="cs-spacer"></div>
+
+        <img class="re-robot" src="assets/img/remi/final-robot.png" alt="Three renders of remi: a soft, cream-coloured body with a dark screen head showing the remi logo, from the front and both sides" width="2816" height="1640" loading="lazy" data-reveal>
+
+        <div class="cs-group cs-group--wide">
+          <p class="cs-label">The face</p>
+          <p class="cs-p">remi's face is a dark screen with simple shapes. We didn't need a detailed face: people instantly complete it into an expression, and the eyebrows carry most of the emotion.</p>
+        </div>
+        <img class="re-face" src="assets/img/remi/robot-scene.png" alt="Close-up of remi's screen face: two golden oval eyes under curved eyebrows" width="2816" height="1258" loading="lazy" data-reveal>
+        <div class="cs-spacer"></div>
+
+        <div class="re-dash" data-reveal>
+          <img class="re-dash__img" src="assets/img/remi/dashboard.png" alt="The medical dashboard on a laptop: key numbers, engagement over time, recent activity and a list of residents" width="1640" height="1178" loading="lazy">
+          <div class="cs-group">
+            <p class="cs-label">Medical dashboard</p>
+            <h3 class="cs-h3">Data for the people who care</h3>
+            <p class="cs-p">Every session feeds a dashboard for nurses and therapists: engagement over time, recent activity, and an overview of each resident's progress.</p>
+            <dl>
+              <div><dt>Proximity</dt><dd>Key numbers sit side by side at the top, read as one overview.</dd></div>
+              <div><dt>Common region</dt><dd>Each block (trend, activity, residents) lives in its own card.</dd></div>
+              <div><dt>Similarity</dt><dd>Residents are listed in identical rows, easy to scan and compare.</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="re-crops" data-reveal>
+          <figure><img src="assets/img/remi/dashboard-crop-1.png" alt="Dashboard close-up: active residents, sessions, average engagement and photos shared" width="2816" height="470" loading="lazy"><figcaption>At a glance: key numbers</figcaption></figure>
+          <figure><img src="assets/img/remi/dashboard-crop-2.png" alt="Dashboard close-up: engagement trend chart and recent activity" width="1384" height="394" loading="lazy"><figcaption>Engagement over time &amp; recent activity</figcaption></figure>
+          <figure><img src="assets/img/remi/dashboard-crop-3.png" alt="Dashboard close-up: list of residents with their sessions and progress" width="1384" height="482" loading="lazy"><figcaption>Each resident's progress</figcaption></figure>
+        </div>
+        <p class="cs-p">I chose to show what a nurse or therapist needs at a glance: how many residents are active, how many sessions happened, average engagement and photos shared. Below that, the engagement trend shows whether therapy is working over time, and each resident's sessions and progress show who needs attention next.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Demo</p>
+          <h3 class="cs-h3">remi in action</h3>
+          <p class="cs-p">Two demo videos: a roleplayed session in a care-home-like setting.</p>
+        </div>
+        <video class="re-video cs-loop" muted loop playsinline preload="metadata" aria-label="Demo: remi running a reminiscence session" data-reveal><source src="assets/video/remi/demo-1.mp4#t=0.1" type="video/mp4"></video>
+        <video class="re-video cs-loop" muted loop playsinline preload="metadata" aria-label="Prototype demo of remi" data-reveal><source src="assets/video/remi/demo-2.mp4#t=0.1" type="video/mp4"></video>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Testing &amp; evaluation</p>
+          <h3 class="cs-h3">What testers thought</h3>
+          <p class="cs-p">We tested the idea with colleagues, collecting both quantitative ratings and qualitative feedback.</p>
+        </div>
+        <div class="re-results" data-reveal>
+          <div><p class="re-results__big">4.5<small>/ 5</small></p><p>on how good the solution is</p></div>
+          <div><p class="re-results__big">75%</p><p>of the people asked liked the design</p></div>
+          <div class="re-results--gold"><p class="re-results__big">100%</p><p>suggested adding eyebrows</p></div>
+        </div>
+        <p class="cs-p">Every tester asked for eyebrows, so we added them. Small as they are, they made remi's expressions much easier to read, which is exactly what the closure principle predicts.</p>
+      </section>
+
+      <!-- ============ REFLECTION ============ -->
+      <section class="cs-sec cs-sec--reflection" aria-labelledby="re-reflection">
+        <p class="cs-kicker" id="re-reflection">Reflection</p>
+        <p class="re-reflect" data-reveal>Designing remi taught me that in a product like this, the “UI” can be the voice, the eyebrows, or even a calculated long pause.</p>
+        <p class="cs-lead">The hardest and most valuable part of the process was roleplaying the therapy ourselves before designing anything. This was the closest we could get to knowing whether the experience actually felt like care.</p>
+      </section>
+
+      <!-- ============ CLOSING ============ -->
+      <section class="re-closing" aria-label="remi">
+        <img src="assets/img/remi/remi-logo.svg" alt="" width="428" height="140">
+        <p>So the light of the past may never fade</p>
+      </section>
+
+      <!-- ============ PREVIOUS / NEXT PROJECT ============ -->
+      <nav class="pnav" aria-label="More projects" style="--pn-accent: #c1aa7f">
+        <a class="pnav__prev" href="mome-ulp.html">
+          <span class="pnav__small">Previous project</span>
+          <span class="pnav__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>MOME ULP redesign</span>
+        </a>
+        <a class="pnav__home" href="index.html#projects">All projects</a>
+        <a class="pnav__next" href="mercedes-aura.html">
+          <span class="pnav__small">Next project</span>
+          <span class="pnav__title">Mercedes AURA<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </nav>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+        <p>&copy; 2026 Róza Parlagi</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="index.html#projects">All projects</a></li>
+        <li><a href="#top" aria-label="Back to top">Back to top &uarr;</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

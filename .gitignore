@@ -8,3 +8,6 @@ Exploration/
 
 # Claude preview files
 Claude outputs/
+
+# Leftovers kept locally, not part of the website
+_to_delete/

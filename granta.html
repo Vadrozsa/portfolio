@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Granta — Case study · Róza Parlagi</title>
+  <meta name="description" content="Granta: a multilingual grant assistant that matches Hungarian SME owners to the grants they qualify for, in plain language. A case study by Róza Parlagi (NDA project).">
+  <meta name="theme-color" content="#093030">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Granta — Case study · Róza Parlagi">
+  <meta property="og:description" content="Designing a grant assistant for Hungarian SMEs.">
+  <meta property="og:url" content="https://parlagiroza.com/granta.html">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/chonburi-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/domine-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/granta.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body id="top" class="home cs-page granta-page">
+  <div class="page">
+
+    <!-- ============ NAV (same as the home page) ============ -->
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Róza Parlagi — home">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links" id="main-menu">
+          <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#contact">Get in touch</a></li>
+          <li><a href="Roza_Parlagi_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="cs-main">
+
+      <!-- ============ HERO ============ -->
+      <section class="gr-hero" aria-labelledby="gr-title">
+        <svg class="gr-hero__deco" viewBox="0 0 769 1042" fill="none" aria-hidden="true">
+          <path d="M353.345 788.678C419.192 852.639 501.545 896.368 591.548 915.163C681.552 933.959 775.801 927.11 864.163 895.354C952.526 863.597 1031.66 808.134 1093.05 734.927C1154.45 661.719 1195.79 573.538 1212.62 479.862C1229.45 386.187 1221.14 290.561 1188.58 203.267C1156.03 115.972 1100.46 40.3098 1027.84 -15.5846C955.231 -71.479 868.324 -105.492 776.466 -113.965C684.608 -122.439 591.274 -105.054 506.499 -63.6781L619.727 194.905C657.704 176.37 699.514 168.582 740.663 172.378C781.812 176.174 820.743 191.41 853.271 216.449C885.799 241.487 910.693 275.381 925.277 314.486C939.861 353.591 943.583 396.428 936.043 438.391C928.503 480.354 909.986 519.856 882.483 552.65C854.98 585.445 819.531 610.29 779.948 624.516C740.365 638.742 698.145 641.81 657.826 633.39C617.508 624.97 580.617 605.381 551.12 576.729L353.345 788.678Z" fill="url(#gr-hero-grad)"/>
+          <ellipse cx="459.13" cy="284.41" rx="238.988" ry="249.712" transform="rotate(-150 459.13 284.41)" fill="#00D09E"/>
+          <defs><linearGradient id="gr-hero-grad" x1="974.786" y1="-51.0972" x2="448.433" y2="860.573" gradientUnits="userSpaceOnUse"><stop stop-color="#00D09E"/><stop offset="1" stop-color="#093030"/></linearGradient></defs>
+        </svg>
+        <div class="gr-hero__center">
+          <p class="gr-hero__eyebrow">Case study</p>
+          <h1 class="gr-hero__title" id="gr-title">Granta</h1>
+          <p class="gr-hero__sub">Designing a grant assistant for Hungarian SMEs</p>
+          <p class="gr-hero__nda"><span aria-hidden="true"></span>NDA project · real Hungarian banking client</p>
+        </div>
+        <dl class="cs-meta gr-hero__meta">
+          <div><dt>My role</dt><dd>Research, concept, user flows &amp; UI design</dd></div>
+          <div><dt>Emphasis on</dt><dd>Turning a complex, rule-heavy system into a simple product</dd></div>
+          <div><dt>Team</dt><dd>3 interaction designers: Réka Czigler, Pegah Setoodegan, Róza Parlagi</dd></div>
+          <div><dt>Timeline</dt><dd>6 months</dd></div>
+        </dl>
+      </section>
+
+      <!-- ============ OVERVIEW ============ -->
+      <section class="cs-sec cs-sec--overview" aria-labelledby="gr-overview">
+        <p class="cs-kicker" id="gr-overview">Overview</p>
+        <h2 class="cs-h1" data-reveal>A smarter way to access grants in Hungary</h2>
+        <div class="gr-nda" data-reveal>
+          <p class="gr-nda__tag">NDA</p>
+          <p>This project was developed with a real Hungarian banking client and is covered by a non-disclosure agreement. Some details, data and screens are simplified or left out to protect confidential information.</p>
+        </div>
+        <div class="cs-overview" data-reveal>
+          <div class="cs-overview__text">
+            <p>Hungary has around 900,000 registered small and medium-sized businesses, and there are EU and state grants designed to help them grow. Yet many owners never apply. Not because they don't qualify, but because finding, understanding and completing an application is simply too hard.</p>
+            <p>Granta is a multilingual digital assistant that matches business owners to the grants they actually qualify for, explains them in plain language, and guides them all the way to submission.</p>
+          </div>
+          <dl class="cs-figures">
+            <div><dt>~900K</dt><dd>registered SMEs in Hungary (KSH)</dd></div>
+            <div><dt>4</dt><dd>key barriers between owners and grants</dd></div>
+            <div><dt>1</dt><dd>assistant from discovery to submission</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ THE PROCESS ============ -->
+      <section class="cs-sec cs-sec--alt cs-sec--process" aria-labelledby="gr-process">
+        <p class="cs-kicker">The process</p>
+        <h2 class="cs-h1 cs-h1--sm" id="gr-process">Following the double diamond</h2>
+        <p class="cs-lead">We moved through the project in four phases: first going wide to understand the problem, narrowing it down to one clear challenge, then exploring solutions before refining one into a working product. The case study follows the same path.</p>
+        <div class="cs-diamond" data-reveal>
+          <svg viewBox="0 0 1408 470" role="img" aria-labelledby="gr-dd-title">
+            <title id="gr-dd-title">Double diamond: Discover and Define lead to the problem definition, Develop and Deliver lead to the solution</title>
+            <polygon points="0,240 340,60 340,420" fill="#041616"/>
+            <polygon points="340,60 680,240 340,420" fill="#046955"/>
+            <polygon points="728,240 1068,60 1068,420" fill="#041616"/>
+            <polygon points="1068,60 1408,240 1068,420" fill="#046955"/>
+            <circle cx="704" cy="240" r="9" fill="#00d09e"/>
+            <circle cx="1399" cy="240" r="9" fill="#00d09e"/>
+            <g class="cs-dd-space"><text x="328" y="25">Problem space</text><text x="1053" y="25">Solution space</text></g>
+            <g class="cs-dd-num"><text x="214" y="199">01</text><text x="465.5" y="199">02</text><text x="943.5" y="199">03</text><text x="1193" y="199">04</text></g>
+            <g class="cs-dd-name"><text x="219" y="240">DISCOVER</text><text x="471" y="240">DEFINE</text><text x="948.5" y="240">DEVELOP</text><text x="1198.5" y="240">DELIVER</text></g>
+            <g class="cs-dd-sub"><text x="210" y="275">diverge</text><text x="461.5" y="275">converge</text><text x="938" y="275">diverge</text><text x="1189.5" y="275">converge</text></g>
+            <g class="cs-dd-end"><text x="616" y="467" text-anchor="start">Problem definition</text><text x="1330" y="467" text-anchor="start">Solution</text></g>
+          </svg>
+        </div>
+        <div class="cs-steps" data-reveal>
+          <div><p class="cs-steps__head">01 · Discover</p><ul><li>Desktop research</li><li>Grant landscape mapping</li><li>Target audience</li><li>Barrier synthesis</li></ul></div>
+          <div><p class="cs-steps__head">02 · Define</p><ul><li>Problem statement</li><li>How might we…</li><li>Design principles</li><li>Project goal</li></ul></div>
+          <div><p class="cs-steps__head">03 · Develop</p><ul><li>Concept: Meet Granta</li><li>User journey</li><li>Matching logic</li><li>Business case &amp; flows</li></ul></div>
+          <div><p class="cs-steps__head">04 · Deliver</p><ul><li>Onboarding</li><li>Main flow</li><li>Re-engagement</li><li>Freemium screens</li></ul></div>
+        </div>
+      </section>
+
+      <!-- ============ 01 DISCOVER ============ -->
+      <section class="cs-sec" aria-labelledby="gr-discover">
+        <h2 class="cs-phase" id="gr-discover"><span class="cs-phase__num" aria-hidden="true">01</span><span class="cs-phase__name">Discover</span></h2>
+        <p class="cs-h2">Research &amp; planning</p>
+        <p class="cs-lead">We started wide. Before sketching a single screen, we wanted to understand how the Hungarian grant system works, who it is meant to serve, and why so much of the money never reaches them.</p>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Research plan</p>
+          <h3 class="cs-h3">Four steps from question to insight</h3>
+        </div>
+        <ol class="gr-timeline" data-reveal>
+          <li><span class="gr-timeline__dot">01</span><p class="gr-timeline__title">Desktop research</p><p>EU and KSH data on SMEs and grant awareness, and how the Hungarian grant system works.</p></li>
+          <li><span class="gr-timeline__dot">02</span><p class="gr-timeline__title">Grant landscape mapping</p><p>Programs like GINOP-PLUS and the Széchenyi Card Program, and providers such as the Hungarian Development Bank.</p></li>
+          <li><span class="gr-timeline__dot">03</span><p class="gr-timeline__title">Audience mapping</p><p>Who Hungarian SME owners are: from local hospitality to manufacturing and independent services.</p></li>
+          <li><span class="gr-timeline__dot gr-timeline__dot--fill">04</span><p class="gr-timeline__title">Synthesis</p><p>Clustering what we learned into the barriers that stop owners from applying.</p></li>
+        </ol>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group cs-group--wide">
+          <p class="cs-label">The landscape</p>
+          <h3 class="cs-h3">The money exists. The people it is meant for often never find it.</h3>
+        </div>
+        <div class="gr-stats" data-reveal>
+          <div class="gr-stat">
+            <p class="gr-stat__big">~900K</p>
+            <p class="gr-stat__text">registered SMEs in Hungary</p>
+            <p class="gr-stat__pills"><span class="cs-pill">Hospitality</span><span class="cs-pill">Retail</span><span class="cs-pill">Services</span><span class="cs-pill">Manufacturing</span></p>
+            <p class="gr-stat__src">Source: KSH, ksh.hu/business-units-and-non-profit-organisations</p>
+          </div>
+          <div class="gr-aware">
+            <p class="cs-label gr-label-sm">Low awareness</p>
+            <p class="gr-aware__big">According to EU survey data, only around a third of European SMEs are aware of the public financial support available to them (Flash Eurobarometer 441, 2016).</p>
+            <p class="gr-aware__text">Grants are announced in calls written for experts, spread across many portals and providers, and rarely reach the owner of a small café or workshop directly.</p>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="gr-audience" data-reveal>
+          <img class="gr-audience__photo" src="assets/img/granta/audience.jpg" alt="Two smiling café owners standing behind their counter" width="1280" height="1120" loading="lazy">
+          <div class="cs-group">
+            <p class="cs-label">Who we are designing for</p>
+            <h3 class="cs-h3">The full spectrum of Hungarian SME owners</h3>
+            <p class="cs-p">From local hospitality to manufacturing and independent services. They are experts in their own business, not in Hungarian grant law, and they don't have time to become one.</p>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group cs-group--wide">
+          <p class="cs-label">What we found</p>
+          <h3 class="cs-h3">Four barriers stand between owners and the money</h3>
+        </div>
+        <div class="cs-cards cs-cards--4" data-reveal>
+          <div class="gr-barrier">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" aria-hidden="true"><path d="M11.5 42.1673V33.9256C9.67917 32.2645 8.26563 30.3239 7.25938 28.1038C6.25313 25.8836 5.75 23.5437 5.75 21.084C5.75 16.2923 7.42708 12.2194 10.7812 8.86523C14.1354 5.51107 18.2083 3.83398 23 3.83398C26.9931 3.83398 30.5309 5.00794 33.6135 7.35586C36.6962 9.70378 38.7007 12.7625 39.6271 16.5319L42.1188 26.3548C42.2785 26.9618 42.1667 27.5128 41.7833 28.0079C41.4 28.5031 40.8889 28.7507 40.25 28.7507H36.4167V34.5007C36.4167 35.5548 36.0413 36.4572 35.2906 37.2079C34.5399 37.9586 33.6375 38.334 32.5833 38.334H28.75V42.1673H24.9167V34.5007H32.5833V24.9173H37.7583L35.9375 17.4902C35.2028 14.5833 33.6375 12.2194 31.2417 10.3986C28.8458 8.57773 26.0986 7.66732 23 7.66732C19.2944 7.66732 16.1319 8.96107 13.5125 11.5486C10.8931 14.1361 9.58333 17.2826 9.58333 20.9881C9.58333 22.9048 9.97465 24.7257 10.7573 26.4507C11.5399 28.1757 12.65 29.709 14.0875 31.0506L15.3333 32.2007V42.1673H11.5ZM23 30.6673C23.5431 30.6673 23.9983 30.4836 24.3656 30.1163C24.733 29.7489 24.9167 29.2937 24.9167 28.7507C24.9167 28.2076 24.733 27.7524 24.3656 27.385C23.9983 27.0177 23.5431 26.834 23 26.834C22.4569 26.834 22.0017 27.0177 21.6344 27.385C21.267 27.7524 21.0833 28.2076 21.0833 28.7507C21.0833 29.2937 21.267 29.7489 21.6344 30.1163C22.0017 30.4836 22.4569 30.6673 23 30.6673ZM21.5625 24.534H24.4854C24.4854 23.7354 24.5892 23.0885 24.7969 22.5934C25.0045 22.0982 25.4278 21.4993 26.0667 20.7965C26.6417 20.1576 27.2007 19.5107 27.7438 18.8559C28.2868 18.201 28.5583 17.3465 28.5583 16.2923C28.5583 14.9507 28.0392 13.8166 27.001 12.8902C25.9628 11.9638 24.6771 11.5007 23.1438 11.5007C21.866 11.5007 20.708 11.868 19.6698 12.6027C18.6316 13.3375 17.9049 14.2958 17.4896 15.4777L20.125 16.5798C20.3486 15.877 20.7399 15.31 21.299 14.8788C21.858 14.4475 22.4729 14.2319 23.1438 14.2319C23.8465 14.2319 24.4295 14.4236 24.8927 14.8069C25.3559 15.1902 25.5875 15.6854 25.5875 16.2923C25.5875 16.9632 25.3878 17.5621 24.9885 18.0892C24.5892 18.6163 24.1181 19.1513 23.575 19.6944C22.9361 20.3652 22.441 21.0361 22.0896 21.7069C21.7382 22.3777 21.5625 23.3201 21.5625 24.534Z" fill="#1C1B1F"/></svg>
+            <p class="gr-barrier__title">Low awareness</p>
+            <p class="gr-barrier__text">According to EU survey data, only around a third of European SMEs are aware of the public financial support available to them (Flash Eurobarometer 441, 2016).</p>
+          </div>
+          <div class="gr-barrier">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><path d="M2.0835 35.834C2.0835 34.6534 2.38732 33.5684 2.99495 32.5788C3.60259 31.5892 4.40988 30.834 5.41683 30.3132C7.56961 29.2368 9.75711 28.4295 11.9793 27.8913C14.2016 27.3531 16.4585 27.084 18.7502 27.084C21.0418 27.084 23.2988 27.3531 25.521 27.8913C27.7432 28.4295 29.9307 29.2368 32.0835 30.3132C33.0904 30.834 33.8977 31.5892 34.5054 32.5788C35.113 33.5684 35.4168 34.6534 35.4168 35.834V37.5007C35.4168 38.6465 35.0088 39.6274 34.1929 40.4434C33.3769 41.2593 32.396 41.6673 31.2502 41.6673H6.25016C5.10433 41.6673 4.12343 41.2593 3.30745 40.4434C2.49148 39.6274 2.0835 38.6465 2.0835 37.5007V35.834ZM43.7502 41.6673H38.4377C38.8196 41.0423 39.1061 40.3739 39.297 39.6621C39.488 38.9503 39.5835 38.2298 39.5835 37.5007V35.4173C39.5835 33.8895 39.1581 32.4225 38.3075 31.0163C37.4568 29.61 36.2502 28.4034 34.6877 27.3965C36.4585 27.6048 38.1252 27.9607 39.6877 28.4642C41.2502 28.9677 42.7085 29.584 44.0627 30.3132C45.3127 31.0076 46.2675 31.7802 46.9272 32.6309C47.587 33.4816 47.9168 34.4104 47.9168 35.4173V37.5007C47.9168 38.6465 47.5088 39.6274 46.6929 40.4434C45.8769 41.2593 44.896 41.6673 43.7502 41.6673ZM12.8647 22.5527C11.2328 20.9208 10.4168 18.959 10.4168 16.6673C10.4168 14.3757 11.2328 12.4138 12.8647 10.7819C14.4967 9.14996 16.4585 8.33398 18.7502 8.33398C21.0418 8.33398 23.0036 9.14996 24.6356 10.7819C26.2675 12.4138 27.0835 14.3757 27.0835 16.6673C27.0835 18.959 26.2675 20.9208 24.6356 22.5527C23.0036 24.1847 21.0418 25.0007 18.7502 25.0007C16.4585 25.0007 14.4967 24.1847 12.8647 22.5527ZM37.1356 22.5527C35.5036 24.1847 33.5418 25.0007 31.2502 25.0007C30.8682 25.0007 30.3821 24.9572 29.7918 24.8704C29.2016 24.7836 28.7154 24.6882 28.3335 24.584C29.271 23.4729 29.9915 22.2402 30.495 20.8861C30.9984 19.5319 31.2502 18.1257 31.2502 16.6673C31.2502 15.209 30.9984 13.8027 30.495 12.4486C29.9915 11.0944 29.271 9.86176 28.3335 8.75065C28.8196 8.57704 29.3057 8.46419 29.7918 8.41211C30.2779 8.36003 30.7641 8.33398 31.2502 8.33398C33.5418 8.33398 35.5036 9.14996 37.1356 10.7819C38.7675 12.4138 39.5835 14.3757 39.5835 16.6673C39.5835 18.959 38.7675 20.9208 37.1356 22.5527ZM6.25016 37.5007H31.2502V35.834C31.2502 35.452 31.1547 35.1048 30.9637 34.7923C30.7727 34.4798 30.521 34.2368 30.2085 34.0632C28.3335 33.1257 26.4411 32.4225 24.5314 31.9538C22.6217 31.485 20.6946 31.2507 18.7502 31.2507C16.8057 31.2507 14.8786 31.485 12.9689 31.9538C11.0592 32.4225 9.16683 33.1257 7.29183 34.0632C6.97933 34.2368 6.72759 34.4798 6.53662 34.7923C6.34565 35.1048 6.25016 35.452 6.25016 35.834V37.5007ZM21.6929 19.61C22.5088 18.7941 22.9168 17.8132 22.9168 16.6673C22.9168 15.5215 22.5088 14.5406 21.6929 13.7246C20.8769 12.9086 19.896 12.5007 18.7502 12.5007C17.6043 12.5007 16.6234 12.9086 15.8075 13.7246C14.9915 14.5406 14.5835 15.5215 14.5835 16.6673C14.5835 17.8132 14.9915 18.7941 15.8075 19.61C16.6234 20.426 17.6043 20.834 18.7502 20.834C19.896 20.834 20.8769 20.426 21.6929 19.61Z" fill="#001E17"/></svg>
+            <p class="gr-barrier__title">No trusted guide</p>
+            <p class="gr-barrier__text">There is no single place that tells owners which grants fit them and what to do next, so many give up before they start.</p>
+          </div>
+          <div class="gr-barrier">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><path d="M18.7502 37.4994H31.2502C31.8404 37.4994 32.3352 37.2997 32.7345 36.9004C33.1338 36.5011 33.3335 36.0063 33.3335 35.416C33.3335 34.8257 33.1338 34.3309 32.7345 33.9316C32.3352 33.5323 31.8404 33.3327 31.2502 33.3327H18.7502C18.1599 33.3327 17.6651 33.5323 17.2658 33.9316C16.8665 34.3309 16.6668 34.8257 16.6668 35.416C16.6668 36.0063 16.8665 36.5011 17.2658 36.9004C17.6651 37.2997 18.1599 37.4994 18.7502 37.4994ZM18.7502 29.166H31.2502C31.8404 29.166 32.3352 28.9664 32.7345 28.5671C33.1338 28.1678 33.3335 27.673 33.3335 27.0827C33.3335 26.4924 33.1338 25.9976 32.7345 25.5983C32.3352 25.199 31.8404 24.9994 31.2502 24.9994H18.7502C18.1599 24.9994 17.6651 25.199 17.2658 25.5983C16.8665 25.9976 16.6668 26.4924 16.6668 27.0827C16.6668 27.673 16.8665 28.1678 17.2658 28.5671C17.6651 28.9664 18.1599 29.166 18.7502 29.166ZM12.5002 45.8327C11.3543 45.8327 10.3734 45.4247 9.55745 44.6087C8.74148 43.7928 8.3335 42.8119 8.3335 41.666V8.33268C8.3335 7.18685 8.74148 6.20595 9.55745 5.38997C10.3734 4.574 11.3543 4.16602 12.5002 4.16602H27.4481C28.0036 4.16602 28.5331 4.27018 29.0366 4.47852C29.5401 4.68685 29.9828 4.98199 30.3647 5.36393L40.4689 15.4681C40.8509 15.85 41.146 16.2928 41.3543 16.7962C41.5627 17.2997 41.6668 17.8292 41.6668 18.3848V41.666C41.6668 42.8119 41.2588 43.7928 40.4429 44.6087C39.6269 45.4247 38.646 45.8327 37.5002 45.8327H12.5002ZM27.0835 16.666V8.33268H12.5002V41.666H37.5002V18.7493H29.1668C28.5766 18.7493 28.0818 18.5497 27.6825 18.1504C27.2831 17.7511 27.0835 17.2563 27.0835 16.666Z" fill="#001E17"/></svg>
+            <p class="gr-barrier__title">Complex legal terms</p>
+            <p class="gr-barrier__text">Dense regulatory language creates confusion even for well-educated owners unfamiliar with Hungarian law.</p>
+          </div>
+          <div class="gr-barrier">
+            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" aria-hidden="true"><path d="M4.84461 44.625C3.58471 44.625 2.50617 44.2089 1.60898 43.3766C0.711781 42.5443 0.263184 41.5438 0.263184 40.375V14.875C0.263184 14.2729 0.48271 13.7682 0.921763 13.3609C1.36082 12.9536 1.90486 12.75 2.55389 12.75C3.20293 12.75 3.74697 12.9536 4.18603 13.3609C4.62508 13.7682 4.84461 14.2729 4.84461 14.875V40.375H41.496C42.145 40.375 42.6891 40.5786 43.1281 40.9859C43.5672 41.3932 43.7867 41.8979 43.7867 42.5C43.7867 43.1021 43.5672 43.6068 43.1281 44.0141C42.6891 44.4214 42.145 44.625 41.496 44.625H4.84461ZM14.0074 36.125C12.7476 36.125 11.669 35.7089 10.7718 34.8766C9.87463 34.0443 9.42603 33.0438 9.42603 31.875V8.5C9.42603 7.33125 9.87463 6.33073 10.7718 5.49844C11.669 4.66615 12.7476 4.25 14.0074 4.25H23.5712C24.182 4.25 24.7642 4.35625 25.3178 4.56875C25.8714 4.78125 26.3582 5.08229 26.7782 5.47187L30.0424 8.5H46.0774C47.3373 8.5 48.4158 8.91615 49.313 9.74844C50.2102 10.5807 50.6588 11.5813 50.6588 12.75V31.875C50.6588 33.0438 50.2102 34.0443 49.313 34.8766C48.4158 35.7089 47.3373 36.125 46.0774 36.125H14.0074ZM14.0074 31.875H46.0774V12.75H28.1526L23.5712 8.5H14.0074V31.875Z" fill="#001E17"/></svg>
+            <p class="gr-barrier__title">Overwhelming paperwork</p>
+            <p class="gr-barrier__text">Multi-step applications with unclear requirements lead to abandonment before submission.</p>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Synthesis · the current journey</p>
+          <h3 class="cs-h3">Where owners drop off today</h3>
+          <p class="cs-p">Mapping the barriers onto the steps of applying showed the real pattern: every step adds friction, and the experience gets worse just when effort is highest.</p>
+        </div>
+        <figure class="cs-figure cs-scroll" data-reveal>
+          <svg viewBox="0 0 1408 600" fill="none" role="img" aria-labelledby="gr-jm-title">
+            <title id="gr-jm-title">As-is journey: Hear about grants (curious, low awareness), Check eligibility (unsure, no trusted guide), Read the call (confused, complex legal terms), Gather documents (overwhelmed, overwhelming paperwork), Submit or give up (drops off, abandonment)</title>
+            <rect width="1408" height="600" rx="28" fill="#0E3D3B"/>
+            <rect x="281.6" y="40" width="1" height="440" fill="#1E5A55"/><rect x="563.2" y="40" width="1" height="440" fill="#1E5A55"/><rect x="844.8" y="40" width="1" height="440" fill="#1E5A55"/><rect x="1126.4" y="40" width="1" height="440" fill="#1E5A55"/>
+            <path d="M140.8 120C240.8 120 322.4 190 422.4 190C522.4 190 604 270 704 270C804 270 885.6 330 985.6 330C1085.6 330 1167.2 380 1267.2 380" stroke="#00D09E" stroke-width="4" stroke-linecap="round"/>
+            <g font-family="Domine" font-size="13" fill="#A9C4BF"><text x="24" y="124.29">+ feeling</text><text x="24" y="394.29">– feeling</text></g>
+            <g font-family="Domine" font-size="20" font-weight="700" fill="#fff" text-anchor="middle"><text x="140.8" y="61.6">Hear about grants</text><text x="422.4" y="61.6">Check eligibility</text><text x="704" y="61.6">Read the call</text><text x="985.6" y="61.6">Gather documents</text><text x="1267.2" y="61.6">Submit… or give up</text></g>
+            <g stroke="#0E3D3B" stroke-width="4"><circle cx="140.8" cy="120" r="9" fill="#00D09E"/><circle cx="422.4" cy="190" r="9" fill="#00D09E"/><circle cx="704" cy="270" r="9" fill="#00D09E"/><circle cx="985.6" cy="330" r="9" fill="#00D09E"/><circle cx="1267.2" cy="380" r="9" fill="#FFC86B"/></g>
+            <g font-family="Domine" font-size="14" fill="#fff" fill-opacity=".8"><text x="110.3" y="153.12">curious</text><text x="396.4" y="223.12">unsure</text><text x="669.5" y="303.12">confused</text><text x="938.1" y="363.12">overwhelmed</text><text x="1228.2" y="413.12">drops off</text></g>
+            <rect x="66.3" y="510" width="144" height="33" rx="16.5" fill="#00D09E"/><rect x="334.4" y="510" width="155" height="33" rx="16.5" fill="#00D09E"/><rect x="603" y="510" width="181" height="33" rx="16.5" fill="#00D09E"/><rect x="871.6" y="510" width="222" height="33" rx="16.5" fill="#00D09E"/><rect x="1201.2" y="510" width="136" height="33" rx="16.5" fill="#FFC86B"/>
+            <g font-family="Domine" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#001E17"><text x="84.3" y="530.79">Low awareness</text><text x="352.4" y="530.79">No trusted guide</text><text x="621" y="530.79">Complex legal terms</text><text x="889.6" y="530.79">Overwhelming paperwork</text><text x="1219.2" y="530.79">Abandonment</text></g>
+          </svg>
+        </figure>
+      </section>
+
+      <!-- ============ 02 DEFINE ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="gr-define">
+        <h2 class="cs-phase" id="gr-define"><span class="cs-phase__num" aria-hidden="true">02</span><span class="cs-phase__name">Define</span></h2>
+        <p class="cs-h2">From many problems to one clear challenge</p>
+        <p class="cs-lead">Looking at the four barriers together, we realised they were not four separate problems. They were one: the path from a business owner to the right grant is broken.</p>
+        <div class="cs-spacer"></div>
+        <div class="cs-callout gr-problem" data-reveal>
+          <p class="cs-label">Problem statement</p>
+          <p class="cs-callout__big">SME owners miss grants they already qualify for.</p>
+          <p class="gr-problem__text">The money is there, but the path to it isn't: it is hidden, written in legal language, and broken into paperwork that nobody guides you through.</p>
+        </div>
+        <div class="cs-spacer"></div>
+        <div class="cs-group">
+          <p class="cs-label">How might we…</p>
+          <h3 class="cs-h3">Turning the problem into questions we could design for</h3>
+        </div>
+        <div class="cs-cards cs-cards--3 gr-hmws" data-reveal>
+          <div class="cs-hmw"><p class="cs-hmw__tag">HMW</p><p class="cs-hmw__text">…help owners find the grants they qualify for, without having to search?</p></div>
+          <div class="cs-hmw"><p class="cs-hmw__tag">HMW</p><p class="cs-hmw__text">…turn legal requirements into language anyone can follow?</p></div>
+          <div class="cs-hmw"><p class="cs-hmw__tag">HMW</p><p class="cs-hmw__text">…guide owners step by step from a match to a finished application?</p></div>
+        </div>
+        <div class="cs-spacer"></div>
+        <div class="cs-group">
+          <p class="cs-label">Design principles</p>
+          <h3 class="cs-h3">Four rules that guided every decision</h3>
+        </div>
+        <div class="cs-rows" data-reveal>
+          <div><p class="cs-rows__num">01</p><p class="cs-rows__title">Only show what fits</p><p class="cs-rows__text">If a hard requirement fails, the grant disappears. A 0% match is misleading; absence from the list is cleaner.</p></div>
+          <div><p class="cs-rows__num">02</p><p class="cs-rows__title">Plain language first</p><p class="cs-rows__text">Every requirement, deadline and amount explained without legal jargon, in the owner's own language.</p></div>
+          <div><p class="cs-rows__num">03</p><p class="cs-rows__title">Do the work for them</p><p class="cs-rows__text">Build the eligibility profile from existing business data, so owners answer as few questions as possible.</p></div>
+          <div><p class="cs-rows__num">04</p><p class="cs-rows__title">Never a dead end</p><p class="cs-rows__text">When a grant is not enough, connect owners to loans, guarantees and grant writers.</p></div>
+        </div>
+        <div class="cs-goal gr-goal" data-reveal>
+          <span class="cs-goal__pill">Goal</span>
+          <p>Help SME owners discover, understand and apply for the grants they qualify for, without needing an expert.</p>
+        </div>
+      </section>
+
+      <!-- ============ 03 DEVELOP ============ -->
+      <section class="cs-sec" aria-labelledby="gr-develop">
+        <h2 class="cs-phase" id="gr-develop"><span class="cs-phase__num" aria-hidden="true">03</span><span class="cs-phase__name">Develop</span></h2>
+        <p class="cs-h2">Exploring the solution</p>
+        <p class="cs-lead">With a clear problem, we explored how a digital assistant could take owners from “I didn't know this existed” to a finished application, and why a bank would want to offer it.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="gr-concept" data-reveal>
+          <div class="gr-concept__text">
+            <p class="cs-label">The concept</p>
+            <p class="gr-concept__name">Meet Granta</p>
+            <p class="gr-concept__lead">A multilingual digital assistant matching business owners to grants they qualify for, in their language, in plain terms.</p>
+            <ul class="gr-concept__list">
+              <li><strong>Easy to set up</strong><span>Guided onboarding and data synchronising</span></li>
+              <li><strong>Easy to understand</strong><span>Plain language instead of legal jargon</span></li>
+              <li><strong>Further help access</strong><span>Connecting you to loans, guarantees and grant writers</span></li>
+            </ul>
+          </div>
+          <img class="gr-concept__img" src="assets/img/granta/hand-phone.png" alt="A hand holding a phone with the Granta grant list" width="1400" height="1218" loading="lazy">
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">User journey</p>
+          <h3 class="cs-h3">How Granta works, in four steps</h3>
+        </div>
+        <ol class="gr-journey" data-reveal>
+          <li><span>1</span><p class="gr-journey__title">Profile setup</p><p>Owners answer plain-language questions. Granta builds their eligibility profile from their business data.</p></li>
+          <li><span>2</span><p class="gr-journey__title">Grant matching</p><p>Only grants they qualify for are shown: translated, simplified, with deadlines and amounts up front.</p></li>
+          <li><span>3</span><p class="gr-journey__title">Guided application</p><p>A step-by-step document checklist with plain explanations, and reminders for key deadlines.</p></li>
+          <li><span>4</span><p class="gr-journey__title">Bank handoff</p><p>The bank's SME loans, guarantees and grant-writer services appear as the natural next step.</p></li>
+        </ol>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Grant matching logic</p>
+          <h3 class="cs-h3">Two stages, so owners only see grants that truly fit</h3>
+          <p class="cs-p">The core of the product is a rule system. We designed it so the interface could stay simple.</p>
+        </div>
+        <figure class="cs-figure cs-scroll" data-reveal>
+          <svg viewBox="0 0 1408 560" fill="none" role="img" aria-labelledby="gr-ml-title">
+            <title id="gr-ml-title">Matching logic: all grants pass through stage 1 hard gates (Hungarian registered company, at least 1 closed financial year, no active NAV tax debt, TEÁOR code within eligible sectors), then stage 2 scoring criteria, resulting in ranked matches</title>
+            <rect y="169.95" width="190" height="220" rx="24" fill="#062424"/>
+            <text x="30" y="226.45" font-family="Domine" font-size="15" font-weight="700" letter-spacing="0.08em" fill="#00D09E">ALL GRANTS</text>
+            <text font-family="Domine" font-size="18" fill="#fff"><tspan x="30" y="263.94">Every open call</tspan><tspan x="30" y="289.94">from every</tspan><tspan x="30" y="315.94">provider</tspan></text>
+            <g fill="#00D09E"><path d="M282 280L272 274.226V285.774L282 280ZM232 280V281H273V279H232V280Z"/><path d="M816 280L806 274.226V285.774L816 280ZM766 280V281H807V279H766V280Z"/><path d="M1250 280L1240 274.226V285.774L1250 280ZM1200 280V281H1241V279H1200V280Z"/></g>
+            <rect x="294" y="40" width="460" height="480" rx="24" fill="#0E3D3B"/>
+            <text x="330" y="92.45" font-family="Domine" font-size="15" font-weight="700" letter-spacing="0.08em" fill="#00D09E">STAGE 1</text>
+            <text x="330" y="132.6" font-family="Chonburi" font-size="26" fill="#fff">Hard gates · pass / fail</text>
+            <g fill="#00D09E"><circle cx="344" cy="182" r="14"/><circle cx="344" cy="244" r="14"/><circle cx="344" cy="306" r="14"/><circle cx="344" cy="368" r="14"/></g>
+            <g font-family="Domine" font-size="17" font-weight="700" fill="#001E17"><text x="337" y="187.61">✓</text><text x="337" y="249.61">✓</text><text x="337" y="311.61">✓</text><text x="337" y="373.61">✓</text></g>
+            <g font-family="Domine" font-size="18" fill="#fff"><text><tspan x="374" y="188.44">Hungarian registered company (Kft. or</tspan><tspan x="374" y="213.44">Bt.)</tspan></text><text x="374" y="250.44">At least 1 closed financial year filed</text><text x="374" y="312.44">No active NAV tax debt</text><text x="374" y="374.44">TEÁOR code within eligible sectors</text></g>
+            <text font-family="Domine" font-size="16" fill="#A9C4BF"><tspan x="330" y="445.28">If any gate fails, the grant is removed entirely, not</tspan><tspan x="330" y="469.28">shown with a low score.</tspan></text>
+            <rect x="828" y="40" width="360" height="480" rx="24" fill="#0E3D3B"/>
+            <text x="864" y="92.45" font-family="Domine" font-size="15" font-weight="700" letter-spacing="0.08em" fill="#00D09E">STAGE 2</text>
+            <text x="864" y="132.6" font-family="Chonburi" font-size="26" fill="#fff">Scoring criteria</text>
+            <g fill="#00D09E" fill-opacity="0.12"><rect x="864" y="166" width="288" height="40" rx="10"/><rect x="864" y="218" width="288" height="40" rx="10"/><rect x="864" y="270" width="288" height="40" rx="10"/><rect x="864" y="322" width="288" height="40" rx="10"/><rect x="864" y="374" width="288" height="40" rx="10"/><rect x="864" y="426" width="288" height="40" rx="10"/></g>
+            <g font-family="Domine" font-size="15" fill="#fff"><text x="880" y="191.45">TEÁOR code match</text><text x="880" y="243.45">Business maturity</text><text x="880" y="295.45">Company size fit</text><text x="880" y="347.45">Geographic eligibility</text><text x="880" y="399.45">Investment goal alignment</text><text x="880" y="451.45">Deadline feasibility</text></g>
+            <rect x="1262" y="150" width="146" height="260" rx="24" fill="#00D09E"/>
+            <text font-family="Chonburi" font-size="20" fill="#001E17"><tspan x="1282" y="198.45">YOUR</tspan><tspan x="1282" y="221.45">MATCHES</tspan></text>
+            <text font-family="Domine" font-size="16" fill="#001E17"><tspan x="1282" y="286.78">ranked, only</tspan><tspan x="1282" y="309.78">the ones that</tspan><tspan x="1282" y="332.78">fit</tspan></text>
+          </svg>
+        </figure>
+        <div class="gr-question" data-reveal>
+          <p class="gr-question__mark" aria-hidden="true">?</p>
+          <p>One question is always asked manually: “What do you want to use the funding for?” The investment goal can't be read from registry data, and it is what makes a match truly relevant.</p>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Business case</p>
+          <h3 class="cs-h3">Why this is a win-win</h3>
+          <p class="cs-p">For Granta to exist, someone has to offer it. We framed it as a service a bank could provide to its SME clients.</p>
+        </div>
+        <figure class="cs-figure cs-scroll" data-reveal>
+          <svg viewBox="0 0 1408 560" fill="none" role="img" aria-labelledby="gr-venn-title">
+            <title id="gr-venn-title">Shared value: the SME owner discovers grants, understands the process, gets access to expert help and loans, and a guided application; the bank gets deeper SME relationships, loan and guarantee upsell, connects clients with its grant writing, and new clients through freemium. Granta sits in the middle.</title>
+            <circle cx="513" cy="280" r="259" stroke="#00D09E" stroke-width="2"/>
+            <circle cx="894" cy="279.95" r="259" stroke="#00D09E" stroke-width="2"/>
+            <g font-family="Chonburi" font-size="36" letter-spacing="0.02em" fill="#fff"><text x="299" y="224.55">SME OWNER</text><text x="989" y="224.55">BANK</text></g>
+            <text font-family="Domine" font-size="15" fill="#fff"><tspan x="299" y="262.9">Discovers grants they didn't know existed</tspan><tspan x="299" y="288.9">Understands the process in plain language</tspan><tspan x="299" y="314.9">Access to expert help and loans for pre-</tspan><tspan x="299" y="340.9">funding</tspan><tspan x="299" y="366.9">A guided application process</tspan></text>
+            <text font-family="Domine" font-size="15" fill="#fff" text-anchor="end"><tspan x="1109" y="262.9">Deeper SME relationships</tspan><tspan x="1109" y="288.9">Loan and guarantee upsell</tspan><tspan x="1109" y="314.9">Connects clients with the bank's grant</tspan><tspan x="1109" y="340.9">writing</tspan><tspan x="1109" y="366.9">New clients through freemium</tspan></text>
+            <text x="704" y="287.4" font-family="Chonburi" font-size="34" fill="#00D09E" text-anchor="middle">Granta</text>
+            <text x="704" y="313.12" font-family="Domine" font-size="14" fill="#fff" text-anchor="middle">shared value</text>
+          </svg>
+        </figure>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">User flow</p>
+          <h3 class="cs-h3">Two ways in: with or without a VAT number</h3>
+          <p class="cs-p">Not every owner has their company data at hand or they haven’t started the business yet. We split onboarding so those with a VAT number get a profile filled in for them, while others answer a few plain questions.</p>
+        </div>
+        <figure class="cs-figure cs-scroll" data-reveal>
+          <svg viewBox="0 0 1408 460" fill="none" role="img" aria-labelledby="gr-flow-title">
+            <title id="gr-flow-title">Onboarding flow: open Granta, choose language, then: has a VAT number? Yes: enter VAT number, profile auto-filled from registry and confirmed. No: answer a few plain-language questions, profile built from answers. Both lead to the funding goal and matches.</title>
+            <rect width="1408" height="460" rx="28" fill="#0E3D3B"/>
+            <path d="M540 228L640 128L740 228L640 328L540 228Z" fill="#062424"/>
+            <rect x="40" y="200" width="180" height="55" rx="27.5" fill="#00D09E"/>
+            <rect x="270" y="200" width="200" height="55" rx="14" fill="#062424"/>
+            <rect x="790" y="70" width="220" height="55" rx="14" fill="#062424"/>
+            <rect x="1060" y="56" width="300" height="78" rx="14" fill="#062424"/>
+            <rect x="790" y="330" width="260" height="78" rx="14" fill="#062424"/>
+            <rect x="1100" y="330" width="260" height="78" rx="14" fill="#062424"/>
+            <rect x="1150" y="200" width="220" height="78" rx="39" fill="#00D09E"/>
+            <g fill="#00D09E"><path d="M262 230L252 224.226V235.774L262 230ZM220 230V231H253V229H220V230Z"/><path d="M512 230L502 224.226V235.774L512 230ZM470 230V231H503V229H470V230Z"/><path d="M782 100L770.646 102.102L778.143 110.884L782 100ZM700 170L700.649 170.761L775.804 106.604L775.155 105.843L774.506 105.083L699.351 169.239L700 170Z"/><path d="M782 360L778.143 349.116L770.646 357.898L782 360ZM700 290L699.351 290.761L774.506 354.917L775.155 354.157L775.804 353.396L700.649 289.239L700 290Z"/><path d="M1052 100L1042 94.2265V105.774L1052 100ZM1010 100V101H1043V99H1010V100Z"/><path d="M1092 360L1082 354.226V365.774L1092 360ZM1050 360V361H1083V359H1050V360Z"/><path d="M1240 192L1238.89 180.507L1229.49 187.218L1240 192ZM1210 150L1209.19 150.581L1233.96 185.258L1234.77 184.676L1235.58 184.095L1210.81 149.419L1210 150Z"/><path d="M1260 268L1250 273.777L1260 279.547L1260 268ZM1230 320L1230.87 320.5L1256.37 276.295L1255.5 275.796L1254.64 275.296L1229.13 319.5L1230 320Z"/></g>
+            <g font-family="Domine" font-size="17" font-weight="700" text-anchor="middle">
+              <text x="130" y="233.11" fill="#001E17">Open Granta</text>
+              <text x="370" y="233.11" fill="#fff">Choose language</text>
+              <text x="900" y="103.11" fill="#fff">Enter VAT number</text>
+              <text fill="#fff"><tspan x="1210" y="89.11">Profile auto-filled from</tspan><tspan x="1210" y="112.11">registry · confirm</tspan></text>
+              <text fill="#fff"><tspan x="920" y="363.11">Answer a few plain-</tspan><tspan x="920" y="386.11">language questions</tspan></text>
+              <text fill="#fff"><tspan x="1230" y="363.11">Profile built from</tspan><tspan x="1230" y="386.11">answers</tspan></text>
+              <text fill="#001E17"><tspan x="1260" y="233.11">Funding goal →</tspan><tspan x="1260" y="256.11">matches</tspan></text>
+              <text fill="#fff"><tspan x="640" y="222.61">Has a VAT</tspan><tspan x="640" y="244.61">number?</tspan></text>
+            </g>
+            <g font-family="Domine" font-size="14" font-weight="700" fill="#00D09E"><text x="720" y="125.12">YES</text><text x="724" y="345.12">NO</text></g>
+          </svg>
+        </figure>
+        <figure class="cs-scroll" data-reveal>
+          <img class="gr-wide-img" src="assets/img/granta/lofi-wireframes.png" alt="Lo-fi onboarding wireframes in grayscale: choose language, registered company question, and business sector" width="2816" height="2200" loading="lazy">
+        </figure>
+      </section>
+
+      <!-- ============ 04 DELIVER ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="gr-deliver">
+        <h2 class="cs-phase" id="gr-deliver"><span class="cs-phase__num" aria-hidden="true">04</span><span class="cs-phase__name">Deliver</span></h2>
+        <p class="cs-h2">Designing the final product</p>
+        <p class="cs-lead">We turned the rule system into a calm, guided mobile experience. Every screen follows the same visual rules: order and highlight information, so owners never have to decode what they see.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Visual language</p>
+          <h3 class="cs-h3">Calm, trustworthy, and clear</h3>
+        </div>
+        <div class="gr-visual" data-reveal>
+          <div class="gr-swatch" style="--bg: #093030; --fg: #fff"><p class="gr-swatch__name">Deep teal</p><p>#093030 · trust, calm, banking</p></div>
+          <div class="gr-swatch" style="--bg: #00d09e; --fg: #001e17"><p class="gr-swatch__name">Granta mint</p><p>#00D09E · action, growth, “yes”</p></div>
+          <div class="gr-swatch" style="--bg: #fff; --fg: #001e17"><p class="gr-swatch__name">White</p><p>#FFFFFF · space for content</p></div>
+          <div class="gr-type"><p class="gr-type__aa">Aa</p><p class="gr-swatch__name">Poppins &amp; Inter</p><p>friendly, round, highly legible at small sizes</p></div>
+          <div class="gr-logo">
+            <svg viewBox="0 0 462 455" fill="none" role="img" aria-label="Granta logo: two simple circles">
+              <path d="M280.924 6.36187C240.728 -3.34917 198.645 -1.92033 159.199 10.4948C119.754 22.9099 84.4386 45.8416 57.0502 76.8245C29.6617 107.807 11.2361 145.669 3.75437 186.34C-3.72733 227.011 0.0178752 268.951 14.5873 307.653C29.1568 346.354 53.9994 380.352 86.4441 405.992C118.889 431.632 157.709 447.944 198.73 453.173C239.751 458.403 281.421 452.353 319.261 435.673C357.101 418.994 389.679 392.316 413.493 358.508L310.818 286.187C300.15 301.332 285.557 313.282 268.606 320.754C251.655 328.226 232.988 330.936 214.612 328.594C196.236 326.251 178.846 318.944 164.312 307.458C149.778 295.972 138.649 280.742 132.123 263.405C125.596 246.069 123.919 227.281 127.27 209.062C130.622 190.843 138.876 173.882 151.145 160.003C163.414 146.124 179.234 135.851 196.904 130.29C214.574 124.728 233.426 124.088 251.432 128.438L280.924 6.36187Z" fill="url(#gr-logo-a)"/>
+              <circle cx="353.419" cy="217.977" r="107.93" fill="#00D09E"/>
+              <defs><linearGradient id="gr-logo-a" x1="227.5" y1="455" x2="227.5" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#00D09E"/><stop offset="1" stop-color="#093030"/></linearGradient></defs>
+            </svg>
+            <p>Two simple circles, one memorable mark</p>
+          </div>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Onboarding</p>
+          <h3 class="cs-h3">Two entry points, one simple start</h3>
+          <p class="cs-p">With a VAT number, Granta pulls the company data and the owner only confirms it. Without one, a few plain-language questions build the same profile.</p>
+        </div>
+        <!-- 🎬 VIDEOS: put the screen recordings at assets/video/granta/ with these names (onboarding-vat.mp4, onboarding-no-vat.mp4, main-flow.mp4) -->
+        <div class="gr-onboarding" data-reveal>
+          <figure>
+            <div class="cs-phone gr-phone--onb"><video class="cs-loop" muted loop playsinline preload="metadata" aria-label="Onboarding with a VAT number: the profile is filled in from the registry"><source src="assets/video/granta/onboarding-vat.mp4#t=0.1" type="video/mp4"></video></div>
+            <figcaption class="cs-pill gr-pill">With VAT number</figcaption>
+          </figure>
+          <figure>
+            <div class="cs-phone gr-phone--onb"><video class="cs-loop" muted loop playsinline preload="metadata" aria-label="Onboarding without a VAT number: answering a few plain-language questions"><source src="assets/video/granta/onboarding-no-vat.mp4#t=0.1" type="video/mp4"></video></div>
+            <figcaption class="cs-pill gr-pill">Without VAT number</figcaption>
+          </figure>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Main flow</p>
+          <h3 class="cs-h3">Only the grants that fit, explained in plain terms</h3>
+          <p class="cs-p">The home screen lists matching grants as cards. Each card answers the three questions owners care about first: what is it, how much, and by when.</p>
+        </div>
+        <div class="gr-main" data-reveal>
+          <div class="gr-main__phone">
+            <div class="cs-phone gr-phone--main"><video class="cs-loop" muted loop playsinline preload="metadata" aria-label="The Granta home screen with matching grant cards"><source src="assets/video/granta/main-flow.mp4#t=0.1" type="video/mp4"></video></div>
+            <span class="gr-main__hl" aria-hidden="true"></span>
+            <span class="gr-badge" style="--x: -16; --y: 394" aria-hidden="true">1</span>
+            <span class="gr-badge" style="--x: -16; --y: 617" aria-hidden="true">2</span>
+            <span class="gr-badge" style="--x: 404; --y: 270" aria-hidden="true">3</span>
+            <span class="gr-badge" style="--x: 297; --y: 479" aria-hidden="true">4</span>
+          </div>
+          <ol class="gr-notes">
+            <li><span class="gr-badge gr-badge--static" aria-hidden="true">1</span><div><p class="gr-notes__label">Proximity</p><p>Grant name, provider, amount and deadline sit close together on each card, so they read as one unit of information.</p></div></li>
+            <li><span class="gr-badge gr-badge--static" aria-hidden="true">2</span><div><p class="gr-notes__label">Similarity</p><p>Every grant card shares the same structure and style, so owners can compare grants at a glance instead of reading each one.</p></div></li>
+            <li><span class="gr-badge gr-badge--static" aria-hidden="true">3</span><div><p class="gr-notes__label">Common region</p><p>Each card is its own container. The boundary separates one grant from the next, even in a long list.</p></div></li>
+            <li><span class="gr-badge gr-badge--static" aria-hidden="true">4</span><div><p class="gr-notes__label">Figure–ground</p><p>The mint call-to-action is the only saturated element on the card, so the next action is always obvious.</p></div></li>
+          </ol>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Re-engagement</p>
+          <h3 class="cs-h3">Bringing owners back at the right moment</h3>
+          <p class="cs-p">Grant applications take weeks. Granta follows up with timely, specific nudges: an approaching deadline, a missing document, or a check-in after the owner visited an application page.</p>
+        </div>
+        <div class="gr-revisit" data-reveal>
+          <img class="gr-revisit__phone" src="assets/img/granta/phone-revisiting.png" alt="The Granta app on a phone" width="880" height="1780" loading="lazy">
+          <div class="gr-notif" style="--x: 120; --y: 150">
+            <div class="gr-notif__row"><span class="gr-notif__icon" style="--bg: #e8f8f2; --fg: #0e3e3e"></span><div><p class="gr-notif__head"><b>Grant application</b><span>Just now</span></p><p>We noticed you visited the Széchenyi Card Program application page. Did you start the process?</p></div></div>
+            <div class="gr-notif__btns"><span>Yes, I did</span><span class="gr-notif__btn--soft">Not yet</span></div>
+          </div>
+          <div class="gr-notif" style="--x: 230; --y: 350">
+            <div class="gr-notif__row"><span class="gr-notif__icon" style="--bg: #6db6fe; --fg: #f6fff7"></span><div><p class="gr-notif__head"><b>Document required</b><span>Yesterday</span></p><p>Please upload your company registration certificate to proceed with your saved application.</p></div></div>
+            <div class="gr-notif__btns"><span>Upload document</span></div>
+          </div>
+          <div class="gr-notif" style="--x: 340; --y: 550">
+            <div class="gr-notif__row"><span class="gr-notif__icon" style="--bg: #ffeeeb; --fg: #093030"></span><div><p class="gr-notif__head"><b>Deadline approaching</b><span>2 hrs ago</span></p><p>Your application for the <b>GINOP-PLUS fund</b> is due in 7 days. Make sure you uploaded every document.</p></div></div>
+            <div class="gr-notif__btns"><span>Continue application</span></div>
+          </div>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Freemium</p>
+          <h3 class="cs-h3">Try it free, grow with the bank</h3>
+          <p class="cs-p">A free version lets any owner set their language, build a business profile and explore the grants they match. It is also how the bank meets new SME clients.</p>
+        </div>
+        <div class="cs-cards cs-cards--4 gr-screens" data-reveal>
+          <figure><img src="assets/img/granta/screen-language.png" alt="Granta screen: choose your language" width="664" height="1520" loading="lazy"></figure>
+          <figure><img src="assets/img/granta/screen-business-profile.png" alt="Granta screen: business profile" width="664" height="1520" loading="lazy"></figure>
+          <figure><img src="assets/img/granta/screen-grant-list.png" alt="Granta screen: list of matching grants" width="664" height="1520" loading="lazy"></figure>
+          <figure><img src="assets/img/granta/screen-grant-detail.png" alt="Granta screen: grant details in plain language" width="664" height="1522" loading="lazy"></figure>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Testing &amp; validation</p>
+          <h3 class="cs-h3">What we learned from users</h3>
+          <div class="cs-p gr-paras">
+            <p>We did a first round of testing with 5 Hungarian SME owners. The findings confirmed that this application would help SME owners to navigate and apply to grants with more confidence, because of the clear and understandable language and the application guide. The participants noted that it would also be great if Granta could gather the needed empty documents in one place and check for “basic” errors (typos and missing information) before the user uploads them to the official application site.</p>
+            <p>We also tested it with the bank client, and the feedback was positive.</p>
+          </div>
+        </div>
+        <img class="gr-testing" src="assets/img/granta/testing-cuts.png" alt="Screen cuts from testing: the documents list and the document check" width="1880" height="1056" loading="lazy" data-reveal>
+      </section>
+
+      <!-- ============ REFLECTION ============ -->
+      <section class="cs-sec cs-sec--reflection" aria-labelledby="gr-reflection">
+        <p class="cs-kicker">Reflection</p>
+        <h2 class="cs-h1 cs-h1--sm" id="gr-reflection">What this project taught me</h2>
+        <div class="cs-cards cs-cards--2" data-reveal>
+          <div class="cs-list gr-list">
+            <p class="cs-label">What I learned</p>
+            <ul>
+              <li>Designing the rules before the screens. The matching logic decided how simple the interface could be.</li>
+              <li>Designing to simplify complex legal terms is not easy and it requires precision.</li>
+              <li>Visual principles are a tool for clarity, not decoration. Gestalt helped us simplify dense, legal information.</li>
+            </ul>
+          </div>
+          <div class="cs-list gr-list">
+            <p class="cs-label">Next steps</p>
+            <ul>
+              <li>Test the matching logic and the plain-language copy with real SME owners.</li>
+              <li>Validate the bank handoff and freemium model with the bank.</li>
+              <li>Add more languages and an accessibility review.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THANK YOU ============ -->
+      <section class="gr-thanks" aria-label="Granta">
+        <svg viewBox="0 0 462 455" fill="none" aria-hidden="true">
+          <path d="M280.924 6.36187C240.728 -3.34917 198.645 -1.92033 159.199 10.4948C119.754 22.9099 84.4386 45.8416 57.0502 76.8245C29.6617 107.807 11.2361 145.669 3.75437 186.34C-3.72733 227.011 0.0178752 268.951 14.5873 307.653C29.1568 346.354 53.9994 380.352 86.4441 405.992C118.889 431.632 157.709 447.944 198.73 453.173C239.751 458.403 281.421 452.353 319.261 435.673C357.101 418.994 389.679 392.316 413.493 358.508L310.818 286.187C300.15 301.332 285.557 313.282 268.606 320.754C251.655 328.226 232.988 330.936 214.612 328.594C196.236 326.251 178.846 318.944 164.312 307.458C149.778 295.972 138.649 280.742 132.123 263.405C125.596 246.069 123.919 227.281 127.27 209.062C130.622 190.843 138.876 173.882 151.145 160.003C163.414 146.124 179.234 135.851 196.904 130.29C214.574 124.728 233.426 124.088 251.432 128.438L280.924 6.36187Z" fill="url(#gr-logo-b)"/>
+          <circle cx="353.419" cy="217.977" r="107.93" fill="#00D09E"/>
+          <defs><linearGradient id="gr-logo-b" x1="227.5" y1="455" x2="227.5" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#00D09E"/><stop offset="1" stop-color="#093030"/></linearGradient></defs>
+        </svg>
+        <p>Granta · 2026</p>
+      </section>
+
+      <!-- ============ PREVIOUS / NEXT PROJECT ============ -->
+      <nav class="pnav" aria-label="More projects" style="--pn-accent: #00d09e">
+        <a class="pnav__prev" href="locus.html">
+          <span class="pnav__small">Previous project</span>
+          <span class="pnav__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Locus</span>
+        </a>
+        <a class="pnav__home" href="index.html#projects">All projects</a>
+        <a class="pnav__next" href="mome-ulp.html">
+          <span class="pnav__small">Next project</span>
+          <span class="pnav__title">MOME ULP redesign<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </nav>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+        <p>&copy; 2026 Róza Parlagi</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="index.html#projects">All projects</a></li>
+        <li><a href="#top" aria-label="Back to top">Back to top &uarr;</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -43,7 +43,7 @@
 
   /* ---------- Project arrows ---------- */
   var projects = document.getElementById('projects');
-  if (projects) {
+  if (projects && projects.querySelector('[data-scroller]')) {
     var row = projects.querySelector('[data-scroller]');
     var prev = projects.querySelector('[data-scroll="prev"]');
     var next = projects.querySelector('[data-scroll="next"]');
@@ -230,4 +230,114 @@
       if (!e.target.closest('.frame')) closeAll();
     });
   }
+})();
+
+/* ---------- Homepage "Get to know me": pile of cards (click the top one to send it to the back) ---------- */
+(function () {
+  'use strict';
+  var deck = document.querySelector('[data-deck]');
+  if (!deck) return;
+  var cards = Array.prototype.slice.call(deck.querySelectorAll('.h-fact'));
+  if (!cards.length) return;
+  var dotsBox = deck.querySelector('[data-deck-dots]');
+  var status = deck.querySelector('[data-deck-status]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var order = cards.map(function (_, i) { return i; });   // order[0] = index of the top card
+  var busy = false;
+  var total = cards.length;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  cards.forEach(function (c, i) {
+    var num = c.querySelector('.h-fact__num');
+    if (num) num.textContent = pad(i + 1) + ' / ' + pad(total);
+    if (dotsBox) dotsBox.appendChild(document.createElement('span'));
+  });
+  var dots = dotsBox ? Array.prototype.slice.call(dotsBox.children) : [];
+
+  function render() {
+    order.forEach(function (cardIndex, depth) {
+      var c = cards[cardIndex];
+      c.setAttribute('data-depth', String(depth));
+      var top = depth === 0;
+      c.tabIndex = top ? 0 : -1;
+      c.setAttribute('aria-hidden', top ? 'false' : 'true');
+      c.setAttribute('aria-label', top ? 'Show the next fact' : '');
+    });
+    dots.forEach(function (d, i) { d.classList.toggle('is-active', i === order[0]); });
+    if (status) {
+      var t = cards[order[0]].querySelector('.h-fact__text');
+      status.textContent = 'Fact ' + (order[0] + 1) + ' of ' + total + ': ' + (t ? t.textContent : '');
+    }
+  }
+
+  function next() {
+    if (busy) return;
+    var top = cards[order[0]];
+    var finish = function () {
+      order.push(order.shift());
+      top.classList.remove('is-leaving');
+      render();
+      busy = false;
+    };
+    if (reduce.matches) { finish(); return; }
+    busy = true;
+    top.classList.add('is-leaving');
+    setTimeout(finish, 380);
+  }
+  function prev() {
+    if (busy) return;
+    order.unshift(order.pop());
+    render();
+  }
+
+  cards.forEach(function (c) {
+    c.addEventListener('click', function () { if (c.getAttribute('data-depth') === '0') next(); });
+  });
+  var nb = deck.querySelector('[data-deck-next]');
+  var pb = deck.querySelector('[data-deck-prev]');
+  if (nb) nb.addEventListener('click', next);
+  if (pb) pb.addEventListener('click', prev);
+
+  render();
+})();
+
+/* ---------- Phone menu (hamburger in the header) ---------- */
+(function () {
+  'use strict';
+  var nav = document.querySelector('.nav');
+  var burger = nav && nav.querySelector('.nav__burger');
+  if (!burger) return;
+
+  function setOpen(open) {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+  nav.querySelectorAll('.nav__links a').forEach(function (a) {
+    a.addEventListener('click', function () { setOpen(false); });       // close after picking a section
+  });
+  document.addEventListener('click', function (e) { if (!nav.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  window.matchMedia('(min-width: 721px)').addEventListener('change', function () { setOpen(false); });
+})();
+
+/* ---------- Case studies: screen-recording videos play only while on screen ---------- */
+(function () {
+  'use strict';
+  var vids = document.querySelectorAll('video.cs-loop');
+  if (!vids.length) return;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still || !('IntersectionObserver' in window)) {
+    vids.forEach(function (v) { v.controls = true; });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else { v.pause(); }
+    });
+  }, { threshold: 0.25 });
+  vids.forEach(function (v) { io.observe(v); });
 })();

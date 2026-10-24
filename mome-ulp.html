@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MOME ULP redesign — Case study · Róza Parlagi</title>
+  <meta name="description" content="MOME ULP redesign: turning MOME's university life platform app from a static, institutional directory into a student-centric dashboard. A UI-focused case study by Róza Parlagi.">
+  <meta name="theme-color" content="#874fff">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="MOME ULP redesign — Case study · Róza Parlagi">
+  <meta property="og:description" content="From institutional to student-centric: a UI-focused redesign of MOME's university life platform app.">
+  <meta property="og:url" content="https://parlagiroza.com/mome-ulp.html">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/chonburi-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/domine-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/mome.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body id="top" class="home cs-page mome-page">
+  <div class="page">
+
+    <!-- ============ NAV (same as the home page) ============ -->
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Róza Parlagi — home">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links" id="main-menu">
+          <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#contact">Get in touch</a></li>
+          <li><a href="Roza_Parlagi_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+        <main class="cs-main">
+
+      <!-- ============ HERO ============ -->
+      <section class="mo-hero" aria-labelledby="mo-title">
+        <span class="mo-hero__blob mo-hero__blob--y" aria-hidden="true"></span>
+        <span class="mo-hero__blob mo-hero__blob--p" aria-hidden="true"></span>
+        <p class="mo-hero__eyebrow">Case study · MOME Interaction Design</p>
+        <h1 class="mo-hero__title" id="mo-title">MOME ULP <span>redesign</span></h1>
+        <p class="mo-hero__sub">From institutional to student-centric. A UI-focused redesign of MOME's university life platform app.</p>
+        <dl class="cs-meta">
+          <div><dt>My role</dt><dd>Solo project: research, IA, UI &amp; interaction design</dd></div>
+          <div><dt>Emphasis on</dt><dd>UI design, visual hierarchy and engagement</dd></div>
+          <div><dt>Tools</dt><dd>Figma</dd></div>
+          <div><dt>Timeline</dt><dd>One semester · 2025</dd></div>
+        </dl>
+      </section>
+
+      <!-- ============ OVERVIEW ============ -->
+      <section class="cs-sec cs-sec--overview" aria-labelledby="mo-overview">
+        <p class="cs-kicker" id="mo-overview">Overview</p>
+        <h2 class="cs-h1" data-reveal>A university life app that didn't feel alive</h2>
+        <div class="cs-overview" data-reveal>
+          <div class="cs-overview__text">
+            <p>The MOME ULP is meant to be the university's life platform: schedule, news, events and student tools in one app. In practice, students described it as cold, static and overly institutional, closer to a nicely designed album than a useful everyday app.</p>
+            <p>This UI-focused project redesigns it around the student: a personal dashboard that shows what matters right now, a clearer structure, a brighter palette, and playful digital companions that give students a reason to come back.</p>
+          </div>
+          <dl class="cs-figures">
+            <div><dt>17</dt><dd>interview insights clustered</dd></div>
+            <div><dt>4</dt><dd>competitor apps, compared on 6 criteria</dd></div>
+            <div><dt>4</dt><dd>main sections in the new IA</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ THE PROCESS ============ -->
+      <section class="cs-sec cs-sec--alt cs-sec--process" aria-labelledby="mo-process">
+        <p class="cs-kicker" id="mo-process">The process</p>
+        <p class="cs-lead">First listening to students and looking at the current app, then narrowing it to one clear rebrief, before exploring structure and visuals and refining them into a tested prototype.</p>
+        <div class="cs-diamond" data-reveal>
+          <svg viewBox="0 0 1408 470" role="img" aria-labelledby="mo-dd-title">
+            <title id="mo-dd-title">Double diamond: Discover and Define lead to the rebrief, Develop and Deliver lead to the prototype</title>
+            <polygon points="0,240 340,60 340,420" fill="#874fff" fill-opacity=".2"/>
+            <polygon points="340,60 680,240 340,420" fill="#874fff" fill-opacity=".4"/>
+            <polygon points="728,240 1068,60 1068,420" fill="#e1d4ff"/>
+            <polygon points="1068,60 1408,240 1068,420" fill="#cbb3ff"/>
+            <circle cx="704" cy="240" r="9" fill="#edf115"/>
+            <circle cx="1399" cy="240" r="9" fill="#edf115"/>
+            <g class="cs-dd-num"><text x="214" y="199">01</text><text x="465.5" y="199">02</text><text x="943.5" y="199">03</text><text x="1193" y="199">04</text></g>
+            <g class="cs-dd-name"><text x="211" y="240">DISCOVER</text><text x="462" y="240">DEFINE</text><text x="941" y="240">DEVELOP</text><text x="1191" y="240">DELIVER</text></g>
+            <g class="cs-dd-sub"><text x="210" y="275">diverge</text><text x="461.5" y="275">converge</text><text x="938" y="275">diverge</text><text x="1189.5" y="275">converge</text></g>
+            <g class="cs-dd-end"><text x="670" y="467" text-anchor="start">Rebrief</text><text x="1320" y="467" text-anchor="start">Prototype</text></g>
+          </svg>
+        </div>
+        <div class="cs-steps" data-reveal>
+          <div><p class="cs-steps__head">01 · Discover</p><ul><li>Student interviews</li><li>Insight clustering</li><li>Competitor analysis</li><li>MOME vs students</li></ul></div>
+          <div><p class="cs-steps__head">02 · Define</p><ul><li>Key problem</li><li>Rebrief (HMW)</li><li>Design goals</li></ul></div>
+          <div><p class="cs-steps__head">03 · Develop</p><ul><li>Proposed IA</li><li>Lo-fi wireframes</li><li>Colour palette update</li><li>First UI versions</li></ul></div>
+          <div><p class="cs-steps__head">04 · Deliver</p><ul><li>Digital companions</li><li>Motivational features</li><li>Friends &amp; final screens</li><li>Prototype &amp; testing</li></ul></div>
+        </div>
+      </section>
+
+      <!-- ============ 01 DISCOVER ============ -->
+      <section class="cs-sec" aria-labelledby="mo-discover">
+        <h2 class="cs-phase" id="mo-discover"><span class="cs-phase__num" aria-hidden="true">01</span><span class="cs-phase__name">Discover</span></h2>
+        <p class="cs-h2">Research &amp; planning</p>
+        <p class="cs-lead">I started by listening. Before touching the UI, I wanted to understand how students actually use the current app, what they miss, and how other university and student apps solve the same problems.</p>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Research plan</p>
+          <h3 class="cs-h3">Four steps from question to insight</h3>
+        </div>
+        <ol class="mo-timeline" data-reveal>
+          <li><span class="mo-timeline__dot">01</span><p class="mo-timeline__title">Student interviews</p><p>In-person interviews with MOME students, 30 min to 1 hour each, about how, when and why they open the app.</p></li>
+          <li><span class="mo-timeline__dot">02</span><p class="mo-timeline__title">Insight clustering</p><p>Grouping every observation and quote into themes on an affinity board.</p></li>
+          <li><span class="mo-timeline__dot">03</span><p class="mo-timeline__title">Competitor analysis</p><p>Reviewing four university and student apps for structure and tone.</p></li>
+          <li><span class="mo-timeline__dot">04</span><p class="mo-timeline__title">Synthesis</p><p>Comparing MOME's identity with what students actually want.</p></li>
+        </ol>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Interview insights</p>
+          <h3 class="cs-h3">What students told me</h3>
+          <p class="cs-p">I clustered every note from the interviews into four themes. The pattern was clear: the app looked fine, but it didn't help, and it didn't invite students back.</p>
+        </div>
+        <p class="cs-p">I did in-person interviews with MOME students, around 30 minutes to 1 hour per person.</p>
+        <div class="mo-board" data-reveal>
+          <div class="mo-cluster">
+            <p class="mo-cluster__head">Look &amp; feel <span class="mo-cluster__count" aria-label="5 notes">5</span></p>
+            <div class="mo-notes">
+              <div>
+                <p class="mo-note">The dark/black theme and a layout very similar to the MOME website don't help usability.</p>
+                <p class="mo-note">The app could be looser and more fun, more in line with students' taste (like the MOME front wall).</p>
+                <p class="mo-note mo-note--quote">“I like that the news have pictures.”</p>
+              </div>
+              <div>
+                <p class="mo-note">The app could be brighter, more colourful. It's too sterile. MOME wants an elegant look, but students aren't really like that.</p>
+                <p class="mo-note">The app looks outdated and lacks visual clarity.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mo-cluster">
+            <p class="mo-cluster__head">Hierarchy &amp; information <span class="mo-cluster__count" aria-label="4 notes">4</span></p>
+            <div class="mo-notes">
+              <div>
+                <p class="mo-note">Visual hierarchy is weak; all sections look similar and lack contrast.</p>
+                <p class="mo-note mo-note--quote">“A lot of free space in the profile page, maybe that can be used for some info or features.”</p>
+              </div>
+              <div>
+                <p class="mo-note mo-note--quote">“Visually it fits the university's identity, but it's much less informative than it looks.”</p>
+                <p class="mo-note mo-note--quote">“Not inviting enough”: feels like a nicely designed, static album rather than a useful app.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mo-cluster">
+            <p class="mo-cluster__head">Navigation &amp; discovery <span class="mo-cluster__count" aria-label="4 notes">4</span></p>
+            <div class="mo-notes">
+              <div>
+                <p class="mo-note">Navigation feels unclear; some features are hidden or hard to discover.</p>
+                <p class="mo-note mo-note--quote">“Customisation of the homepage is really hidden in profile and settings.”</p>
+              </div>
+              <div>
+                <p class="mo-note">The participant didn't realise customisation (tags, homepage order) was possible.</p>
+                <p class="mo-note">It's frustrating to save content and not know where to find it later.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mo-cluster">
+            <p class="mo-cluster__head">Engagement &amp; value <span class="mo-cluster__count" aria-label="4 notes">4</span></p>
+            <div class="mo-notes">
+              <div>
+                <p class="mo-note">The app doesn't motivate regular use; it feels too official and static.</p>
+                <p class="mo-note">They would keep Neptun for data accuracy but prefer the app's visual simplicity.</p>
+              </div>
+              <div>
+                <p class="mo-note mo-note--quote">“It should be a university LIFE platform app, but it is empty.”</p>
+                <p class="mo-note mo-note--quote">“I like that I can see my course schedule right away.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="mo-legend"><li>Observation</li><li>Direct quote</li></ul>
+
+        <div class="mo-insight" data-reveal>
+          <p class="cs-label">Key insight</p>
+          <p>The app lacks a student-centric approach. It feels cold and overly institutional, and it isn't engaging.</p>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Competitor analysis</p>
+          <h3 class="cs-h3">How other student apps do it</h3>
+          <p class="cs-p">I compared four Hungarian university student apps with the current MOME ULP on six criteria: visual identity, layout &amp; hierarchy, navigation, accessibility, micro-interactions, and tone &amp; personality. For each, I noted best practices, pain points and what was worth adapting.</p>
+        </div>
+        <div class="mo-matrix" data-reveal>
+          <div class="mo-matrix__row mo-matrix__row--head" aria-hidden="true"><span>App</span><span>Screens</span><span>Best practices</span><span>Pain points</span><span>What to adapt</span></div>
+
+          <div class="mo-matrix__row">
+            <div class="mo-matrix__app"><img src="assets/img/mome/competitor-1-logo.png" alt="" width="176" height="176" loading="lazy">MyCorvinus</div>
+            <div class="mo-matrix__shots"><img src="assets/img/mome/competitor-1-screens.png" alt="Two screens of the MyCorvinus app" width="574" height="600" loading="lazy"></div>
+            <div><p class="mo-matrix__col">Best practices</p><ul><li data-s="+">Friendly colours</li><li data-s="+">Good layout</li><li data-s="+">Easy navigation</li><li data-s="+">Easy to decode information</li></ul></div>
+            <div><p class="mo-matrix__col">Pain points</p><ul class="mo-matrix__cons"><li data-s="–">Some icons are hard to see or understand in different modes</li><li data-s="–">Could embed more links (like food)</li><li data-s="–">More natural photos</li></ul></div>
+            <div><p class="mo-matrix__col">What to adapt</p><ul><li data-s="→">Blog for student articles</li><li data-s="→">Onboarding information gathered together</li><li data-s="→">Interactive map</li><li data-s="→">Social life platform</li><li data-s="→">Student support</li><li data-s="→">Feedback option for the app</li><li data-s="→">Colours that engage students</li></ul></div>
+          </div>
+
+          <div class="mo-matrix__row">
+            <div class="mo-matrix__app"><img src="assets/img/mome/competitor-2-logo.png" alt="" width="176" height="176" loading="lazy">Semmelweis student app</div>
+            <div class="mo-matrix__shots"><img src="assets/img/mome/competitor-2-screens.png" alt="Two screens of the Semmelweis student app" width="574" height="600" loading="lazy"></div>
+            <div><p class="mo-matrix__col">Best practices</p><ul><li data-s="+">Consistent colour use</li><li data-s="+">Easy navigation</li><li data-s="+">Helpful information gathered in the map</li></ul></div>
+            <div><p class="mo-matrix__col">Pain points</p><ul class="mo-matrix__cons"><li data-s="–">Repeated icons</li><li data-s="–">Needs more photos</li><li data-s="–">Most functions are not integrated</li><li data-s="–">Not student-centred, too institutional</li></ul></div>
+            <div><p class="mo-matrix__col">What to adapt</p><ul><li data-s="→">Map</li><li data-s="→">Weekly, newspaper-like updates</li><li data-s="→">Phonebook</li><li data-s="→">Quick feedback about the app</li><li data-s="→">Onboarding information in one place</li><li data-s="→">Easy language change</li></ul></div>
+          </div>
+
+          <div class="mo-matrix__row">
+            <div class="mo-matrix__app"><img src="assets/img/mome/competitor-3-logo.png" alt="" width="176" height="178" loading="lazy">UD Studiversity</div>
+            <div class="mo-matrix__shots"><img src="assets/img/mome/competitor-3-screens.png" alt="Two screens of the UD Studiversity app" width="574" height="600" loading="lazy"></div>
+            <div><p class="mo-matrix__col">Best practices</p><ul><li data-s="+">Student-friendly visual tone</li><li data-s="+">Strong student-centric features</li><li data-s="+">Easy navigation</li><li data-s="+">Links to helpful apps</li><li data-s="+">Subsistence calculator</li></ul></div>
+            <div><p class="mo-matrix__col">Pain points</p><ul class="mo-matrix__cons"><li data-s="–">Too bold colours on the menu page</li><li data-s="–">Needs more photos</li><li data-s="–">Playful menu vs. minimal content screens feels disjointed</li><li data-s="–">No map or directions</li><li data-s="–">No onboarding flow</li></ul></div>
+            <div><p class="mo-matrix__col">What to adapt</p><ul><li data-s="→">UNIpass places and an app for it</li><li data-s="→">Phonebook</li><li data-s="→">Links to other helpful apps</li><li data-s="→">Well-structured information</li><li data-s="→">Colours that engage students</li></ul></div>
+          </div>
+
+          <div class="mo-matrix__row">
+            <div class="mo-matrix__app"><img src="assets/img/mome/competitor-4-logo.png" alt="" width="176" height="176" loading="lazy">PTE</div>
+            <div class="mo-matrix__shots"><img src="assets/img/mome/competitor-4-screens.png" alt="Two screens of the PTE student app" width="574" height="600" loading="lazy"></div>
+            <div><p class="mo-matrix__col">Best practices</p><ul><li data-s="+">Q&amp;A section</li><li data-s="+">Personal question function</li><li data-s="+">Helpful links</li><li data-s="+">Games</li></ul></div>
+            <div><p class="mo-matrix__col">Pain points</p><ul class="mo-matrix__cons"><li data-s="–">Too monochrome</li><li data-s="–">No integrated map or link between departments</li><li data-s="–">No onboarding flow</li></ul></div>
+            <div><p class="mo-matrix__col">What to adapt</p><ul><li data-s="→">Personality test: fun and informative</li><li data-s="→">Games</li><li data-s="→">Q&amp;A</li></ul></div>
+          </div>
+
+          <div class="mo-matrix__row mo-matrix__row--own">
+            <div class="mo-matrix__app"><img src="assets/img/mome/competitor-5-logo.png" alt="" width="176" height="176" loading="lazy">MOME ULP (current)</div>
+            <div class="mo-matrix__shots"><img src="assets/img/mome/competitor-5-screens.png" alt="Two screens of the current MOME ULP app" width="574" height="600" loading="lazy"></div>
+            <div><p class="mo-matrix__col">Best practices</p><ul><li data-s="+">Very clean, minimal design</li><li data-s="+">Useful features in one app</li><li data-s="+">Accessibility options: language switch, theme toggle</li></ul></div>
+            <div><p class="mo-matrix__col">Pain points</p><ul class="mo-matrix__cons"><li data-s="–">Rarely useful in everyday school life</li><li data-s="–">Doesn't feel student-centred</li><li data-s="–">No customisation, very basic functions</li><li data-s="–">Unclear labels (e.g. “Platforms”)</li><li data-s="–">Lacks emotional, community-driven touches</li></ul></div>
+            <div><p class="mo-matrix__col">What to adapt</p><ul><li data-s="→">The starting point for this redesign</li></ul></div>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">The tension</p>
+          <h3 class="cs-h3">MOME's identity vs. students' taste</h3>
+          <p class="cs-p">The current app mirrors the university website: black, elegant and refined. Students, on the other hand, asked for something brighter, looser and more fun. The redesign had to bridge the two.</p>
+        </div>
+        <img class="mo-vs" src="assets/img/mome/mome-vs-students.png" alt="The current MOME app, black and minimal, next to a group of student figures in purple and black: MOME's current app versus students" width="2816" height="1440" loading="lazy" data-reveal>
+      </section>
+
+      <!-- ============ 02 DEFINE ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="mo-define">
+        <h2 class="cs-phase" id="mo-define"><span class="cs-phase__num" aria-hidden="true">02</span><span class="cs-phase__name">Define</span></h2>
+        <p class="cs-h2">From a static directory to a student dashboard</p>
+        <p class="cs-lead">The interviews and the competitor review pointed to one root problem. The app was designed around the institution and its identity, not around what a student needs on a normal day.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-callout mo-problem" data-reveal>
+          <p class="cs-label">Problem</p>
+          <p class="cs-callout__big">Students don't use the ULP as a life platform, because it was built as a directory.</p>
+          <p>It shows the university's content in the university's style, but hides what students need right now: their next class, their deadlines, what is happening on campus.</p>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="mo-rebrief" data-reveal>
+          <p class="cs-label">Rebrief</p>
+          <div class="mo-rebrief__circle">
+            <p>“How might we transform the MOME ULP from a static administrative directory into a dynamic, student-centric dashboard that visually reflects the university's creative culture?”</p>
+          </div>
+        </div>
+
+        <div class="cs-group">
+          <p class="cs-label">Design goals</p>
+          <h3 class="cs-h3">Four goals, one for each insight theme</h3>
+        </div>
+        <div class="cs-cards cs-cards--4 mo-goals" data-reveal>
+          <div class="mo-goal"><p class="mo-goal__num">01</p><p class="mo-goal__title">Personal &amp; timely</p><p>Show what matters to me right now: next class, deadlines, today's menu.</p></div>
+          <div class="mo-goal"><p class="mo-goal__num">02</p><p class="mo-goal__title">Clear hierarchy</p><p>Make the most important thing the most visible, instead of equal-looking sections.</p></div>
+          <div class="mo-goal"><p class="mo-goal__num">03</p><p class="mo-goal__title">Easy to find</p><p>Four clear sections, and nothing important hidden in settings.</p></div>
+          <div class="mo-goal mo-goal--yellow"><p class="mo-goal__num">04</p><p class="mo-goal__title">Brighter &amp; playful</p><p>Closer to students' taste and MOME's creative culture, not just its brand rules.</p></div>
+        </div>
+      </section>
+
+      <!-- ============ 03 DEVELOP ============ -->
+      <section class="cs-sec" aria-labelledby="mo-develop">
+        <h2 class="cs-phase" id="mo-develop"><span class="cs-phase__num" aria-hidden="true">03</span><span class="cs-phase__name">Develop</span></h2>
+        <p class="cs-h2">Exploring structure and visuals</p>
+        <p class="cs-lead">With the rebrief set, I worked from the inside out: first reorganising the content into a clear information architecture, then sketching layouts in lo-fi, and only then exploring colour and UI.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Proposed IA</p>
+          <h3 class="cs-h3">Four sections, built around a student's day</h3>
+          <p class="cs-p">I regrouped every feature of the old app by how often students need it: daily things on Home and Schedule, campus life in MOME Life, and practical tools in the Hub.</p>
+        </div>
+        <div class="mo-ia" data-reveal>
+          <div><h4>Home</h4><ul><li>Now</li><li>Profile (top)</li><li>Notifications (top)</li><li>Settings / accessibility</li><li>Your companion</li><li>Saved events</li></ul></div>
+          <div><h4>Schedule</h4><ul><li>Classes</li><li>Deadlines</li><li>Exams</li><li>Neptun entrance</li></ul></div>
+          <div><h4>MOME Life</h4><ul><li>News</li><li>Events</li><li>Food</li><li>Activities / sport</li><li>Blog</li><li>Games and tests</li></ul></div>
+          <div><h4>Hub (tools)</h4><ul><li>Map</li><li>Library</li><li>HÖK / student council</li><li>Error feedback / IT</li><li>Neptun</li><li>Printshop</li><li>Onboarding</li><li>Phonebook</li><li>FAQ</li></ul></div>
+        </div>
+        <p class="mo-mcard"><b>+ MOME card</b><span>the digital student ID, always one tap away</span></p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Lo-fi wireframes</p>
+          <h3 class="cs-h3">Testing the layout before the look</h3>
+          <p class="cs-p">In grayscale I explored how much fits on the home screen, how the schedule and calendar work together, and where the “now” information sits.</p>
+        </div>
+        <div class="mo-wires" data-reveal>
+          <img src="assets/img/mome/wireframe-1.png" alt="Lo-fi wireframe of the home screen" width="614" height="1618" loading="lazy">
+          <img src="assets/img/mome/wireframe-2.png" alt="Lo-fi wireframe of the schedule with timetable and calendar" width="614" height="1678" loading="lazy">
+          <img src="assets/img/mome/wireframe-3.png" alt="Lo-fi wireframe of the deadlines list" width="614" height="1406" loading="lazy">
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Colour palette update</p>
+          <h3 class="cs-h3">Promoting MOME's secondary colours</h3>
+          <p class="cs-p">Instead of breaking the brand, I looked inside it. MOME's identity already includes purple and yellow as secondary colours, so I elevated them to primary status to make the app more vibrant and inviting.</p>
+        </div>
+        <div class="mo-palette" data-reveal>
+          <div class="mo-palette__card">
+            <p class="cs-label">Before</p>
+            <ul>
+              <li style="--c:#000">Black<small>#000000</small></li>
+              <li style="--c:#fff">White<small>#FFFFFF</small></li>
+            </ul>
+          </div>
+          <span class="mo-palette__arrow" aria-hidden="true">→</span>
+          <div class="mo-palette__card">
+            <p class="cs-label">After</p>
+            <ul>
+              <li style="--c:#874fff">Purple<small>#874FFF</small></li>
+              <li style="--c:#edf115">Yellow<small>#EDF115</small></li>
+              <li style="--c:#dcccff">Lilac<small>#DCCCFF</small></li>
+              <li style="--c:#fff">White<small>#FFFFFF</small></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">First UI versions</p>
+          <h3 class="cs-h3">Bringing the structure to life</h3>
+          <p class="cs-p">The first high-fidelity versions applied the new palette across all four sections and the MOME card.</p>
+        </div>
+        <div class="mo-first" data-reveal>
+          <img src="assets/img/mome/first-version-1.png" alt="First UI version: home" width="436" height="1164" loading="lazy">
+          <img src="assets/img/mome/first-version-2.png" alt="First UI version: schedule" width="436" height="1428" loading="lazy">
+          <img src="assets/img/mome/first-version-3.png" alt="First UI version: calendar and deadlines" width="436" height="1014" loading="lazy">
+          <img src="assets/img/mome/first-version-4.png" alt="First UI version: MOME card" width="436" height="1014" loading="lazy">
+          <img src="assets/img/mome/first-version-5.png" alt="First UI version: MOME Life" width="436" height="1236" loading="lazy">
+          <img src="assets/img/mome/first-version-6.png" alt="First UI version: Hub" width="436" height="1010" loading="lazy">
+        </div>
+      </section>
+
+      <!-- ============ 04 DELIVER ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="mo-deliver">
+        <h2 class="cs-phase" id="mo-deliver"><span class="cs-phase__num" aria-hidden="true">04</span><span class="cs-phase__name">Deliver</span></h2>
+        <p class="cs-h2">Making the app feel alive</p>
+        <p class="cs-lead">The final design keeps the clear structure and adds what students said was missing: personality, encouragement and each other.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="mo-feature" data-reveal>
+          <div class="cs-group">
+            <p class="cs-label">Digital companions</p>
+            <h3 class="cs-h3">A spirit animal for every student</h3>
+            <p class="cs-p">Each student picks a companion that lives in the app. It adds a personal touch, gives the interface a voice, and turns an official tool into something that feels like yours.</p>
+          </div>
+          <img class="mo-feature__img" src="assets/img/mome/companions.png" alt="Seven illustrated companion characters in purple and yellow, among them an owl, a fox and a cat" width="1560" height="1120" loading="lazy">
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="mo-feature mo-feature--flip" data-reveal>
+          <div class="cs-group">
+            <p class="cs-label">Motivational features</p>
+            <h3 class="cs-h3">Support, not just information</h3>
+            <p class="cs-p">The companion reacts to the student's day with messages for different moments: encouragement after progress, a nudge before a deadline, and a reminder that rest and balance matter too.</p>
+          </div>
+          <img class="mo-feature__img" src="assets/img/mome/motivation.png" alt="The owl companion with speech bubbles: encouragement, a deadline nudge and a reminder to rest" width="1560" height="1080" loading="lazy">
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="mo-feature mo-friends" data-reveal>
+          <div class="cs-group">
+            <p class="cs-label">Connecting students</p>
+            <h3 class="cs-h3">Making friends inside the app</h3>
+            <p class="cs-p">Students can send and accept friend requests across programmes, see each other's spirit animals, and spot classmates in shared classes. A “life platform” should include the people.</p>
+          </div>
+          <div class="mo-friends__phones">
+            <img src="assets/img/mome/friend-request.png" alt="Friend request screen with three new requests to accept or decline" width="708" height="1520" loading="lazy">
+            <img src="assets/img/mome/friends.png" alt="New friend screen showing Veronika Kiss's spirit animal, Alexis" width="354" height="760" loading="lazy">
+          </div>
+        </div>
+
+        <div class="cs-group">
+          <p class="cs-label">Final home screen</p>
+          <h3 class="cs-h3">A home that changes with the day</h3>
+          <p class="cs-p">The home dashboard adapts to the time: in the morning it shows the next class and deadlines, at lunch the canteen menu, in the evening tomorrow's first class and a homework reminder.</p>
+        </div>
+        <div class="mo-homes" data-reveal>
+          <img src="assets/img/mome/home-1.png" alt="Morning home screen: the next class starts in 15 minutes and an essay is due tomorrow" width="872" height="2300" loading="lazy">
+          <img src="assets/img/mome/home-2.png" alt="Afternoon home screen: today's canteen menu and a deadline nudge from the owl" width="872" height="2300" loading="lazy">
+          <img src="assets/img/mome/home-3.png" alt="Evening home screen: tomorrow's first class and a homework reminder" width="872" height="2300" loading="lazy">
+        </div>
+        <div class="cs-spacer" style="--s: 48"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Prototype</p>
+          <h3 class="cs-h3">The interactive prototype</h3>
+          <p class="cs-p">Two clips from the prototype: the main features, and connecting with friends.</p>
+        </div>
+        <div class="mo-videos" data-reveal>
+          <video class="cs-loop" muted loop playsinline preload="metadata" aria-label="Prototype walkthrough of the main features"><source src="assets/video/mome/main-features.mp4#t=0.1" type="video/mp4"></video>
+          <video class="cs-loop" muted loop playsinline preload="metadata" aria-label="Prototype walkthrough of adding a friend"><source src="assets/video/mome/friends.mp4#t=0.1" type="video/mp4"></video>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Testing</p>
+          <h3 class="cs-h3">What testers said</h3>
+          <p class="cs-p">I tested the prototype with students. The feedback confirmed the direction and showed what to improve next.</p>
+        </div>
+        <div class="mo-quotes" data-reveal>
+          <div>
+            <p class="cs-pill">Worked well</p>
+            <blockquote>Love the deadlines, good reminder.</blockquote>
+            <blockquote>The quick actions are very helpful.</blockquote>
+          </div>
+          <div>
+            <p class="cs-pill cs-pill--y">To improve</p>
+            <blockquote>Can I customise the Home dashboard? I don't see it.</blockquote>
+            <blockquote>Can I change my spirit animal more?</blockquote>
+            <blockquote>The yellow is a little bit harsh for me.</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REFLECTION ============ -->
+      <section class="cs-sec cs-sec--reflection" aria-labelledby="mo-reflection">
+        <p class="cs-kicker">Reflection</p>
+        <h2 class="cs-h1 cs-h1--sm" id="mo-reflection">What this project taught me</h2>
+        <div class="cs-cards cs-cards--2" data-reveal>
+          <div class="cs-list">
+            <p class="cs-label">What I learned</p>
+            <ul>
+              <li>You can change how a product feels without breaking the brand: the new palette came from MOME's own secondary colours.</li>
+              <li>Small emotional details, like a companion or a kind message, can totally change how an institutional tool feels.</li>
+              <li>Testing shows what is still hidden: customisation needed to be more visible.</li>
+            </ul>
+          </div>
+          <div class="cs-list">
+            <p class="cs-label">Next steps</p>
+            <ul>
+              <li>Make the home dashboard customisable from the home screen itself.</li>
+              <li>Offer more ways to personalise the spirit animal.</li>
+              <li>Soften the yellow and check colour contrast for accessibility.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THANK YOU ============ -->
+      <section class="mo-thanks" aria-label="MOME ULP">
+        <div class="mo-thanks__mark" aria-hidden="true">
+          <img class="mo-thanks__owl" src="assets/img/mome/thank-you-icon.svg" alt="" width="206" height="202">
+          <div class="mo-thanks__card"><span></span><span></span><span></span></div>
+        </div>
+        <p>MOME ULP</p>
+      </section>
+
+      <!-- ============ PREVIOUS / NEXT PROJECT ============ -->
+      <nav class="pnav" aria-label="More projects" style="--pn-accent: #874fff">
+        <a class="pnav__prev" href="granta.html">
+          <span class="pnav__small">Previous project</span>
+          <span class="pnav__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Granta</span>
+        </a>
+        <a class="pnav__home" href="index.html#projects">All projects</a>
+        <a class="pnav__next" href="remi.html">
+          <span class="pnav__small">Next project</span>
+          <span class="pnav__title">remi<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </nav>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+        <p>&copy; 2026 Róza Parlagi</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="index.html#projects">All projects</a></li>
+        <li><a href="#top" aria-label="Back to top">Back to top &uarr;</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
