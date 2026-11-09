@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stitch Please! — Case study · Róza Parlagi</title>
+  <meta name="description" content="Stitch Please!: a mobile-first companion for crochet and knitting projects, built on a Figma design system with variables and design tokens for light and dark mode. A case study by Róza Parlagi.">
+  <meta name="theme-color" content="#ff4fb3">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Stitch Please! — Case study · Róza Parlagi">
+  <meta property="og:description" content="A crochet and knitting companion app, built on Figma variables and design tokens: one design, light and dark mode.">
+  <meta property="og:url" content="https://parlagiroza.com/stitch-please.html">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/chonburi-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/domine-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/case.css">
+  <link rel="stylesheet" href="css/stitch.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body id="top" class="home cs-page stitch-page">
+  <div class="page">
+
+    <!-- ============ NAV (same as the home page) ============ -->
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Róza Parlagi — home">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__links" id="main-menu">
+          <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#contact">Get in touch</a></li>
+          <li><a href="Roza_Parlagi_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="cs-main">
+
+      <!-- ============ HERO ============ -->
+      <section class="sp-hero" aria-labelledby="sp-title">
+        <span class="sp-hero__blob sp-hero__blob--o" aria-hidden="true"></span>
+        <span class="sp-hero__blob sp-hero__blob--p" aria-hidden="true"></span>
+        <img class="sp-hero__phone" src="assets/img/stitch/hero-phone.png" alt="Two hands holding a phone with the Stitch Please! home screen" width="1720" height="1302">
+        <p class="sp-hero__eyebrow">Case study · Ongoing hobby project</p>
+        <h1 class="sp-hero__title" id="sp-title">Stitch <span>Please!</span></h1>
+        <p class="sp-hero__sub">A mobile-first companion for crochet and knitting projects, from finding a pattern to the very last row.</p>
+        <dl class="cs-meta">
+          <div><dt>My role</dt><dd>Solo project: concept, IA, design system &amp; UI</dd></div>
+          <div><dt>Emphasis on</dt><dd>Variables, design tokens and UI</dd></div>
+          <div><dt>Tools</dt><dd>Figma (variables &amp; components)</dd></div>
+          <div><dt>Timeline</dt><dd>Hobby project, ongoing</dd></div>
+        </dl>
+      </section>
+
+      <!-- ============ OVERVIEW ============ -->
+      <section class="cs-sec cs-sec--overview" aria-labelledby="sp-overview">
+        <p class="cs-kicker" id="sp-overview">Overview</p>
+        <h2 class="cs-h1" data-reveal>One place for every row, stitch and colour change</h2>
+        <div class="cs-overview" data-reveal>
+          <div class="cs-overview__text">
+            <p>Crafters (such as myself) juggle paper notes, bookmarked PDFs and their own memory to keep track of where they are in a project. Stitch Please! brings it all together: pattern storage, project progress and material planning in one place, built around the rhythm of how people actually craft.</p>
+            <p>It is for anyone who picks up a hook or needles, from someone crocheting their first beanie to an experienced knitter running five projects at once. Beginners get clear guidance through setup, experts get fast access to tracking and their pattern library.</p>
+          </div>
+          <dl class="cs-figures">
+            <div><dt>4</dt><dd>pillars: tracking, patterns, materials, sharing</dd></div>
+            <div><dt>3</dt><dd>main sections: Home, Projects, Patterns</dd></div>
+            <div><dt>128</dt><dd>variables in 4 collections, so light and dark switch with one mode</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ THE PROCESS ============ -->
+      <section class="cs-sec cs-sec--alt cs-sec--process" aria-labelledby="sp-process">
+        <p class="cs-kicker" id="sp-process">The process</p>
+        <p class="cs-lead">I started from the craft itself: how people track their projects today and which apps already help. From there I defined the core problem and four pillars, built the information architecture and a design system, and designed the screens on top of it.</p>
+        <div class="cs-diamond" data-reveal>
+          <svg viewBox="0 0 1408 470" role="img" aria-labelledby="sp-dd-title">
+            <title id="sp-dd-title">Double diamond: Discover and Define lead to the four pillars, Develop and Deliver lead to the design system and screens</title>
+            <polygon points="0,240 340,60 340,420" fill="#ff4fb3" fill-opacity=".2"/>
+            <polygon points="340,60 680,240 340,420" fill="#ff4fb3" fill-opacity=".4"/>
+            <polygon points="728,240 1068,60 1068,420" fill="#ffd99c"/>
+            <polygon points="1068,60 1408,240 1068,420" fill="#ffb949"/>
+            <circle cx="704" cy="240" r="9" fill="#ffb949"/>
+            <circle cx="1399" cy="240" r="9" fill="#ffb949"/>
+            <g class="cs-dd-num"><text x="214" y="199">01</text><text x="465.5" y="199">02</text><text x="943.5" y="199">03</text><text x="1193" y="199">04</text></g>
+            <g class="cs-dd-name"><text x="211" y="240">DISCOVER</text><text x="462" y="240">DEFINE</text><text x="941" y="240">DEVELOP</text><text x="1191" y="240">DELIVER</text></g>
+            <g class="cs-dd-sub"><text x="210" y="275">diverge</text><text x="461.5" y="275">converge</text><text x="938" y="275">diverge</text><text x="1189.5" y="275">converge</text></g>
+            <g class="cs-dd-end"><text x="640" y="467" text-anchor="start">Four pillars</text><text x="1290" y="467" text-anchor="start">Design system</text></g>
+          </svg>
+        </div>
+        <div class="cs-steps" data-reveal>
+          <div><p class="cs-steps__head">01 · Discover</p><ul><li>App concept</li><li>Best-practice research</li><li>Existing app review</li></ul></div>
+          <div><p class="cs-steps__head">02 · Define</p><ul><li>Core problem</li><li>Four pillars</li><li>Target users</li></ul></div>
+          <div><p class="cs-steps__head">03 · Develop</p><ul><li>Sitemap &amp; IA</li><li>User flows</li><li>Variables &amp; tokens</li></ul></div>
+          <div><p class="cs-steps__head">04 · Deliver</p><ul><li>Components</li><li>Light &amp; dark via modes</li><li>Start new project flow</li></ul></div>
+        </div>
+      </section>
+
+      <!-- ============ 01 DISCOVER ============ -->
+      <section class="cs-sec" aria-labelledby="sp-discover">
+        <h2 class="cs-phase" id="sp-discover"><span class="cs-phase__num" aria-hidden="true">01</span><span class="cs-phase__name">Discover</span></h2>
+        <p class="cs-h2">Starting from the craft</p>
+        <p class="cs-lead">Before designing any screens, I looked at how crafters keep track of their work today, and at the apps they already use: row counters, chart makers and pattern libraries.</p>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Research</p>
+          <h3 class="cs-h3">Four steps from idea to pillars</h3>
+        </div>
+        <ol class="sp-timeline" data-reveal>
+          <li><span class="sp-timeline__dot">01</span><p class="sp-timeline__title">App concept</p><p>Defining who the app is for and what it should do, from the first pattern to the finished piece.</p></li>
+          <li><span class="sp-timeline__dot">02</span><p class="sp-timeline__title">Best practices</p><p>Collecting counters, chart tools and pattern apps on one board to see what works.</p></li>
+          <li><span class="sp-timeline__dot">03</span><p class="sp-timeline__title">Finding the gaps</p><p>Projects, patterns and yarn live in separate tools, so crafters keep switching.</p></li>
+          <li><span class="sp-timeline__dot">04</span><p class="sp-timeline__title">Four pillars</p><p>Turning the findings into four focus areas for the app.</p></li>
+        </ol>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Best practices</p>
+          <h3 class="cs-h3">What existing craft apps do well</h3>
+          <p class="cs-p">Counter apps make tapping fast and visible, and chart makers show patterns as clear grids. But most of them do only one thing, so crafters still jump between several tools.</p>
+        </div>
+        <div class="sp-board" data-reveal>
+          <img src="assets/img/stitch/best-practices.jpg" alt="Moodboard of existing craft apps: row counter apps, stitch chart makers, a smartwatch counter and pattern library screens" width="2704" height="1610" loading="lazy">
+        </div>
+
+        <div class="sp-insight" data-reveal>
+          <p class="cs-label">Key insight</p>
+          <p>Crafters don't need another social feed. They need one place that remembers exactly where they are.</p>
+        </div>
+      </section>
+
+      <!-- ============ 02 DEFINE ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="sp-define">
+        <h2 class="cs-phase" id="sp-define"><span class="cs-phase__num" aria-hidden="true">02</span><span class="cs-phase__name">Define</span></h2>
+        <p class="cs-h2">From scattered notes to one companion</p>
+        <p class="cs-lead">The research pointed to one core problem and four areas the app has to cover. Everything else, including sharing, stays deliberately light.</p>
+        <div class="cs-spacer"></div>
+        <div class="cs-callout sp-problem" data-reveal>
+          <p class="cs-label">Problem</p>
+          <p class="cs-callout__big">Crafters juggle paper notes, bookmarked PDFs and memory to know where they are in a project.</p>
+          <p>Patterns, progress and materials live in different places, so every session starts with finding your place again.</p>
+        </div>
+        <div class="cs-spacer"></div>
+        <div class="sp-rebrief" data-reveal>
+          <p class="cs-label">Rebrief</p>
+          <div class="sp-rebrief__circle">
+            <p>“How might we help crafters go from a pattern to a finished project in one app, tracking every row, stitch and colour change along the way?”</p>
+          </div>
+        </div>
+        <div class="cs-group">
+          <p class="cs-label">The four pillars</p>
+          <h3 class="cs-h3">Four pillars, one for each part of a project</h3>
+        </div>
+        <div class="cs-cards cs-cards--4" data-reveal>
+          <div class="sp-goal"><p class="sp-goal__num">01</p><p class="sp-goal__title">Project tracking</p><p>The heart of the app: a tap counter for rows, tiles and rounds, colour-change alerts, notes and photos.</p></div>
+          <div class="sp-goal"><p class="sp-goal__num">02</p><p class="sp-goal__title">Pattern management</p><p>A personal library: import PDFs, paste URLs (e.g. Ravelry) or write patterns from scratch.</p></div>
+          <div class="sp-goal"><p class="sp-goal__num">03</p><p class="sp-goal__title">Material planning</p><p>Scoped to the project: the app tells you how much yarn this piece needs. No stash management.</p></div>
+          <div class="sp-goal sp-goal--orange"><p class="sp-goal__num">04</p><p class="sp-goal__title">Light sharing</p><p>Export a project or pattern as a link or image. No social feed, just simple sharing.</p></div>
+        </div>
+      </section>
+
+      <!-- ============ 03 DEVELOP ============ -->
+      <section class="cs-sec" aria-labelledby="sp-develop">
+        <h2 class="cs-phase" id="sp-develop"><span class="cs-phase__num" aria-hidden="true">03</span><span class="cs-phase__name">Develop</span></h2>
+        <p class="cs-h2">Structure first, then a system</p>
+        <p class="cs-lead">I mapped the sitemap and the main user flows before drawing screens, then built a design system with Figma variables and design tokens so every screen could be assembled from the same parts, in light and dark mode.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Information architecture</p>
+          <p class="cs-p">Home, Projects and Patterns sit in the bottom navigation. Each one opens into its own detail screens, and a new project can start from Home or straight from a saved pattern.</p>
+        </div>
+        <div class="sp-map" data-reveal>
+          <ul class="sp-map__col">
+            <li><b>Home / dashboard</b></li>
+            <li><b>New project</b><small>basics &amp; materials</small></li>
+            <li><b>Import or create pattern</b><small>preview, materials, sizes</small></li>
+            <li><b>Project created</b><small>summary, then back to Projects</small></li>
+          </ul>
+          <ul class="sp-map__col">
+            <li><b>Projects</b></li>
+            <li><b>Project detail</b><small>progress at a glance</small></li>
+            <li><b>Log progress</b><small>rows, notes, photos</small></li>
+            <li><b>Summary &amp; done</b><small>today's progress, archive</small></li>
+          </ul>
+          <ul class="sp-map__col">
+            <li><b>Patterns</b></li>
+            <li><b>Pattern detail</b><small>materials, sizes, stitch chart</small></li>
+            <li><b>Start project from pattern</b></li>
+          </ul>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">User flows</p>
+          <h3 class="cs-h3">Two flows that carry the app</h3>
+          <p class="cs-p">Starting a project is broken into short, focused steps. Daily tracking is built for speed: resume from Home, log rows, save, and come back tomorrow.</p>
+        </div>
+        <div class="sp-flows" data-reveal>
+          <div class="sp-flow">
+            <p class="cs-label">Start new project</p>
+            <ol><li>Home</li><li>New project</li><li>Craft type</li><li>Materials</li><li>Schedule</li><li>Notes &amp; summary</li><li>Project created</li></ol>
+          </div>
+          <div class="sp-flow">
+            <p class="cs-label">Daily tracking</p>
+            <ol><li>Home</li><li>Resume project</li><li>Log rows &amp; colours</li><li>Save for today</li><li>Summary</li><li>Mark as done</li><li>Archive</li></ol>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Design system</p>
+          <h3 class="cs-h3">One system, light and dark</h3>
+          <p class="cs-p">Colours, type, spacing, roundings and icons are set up as variables and tokens. Pink carries actions, orange marks what is in progress, and the neutrals switch between the light and dark themes.</p>
+        </div>
+        <div class="sp-ds" data-reveal>
+          <div class="sp-panel">
+            <p class="sp-panel__title">Colour</p>
+            <ul class="sp-swatches">
+              <li><b>Primary · pink</b><span><i style="--c:#a6005e"></i><i style="--c:#c70673"></i><i style="--c:#ff4fb3"></i><i style="--c:#ff88cb"></i><i style="--c:#ffb8e0"></i></span></li>
+              <li><b>Primary · orange</b><span><i style="--c:#ce8105"></i><i style="--c:#ec9d1f"></i><i style="--c:#ffb949"></i><i style="--c:#ffd592"></i><i style="--c:#ffe3b5"></i><i style="--c:#fff8ed"></i></span></li>
+              <li><b>Neutral</b><span><i style="--c:#121416"></i><i style="--c:#212529"></i><i style="--c:#343a40"></i><i style="--c:#495057"></i><i style="--c:#868e96"></i><i style="--c:#adb5bd"></i><i style="--c:#ced4da"></i><i style="--c:#e9ecef"></i><i style="--c:#f8f9fa"></i><i style="--c:#ffffff"></i></span></li>
+              <li><b>Success</b><span><i style="--c:#0f7348"></i><i style="--c:#159a60"></i><i style="--c:#1dbe77"></i><i style="--c:#7dddb5"></i><i style="--c:#e6f9f0"></i></span></li>
+              <li><b>Danger</b><span><i style="--c:#9b1c1c"></i><i style="--c:#c62828"></i><i style="--c:#e53935"></i><i style="--c:#ff9b9b"></i><i style="--c:#ffe8e8"></i></span></li>
+            </ul>
+          </div>
+          <div class="sp-panel sp-panel--dark">
+            <p class="sp-panel__title">Typography</p>
+            <p class="sp-type__kal">Aa Kalnia</p>
+            <small>Headings · title font token (text/font-family/title)</small>
+            <p class="sp-type__inter">Aa Inter</p>
+            <small>Body · body font token (text/font-family/body)</small>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <!-- Variables & tokens -->
+        <div class="cs-group">
+          <p class="cs-label">Variables &amp; tokens</p>
+          <p class="cs-p">I set up 128 variables in four collections. Primitive tokens hold the raw values. Semantic tokens give them a job, like text/primary or action/primary, and they have modes: Light and Dark for colour, Mobile and Desktop for type. Components only use semantic tokens, so switching a mode restyles every screen.</p>
+        </div>
+        <div class="sp-arch" data-reveal>
+          <div class="sp-arch__col">
+            <div class="sp-layer"><p>Primitive (global)</p><p class="sp-layer__big">68 raw values</p><div class="sp-modes"><span>1 mode</span></div><p class="sp-layer__text">Colour ramps: pink, yellow, neutral, green, red<br>Spacing 2–32 px<br>Rounding 2–24 px<br>Font family, weight, size, line height</p></div>
+          </div>
+          <span class="sp-arch__arrow" aria-hidden="true">→</span>
+          <div class="sp-arch__col sp-arch__col--wide">
+            <div class="sp-layer sp-layer--pink"><p>Semantic colours (alias)</p><p class="sp-layer__big">31 colour roles</p><div class="sp-modes"><span>Light</span><span class="is-dark">Dark</span></div><p class="sp-layer__text">Background, Surface, Text, Border, Status, Action, State, Shadow</p></div>
+            <div class="sp-layer sp-layer--pink"><p>Semantic typography</p><p class="sp-layer__big">28 type tokens</p><div class="sp-modes"><span>Mobile</span><span>Desktop</span></div><p class="sp-layer__text">H1–H3, Lead, Base, Small, Caption: family, weight, size, line height</p></div>
+          </div>
+          <span class="sp-arch__arrow" aria-hidden="true">→</span>
+          <div class="sp-arch__col">
+            <div class="sp-layer sp-layer--line"><p>Components</p><p class="sp-layer__big">Bound to semantic tokens</p><p class="sp-layer__text">Buttons with active, pressed and inactive states, project cards, row counter, inputs, bottom navigation</p></div>
+          </div>
+          <span class="sp-arch__arrow" aria-hidden="true">→</span>
+          <div class="sp-arch__col">
+            <div class="sp-layer sp-layer--dark"><p>Screens</p><p class="sp-layer__big">Switch by mode</p><p class="sp-layer__text">Set a frame to Light or Dark (or Mobile or Desktop) and every token resolves to its new value.</p></div>
+          </div>
+        </div>
+        <div class="sp-chain" data-reveal>
+          <b>EXAMPLE</b>
+          <code><i></i>color/pink/500 #FF4FB3</code><span aria-hidden="true">→</span>
+          <code>Color/action/primary</code><span aria-hidden="true">→</span>
+          <code><i></i>“Start new project” button</code>
+          <p>In Dark mode the same role points to color/pink/300.</p>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Semantic colours</p>
+          <p class="cs-p">Each colour role has a Light and a Dark value that points back to a primitive. This is what lets the app switch between light and dark mode without a second set of screens.</p>
+        </div>
+        <div class="sp-table-wrap" data-reveal>
+          <table class="sp-table">
+            <thead><tr><th scope="col">Semantic token</th><th scope="col">Light mode</th><th scope="col">Dark mode</th></tr></thead>
+            <tbody>
+              <tr><td>Color/Background/default</td><td><i style="--c:#ffffff"></i>color/neutral/0</td><td><i style="--c:#121416"></i>color/neutral/1000</td></tr>
+              <tr><td>Color/Surface/default</td><td><i style="--c:#f1f3f5"></i>color/neutral/100</td><td><i style="--c:#343a40"></i>color/neutral/800</td></tr>
+              <tr><td>Color/text/primary</td><td><i style="--c:#212529"></i>color/neutral/900</td><td><i style="--c:#ffffff"></i>color/neutral/0</td></tr>
+              <tr><td>Color/text/primary 2</td><td><i style="--c:#c70673"></i>color/pink/600</td><td><i style="--c:#ffb8e0"></i>color/pink/100</td></tr>
+              <tr><td>Color/text/secondary</td><td><i style="--c:#868e96"></i>color/neutral/600</td><td><i style="--c:#e9ecef"></i>color/neutral/200</td></tr>
+              <tr><td>Color/border/default</td><td><i style="--c:#e9ecef"></i>color/neutral/200</td><td><i style="--c:#495057"></i>color/neutral/700</td></tr>
+              <tr><td>Color/action/primary</td><td><i style="--c:#ff4fb3"></i>color/pink/500</td><td><i style="--c:#ff88cb"></i>color/pink/300</td></tr>
+              <tr><td>Color/action/secondary</td><td><i style="--c:#ffb949"></i>color/yellow/300</td><td><i style="--c:#ce8105"></i>color/yellow/600</td></tr>
+              <tr><td>Color/status/success</td><td><i style="--c:#1dbe77"></i>color/green/500</td><td><i style="--c:#7dddb5"></i>color/green/300</td></tr>
+              <tr><td>Color/status/error</td><td><i style="--c:#e53935"></i>color/red/500</td><td><i style="--c:#ff9b9b"></i>color/red/300</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Scales</p>
+          <h3 class="cs-h3">Spacing, rounding and type, all as tokens</h3>
+          <p class="cs-p">Spacing and corner radius come from fixed number scales, and the text styles read their size and line height from the Semantic Typography collection, which has a Mobile and a Desktop mode.</p>
+        </div>
+        <div class="sp-scales" data-reveal>
+          <div class="sp-panel">
+            <p class="sp-panel__title">Spacing</p>
+            <ul class="sp-bars">
+              <li><code>spacing/50</code><i style="--v:2"></i><span>2 px</span></li>
+              <li><code>spacing/100</code><i style="--v:4"></i><span>4 px</span></li>
+              <li><code>spacing/200</code><i style="--v:8"></i><span>8 px</span></li>
+              <li><code>spacing/250</code><i style="--v:12"></i><span>12 px</span></li>
+              <li><code>spacing/300</code><i style="--v:16"></i><span>16 px</span></li>
+              <li><code>spacing/400</code><i style="--v:24"></i><span>24 px</span></li>
+              <li><code>spacing/500</code><i style="--v:32"></i><span>32 px</span></li>
+            </ul>
+            <p class="sp-panel__title">Rounding</p>
+            <ul class="sp-radii">
+              <li><i style="--r:2"></i>100 · 2px</li>
+              <li><i style="--r:4"></i>200 · 4px</li>
+              <li><i style="--r:8"></i>300 · 8px</li>
+              <li><i style="--r:16"></i>400 · 16px</li>
+              <li><i style="--r:24"></i>500 · 24px</li>
+            </ul>
+          </div>
+          <div class="sp-panel sp-panel--dark">
+            <p class="sp-panel__title">Typography modes</p>
+            <table class="sp-typetable">
+              <thead><tr><th scope="col">TOKEN</th><th scope="col">MOBILE</th><th scope="col">DESKTOP</th></tr></thead>
+              <tbody>
+                <tr><td>H1 · Kalnia Bold</td><td>32 / 40</td><td>40 / 48</td></tr>
+                <tr><td>H2 · Kalnia Bold</td><td>24 / 32</td><td>32 / 40</td></tr>
+                <tr><td>H3 · Kalnia</td><td>20 / 28</td><td>24 / 32</td></tr>
+                <tr><td>Lead · Inter Medium</td><td>18 / 28</td><td>24 / 32</td></tr>
+                <tr><td>Base · Inter Medium</td><td>16 / 24</td><td>16 / 24</td></tr>
+                <tr><td>Small · Inter Medium</td><td>14 / 20</td><td>14 / 20</td></tr>
+                <tr><td>Caption · Inter Medium</td><td>12 / 16</td><td>12 / 16</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="sp-proto" data-reveal>
+          <div class="cs-group">
+            <p class="cs-label">Prototype logic</p>
+            <h3 class="cs-h3">A variable that really counts rows</h3>
+            <p class="cs-p">A separate Conditions collection holds one number variable, currentRow. The + and − buttons of the row counter use Set variable actions, and the counter text is bound to the variable, so in the prototype the number actually goes up and down.</p>
+            <pre>On tap  +  →  set currentRow = currentRow + 1
+<span>On tap  −  →  set currentRow = currentRow − 1</span></pre>
+          </div>
+          <img src="assets/img/stitch/row-counter.png" alt="Row counter component: 6 of 15 rows, with minus and plus buttons and a 45% progress bar" width="622" height="408" loading="lazy">
+        </div>
+        <div class="cs-spacer" style="--s: 40"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Components</p>
+          <p class="cs-p">Every component is a variant set with its states built in: active, pressed and disabled buttons; late, in-progress and done projects; default and chosen options. Their colours come from semantic tokens, so the same components work in light and dark mode.</p>
+        </div>
+        <div class="sp-comps" data-reveal>
+          <img src="assets/img/stitch/comp-buttons.png" alt="Buttons: primary and secondary “Start new project” buttons, each in active, pressed and disabled states" width="1384" height="764" loading="lazy">
+          <img src="assets/img/stitch/comp-pattern-source.png" alt="Pattern source picker in default and chosen states: From Library, Paste URL, Upload PDF and Write Manually" width="1384" height="764" loading="lazy">
+          <img src="assets/img/stitch/comp-queue.png" alt="Pattern queue item in late, in-progress and done states" width="1386" height="1066" loading="lazy">
+          <img src="assets/img/stitch/comp-project-card.png" alt="Project card in active and inactive states, and the yarn option with an Add yarn button" width="1382" height="1066" loading="lazy">
+          <img src="assets/img/stitch/comp-nav-light.png" alt="Bottom navigation in light mode, with the Home, Projects and Patterns tab each active" width="1384" height="916" loading="lazy">
+          <img src="assets/img/stitch/comp-nav-dark.png" alt="Bottom navigation in dark mode, with the Home, Projects and Patterns tab each active" width="1384" height="916" loading="lazy">
+        </div>
+      </section>
+
+      <!-- ============ 04 DELIVER ============ -->
+      <section class="cs-sec cs-sec--alt" aria-labelledby="sp-deliver">
+        <h2 class="cs-phase" id="sp-deliver"><span class="cs-phase__num" aria-hidden="true">04</span><span class="cs-phase__name">Deliver</span></h2>
+        <p class="cs-h2">A calm companion for busy hands</p>
+        <p class="cs-lead">The final screens put the current project first and keep every action one tap away, so crafters can put the phone down mid-row and pick up exactly where they stopped.</p>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Main screens</p>
+          <h3 class="cs-h3">Dashboard, Projects, Patterns</h3>
+          <p class="cs-p">The three tabs of the bottom navigation. Each opens on what matters most: today’s task, projects grouped by status, and a searchable pattern library.</p>
+        </div>
+        <div class="sp-screens" data-reveal>
+          <figure><figcaption>Dashboard</figcaption><img src="assets/img/stitch/main-dashboard.png" alt="Dashboard: the main daily task, Persian tiles blanket, and the pattern queue" width="796" height="1686" loading="lazy"></figure>
+          <figure><figcaption>Projects</figcaption><img src="assets/img/stitch/main-projects.png" alt="My Projects: projects grouped as in progress, overdue and planned" width="796" height="1686" loading="lazy"></figure>
+          <figure><figcaption>Patterns</figcaption><img src="assets/img/stitch/main-patterns.png" alt="My Patterns: a searchable grid of saved crochet and knitting patterns" width="796" height="1686" loading="lazy"></figure>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="sp-feature" data-reveal>
+          <div class="cs-group">
+            <p class="cs-label">Home dashboard</p>
+            <h3 class="cs-h3">Today’s task comes first</h3>
+            <p class="cs-p">The home screen opens on the main daily task: the project in progress, how far along it is and the next colour change. Below it, the pattern queue shows what is next, with late, in-progress and finished projects marked by colour.</p>
+          </div>
+          <div class="sp-feature__vis"><img src="assets/img/stitch/dashboard-tall.png" alt="Top of the home dashboard: greeting, main daily task card and the pattern queue" width="960" height="2030" loading="lazy"></div>
+        </div>
+        <div class="sp-feature sp-feature--flip" data-reveal>
+          <div class="cs-group">
+            <p class="cs-label">Bottom navigation</p>
+            <h3 class="cs-h3">Three tabs, always within reach</h3>
+            <p class="cs-p">Home, Projects and Patterns stay at the bottom of every screen, and the pink “Start new project” button floats above the list, so the main action is always under the thumb.</p>
+          </div>
+          <div class="sp-feature__vis sp-feature__vis--pink"><img src="assets/img/stitch/dashboard-tall.png" alt="Bottom of the home dashboard: the pattern queue, the floating Start new project button and the bottom navigation" width="960" height="2030" loading="lazy"></div>
+        </div>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Start new project flow</p>
+          <h3 class="cs-h3">Six short steps instead of one long form</h3>
+          <p class="cs-p">Name the project and choose a pattern source, pick the craft type, add hook size and yarn, set an optional deadline and notes, then check the summary before the project is created.</p>
+        </div>
+        <ol class="sp-steps" data-reveal>
+          <li><b>1 · Name &amp; pattern source</b><img src="assets/img/stitch/flow-1.png" alt="New project: project name and pattern source options" width="720" height="1600" loading="lazy"></li>
+          <li><b>2 · Craft type</b><img src="assets/img/stitch/flow-2.png" alt="Craft type: crochet or knitting" width="720" height="1600" loading="lazy"></li>
+          <li><b>3 · Hook &amp; materials</b><img src="assets/img/stitch/flow-3.png" alt="Materials: hook size and a yarn form with brand, weight, colour and amount" width="720" height="1600" loading="lazy"></li>
+          <li><b>4 · Yarn added</b><img src="assets/img/stitch/flow-4.png" alt="Materials with a yarn added: Crimson snow pink, light, 2 balls" width="720" height="1600" loading="lazy"></li>
+          <li><b>5 · Schedule</b><img src="assets/img/stitch/flow-5.png" alt="Schedule: an optional project deadline" width="720" height="1600" loading="lazy"></li>
+          <li><b>6 · Notes &amp; summary</b><img src="assets/img/stitch/flow-6.png" alt="Project notes and the project summary with a Create project button" width="720" height="1600" loading="lazy"></li>
+        </ol>
+        <div class="cs-spacer"></div>
+
+        <div class="cs-group">
+          <p class="cs-label">Light &amp; dark mode</p>
+          <h3 class="cs-h3">One design, switched by variables</h3>
+          <p class="cs-p">Light and dark mode were built with variables and tokens, so the app can switch between them. Every colour is a semantic token with a Light and a Dark value: both sides below are the same frames, only the variable mode is different.</p>
+        </div>
+        <div class="sp-modes-demo" data-reveal>
+          <div class="sp-modes-demo__on-dark">
+            <span class="sp-pill">MODE · LIGHT</span>
+            <div class="sp-modes-demo__row">
+              <img src="assets/img/stitch/light-dashboard.png" alt="Dashboard in light mode" width="720" height="1600" loading="lazy">
+              <img src="assets/img/stitch/light-project.png" alt="Project detail in light mode" width="720" height="1600" loading="lazy">
+            </div>
+          </div>
+          <div class="sp-modes-demo__on-light">
+            <span class="sp-pill">MODE · DARK</span>
+            <div class="sp-modes-demo__row">
+              <img src="assets/img/stitch/dark-dashboard.png" alt="The same dashboard in dark mode" width="720" height="1600" loading="lazy">
+              <img src="assets/img/stitch/dark-project.png" alt="The same project detail in dark mode" width="720" height="1600" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REFLECTION ============ -->
+      <section class="cs-sec cs-sec--reflection" aria-labelledby="sp-reflection">
+        <h2 class="cs-kicker" id="sp-reflection">Reflection</h2>
+        <div class="cs-list sp-reflect" data-reveal>
+          <p class="cs-label">What I learned</p>
+          <ul>
+            <li>A design system pays off fast: once colours, type and components were variables, the dark theme took a fraction of the time.</li>
+            <li>Breaking a long setup into short steps makes it feel lighter, even when it asks for the same information.</li>
+            <li>Crafting is full of interruptions, so the app has to show people exactly where they stopped, instantly.</li>
+          </ul>
+        </div>
+        <div class="sp-ongoing" data-reveal>
+          <h3>This is an ongoing project</h3>
+          <p>Stitch Please! started last semester and I keep working on it as a hobby project. The next step is testing the prototype with crafters, then iterating on the design based on what I learn.</p>
+        </div>
+      </section>
+
+      <!-- ============ THANK YOU ============ -->
+      <section class="sp-thanks" aria-label="Stitch Please!">
+        <img src="assets/img/stitch/logo.png" alt="" width="47" height="46" loading="lazy">
+        <p>Stitch Please!</p>
+      </section>
+
+      <!-- ============ PREVIOUS / NEXT PROJECT ============ -->
+      <nav class="pnav" aria-label="More projects" style="--pn-accent: #c8077a">
+        <a class="pnav__prev" href="mercedes-aura.html">
+          <span class="pnav__small">Previous project</span>
+          <span class="pnav__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Mercedes AURA</span>
+        </a>
+        <a class="pnav__home" href="index.html#projects">All projects</a>
+        <a class="pnav__next" href="locus.html">
+          <span class="pnav__small">Next project</span>
+          <span class="pnav__title">Locus<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </nav>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="309" height="280">
+        <p>&copy; 2026 Róza Parlagi</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="index.html#projects">All projects</a></li>
+        <li><a href="#top" aria-label="Back to top">Back to top &uarr;</a></li>
+      </ul>
+    </footer>
+  </div>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
